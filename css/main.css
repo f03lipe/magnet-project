@@ -10,7 +10,7 @@ video,iframe{-webkit-filter:blur(2px);-moz-user-select:none;-webkit-user-select:
 canvas{position:absolute;top:0;bottom:0;left:0;right:0;z-index:0;}
 .bg-video{position:absolute;z-index:0;}
 body.light .bg{display:run-in;}
-.bg{display:none;position:absolute;left:0;right:0;top:0;bottom:0;background:#ffffff url('/img/bg.jpg') repeat top left;opacity:.9;}
+.bg{display:none;position:absolute;left:0;right:0;top:0;bottom:0;background:#ffffff url('../img/bg.jpg') repeat top left;opacity:.9;}
 .people{position:absolute;width:250px;bottom:5px;padding:10px 0 0 16px;}.people .person:hover .desc{-webkit-transition:all 0.2s;-moz-transition:all 0.2s;-o-transition:all 0.2s;transition:all 0.2s;-webkit-transition:all 0.2s linear;-moz-transition:all 0.2s linear;-o-transition:all 0.2s linear;-ms-transition:all 0.2s linear;transition:all 0.2s linear;display:inline-block;}
 .people .person:hover .square{box-shadow:5px 0 10px -4px rgba(0, 0, 0, 0.6);-webkit-transition:all 0.2s;-moz-transition:all 0.2s;-o-transition:all 0.2s;transition:all 0.2s;-webkit-transition:all 0.2s linear;-moz-transition:all 0.2s linear;-o-transition:all 0.2s linear;-ms-transition:all 0.2s linear;transition:all 0.2s linear;}
 .people .person{display:table;cursor:pointer;display:inline-block;margin-bottom:10px;margin-right:12px;}.people .person .desc{display:none;position:relative;left:0;z-index:10;overflow:visible;text-overflow:ellipsis;height:60px;max-width:150px;margin-left:-4px;vertical-align:top;padding:8px 10px 8px 10px;box-sizing:border-box;text-align:justify;background:rgba(0, 0, 0, 0.9);font:11px/14px "Open Sans";color:white;}.people .person .desc h5{font-weight:bold;font-size:inherit;margin:0;padding:0;line-height:inherit;}
