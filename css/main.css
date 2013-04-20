@@ -18,11 +18,11 @@ canvas{position:absolute;top:0;bottom:0;left:0;right:0;z-index:1;}
 body.light .bg{display:run-in;}
 .bg{display:none;position:absolute;left:0;right:0;top:0;bottom:0;background:#ffffff url('../img/bg.jpg') repeat top left;opacity:.7;}
 .people .tooltip{opacity:0.9;font:12px Arial,"Open Sans";}.people .tooltip .tooltip-inner{text-align:left;background:black;border-radius:0;}
-.people{position:absolute;text-align:center;width:1000px;left:50%;margin-left:-500px;bottom:40px;font-family:museo-sans;padding:10px 0 0 16px;}body:not(.light) .people{color:white;}
+.people{position:absolute;text-align:center;width:1000px;left:50%;margin-left:-500px;bottom:40px;font-family:museo-sans,"Open Sans",Arial;padding:10px 0 0 16px;}body:not(.light) .people{color:white;}
 body.light .people{color:#111;}
 .people h2{font:bold 20px museo;}
-.people h2.tk-museo{font-family:museo;}
-.people h2.tk-museo-sans{font-family:museo-sans;}
+.people h2.tk-museo{font-family:museo,"Open Sans",Arial;}
+.people h2.tk-museo-sans{font-family:museo-sans,"Open Sans",Arial;}
 .people h2{display:block;}
 .people .person:shover .desc{-webkit-transition:all 0.2s linear;-moz-transition:all 0.2s linear;-o-transition:all 0.2s linear;-ms-transition:all 0.2s linear;transition:all 0.2s linear;display:inline-block;}
 .people .person:shover .square{box-shadow:5px 0 10px -4px rgba(0, 0, 0, 0.6);-webkit-transition:all 0.2s linear;-moz-transition:all 0.2s linear;-o-transition:all 0.2s linear;-ms-transition:all 0.2s linear;transition:all 0.2s linear;}
