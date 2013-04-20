@@ -191,7 +191,10 @@ body.light .bg {
 	h2 {
 		font:bold 20px museo, "Open Sans", Arial;
 	}
-			text-shadow: 0 0 5px rgba(0, 0, 0, .7);
+	body:not(light), body.dark {
+		text-shadow: 0 0 5px rgba(0, 0, 0, .7);
+		
+	}
 
 
 	h2.tk-museo { font-family: museo, "Open Sans", Arial;}
