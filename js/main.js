@@ -524,3 +524,6 @@ $().ready(function MC(canvas) {
 	Draw();
 
 })
+
+
+$(".person .square").tooltip({html:true})
