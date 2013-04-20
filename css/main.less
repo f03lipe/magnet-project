@@ -199,17 +199,6 @@ body.light .bg {
 	padding:10px 0 0 16px;
 	h2 { display: block;}
 
-	& .person .square:nth-child(1) { background-position:-272px -544px;	}
-	& .person .square:nth-child(2) { background-position:-68px -68px;	}
-	& .person .square:nth-child(3) { background-position:-136px -68px;	}
-	& .person .square:nth-child(4) { background-position:-204px -68px;	}
-	& .person .square:nth-child(5) { background-position:-272px -476px;	}
-	& .person .square:nth-child(6) { background-position:0px -136px;	}
-	& .person .square:nth-child(7) { background-position:-68px -136px;	}
-	& .person .square:nth-child(8) { background-position:-136px -136px;	}
-	& .person .square:nth-child(9) { background-position:-204px -136px;	}
-	& .person .square:nth-child(10) { background-position:-272px -136px;	}
-
 	.person:shover {
 		.desc {
 			.transition(all, .2s, linear);
@@ -237,6 +226,17 @@ body.light .bg {
 			height:60px;
 			box-shadow:0 0px 5px rgba(0, 0, 0, 0.7);
 		}
+
+		&:nth-child(9) { .square { background-position:-204px -136px;	} }
+		&:nth-child(8) { .square { background-position:-136px -136px;	} }
+		&:nth-child(7) { .square { background-position:-68px -136px;	} }
+		&:nth-child(6) { .square { background-position:0px -136px;	} }
+		&:nth-child(5) { .square { background-position:-272px -476px;	} }
+		&:nth-child(4) { .square { background-position:-204px -68px;	} }
+		&:nth-child(3) { .square { background-position:-136px -68px;	} }
+		&:nth-child(2) { .square { background-position:-68px -68px;	} }
+		&:nth-child(10) { .square { background-position:-272px -136px;	} }
+		&:nth-child(1) { .square { background-position:-272px -544px;	} }
 	}
 	.person.sel {
 		.square {
