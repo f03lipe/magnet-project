@@ -1,7 +1,8 @@
 a{cursor:pointer;}
 body{font-family:"Open Sans";}
 body.dark,body:not(.light){background:url('../img/bg.png');}
-.title{position:absolute;top:50%;height:185px;margin-top:-92.5px;margin-left:-350px;left:50%;width:700px;z-index:3;vertical-align:middle;text-align:center;font:120px/80px "Monofett","","Open Sans";letter-spacing:1px;text-transform:uppercase;}body:not(.light) .title{color:white;text-shadow:0 0 5px rgba(0, 0, 0, 0.7);}
+body.test .title{display:none;}
+.title{dsisplay:none;position:absolute;top:50%;height:185px;margin-top:-92.5px;margin-left:-350px;left:50%;width:700px;z-index:3;vertical-align:middle;text-align:center;font:120px/80px "Monofett","","Open Sans";letter-spacing:1px;text-transform:uppercase;}body:not(.light) .title{color:white;text-shadow:0 0 5px rgba(0, 0, 0, 0.7);}
 body.light .title{color:#222;}
 body.light .title span:nth-child(1){color:#777 !important;}
 body.dark .title span:nth-child(2){color:#aaa !important;}
