@@ -1,8 +1,8 @@
 .tk-museo{font-family:museo,"Open Sans",Arial;}
 .tk-museo-sans{font-family:museo-sans,"Open Sans",Arial;}
-body{font-family:"Open Sans";}body *:not(canvas){z-index:1;}
+body{font-family:"Open Sans",sans-serif;}body *:not(canvas){z-index:1;}
 header{position:absolute;top:40%;left:50%;height:205px;width:700px;margin-top:-102.5px;margin-left:-350px;z-index:3;vertical-align:middle;text-align:center;}header h1{font:120px/80px "Monofett","Open Sans";letter-spacing:0px;text-transform:uppercase;text-shadow:0px 0 5px rgba(0, 0, 0, 0.3);}header h1:nth-child(2){color:#C00;}
-header h2{font-family:museo,"Open Sans",Arial;margin-top:15px;font-size:20px;text-transform:none;text-shadow:0px 0 2px white;}
+header h2{font-family:museo,"Open Sans",Arial;margin-top:15px;font-size:18px;text-transform:none;text-shadow:0px 0 2px white;}
 .people{position:absolute;width:1000px;left:50%;bottom:40px;margin-left:-500px;cursor:default;text-align:center;font-family:museo-sans,"Open Sans",Arial;padding:10px 0 0 16px;}.people h3{font:bold 20px museo,"Open Sans",Arial;}
 .people .person{width:60px;height:60px;display:table;cursor:pointer;display:inline-block;margin-bottom:10px;margin-right:10px;-webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.3);-moz-box-shadow:0 0 10px rgba(0, 0, 0, 0.3);box-shadow:0 0 10px rgba(0, 0, 0, 0.3);border:5px solid transparent;border-radius:35px;}.people .person .square{width:60px;height:60px;background:url(../img/avatars.png) no-repeat;border-radius:35px;display:inline-block;position:relative;z-index:11;}
 .people .person .tooltip .tooltip-arrow{border-top-color:rgba(255, 255, 255, 0.8);}
