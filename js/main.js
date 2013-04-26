@@ -22,9 +22,9 @@ MagneticCamp = new (function () {
 	var Line = function () {
 		return {
 			start: function () {
-				this.vel = (Math.random()>.5?-1:1)*max(5, random()*20)*.4;
 				this.color = COLORS[_.random(1, COLORS.length)-1];
 				this.thickness = 3+random()*3;
+				this.vel = (Math.random()>.5?-1:1)*max(1, random()*4)*2;
 				this.dx = random()*500-250; // = [-300, 300[
 				this.dy = 150;
 				return this;
@@ -78,7 +78,7 @@ MagneticCamp = new (function () {
 		$('canvas.fullscreen')[0].width = $(window).width();
 		$('canvas.fullscreen')[0].height = $(window).height();
 		Mx = canvas.width/2;
-		My = $('.title').offset().top+$('.title').height()/2;
+		My = $('header').offset().top+$('header').height()/2;
 		d1 = {x: Mx, y: My-100};
 		d2 = {x: Mx, y: My+100};
 	}
@@ -96,20 +96,20 @@ MagneticCamp = new (function () {
 
 $().ready(function () {	MagneticCamp.init() });
 
-$(".person .square").tooltip({html:true})
+$(".person .square").tooltip({html:true, delay: 0})
 
 $().ready(function() {
-	$(".schoolname")
+	$("[data-school]")
 		.mouseover(function (evt) {
-			var school = $(evt.target).data('school');
-			$(".person[data-school="+school+"]").addClass('sel');
-			evt.stopPropagation();
-			return false;
+			target = $(evt.target);
+				school = (
+					(target.data('school')?target:false) ||
+					target.find('[data-school]')[0] ||
+					target.closest('[data-school]')).data('school');
+			console.log(target, school);
+			document.body.dataset.hoverschool = school;
 		})
 		.mouseout(function (evt) {
-			var school = $(evt.target).data('school');
-			$(".person[data-school="+school+"]").removeClass('sel');
-			evt.stopPropagation;
-			return false;
-		});
+			delete document.body.dataset.hoverschool;
+		})
 });
