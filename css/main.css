@@ -26,17 +26,25 @@ body.light .people{color:#222;}
 .people h2.tk-museo{font-family:museo,"Open Sans",Arial;}
 .people h2.tk-museo-sans{font-family:museo-sans,"Open Sans",Arial;}
 .people h2{display:block;}
-.people .person:shover .desc{-webkit-transition:all 0.2s linear;-moz-transition:all 0.2s linear;-o-transition:all 0.2s linear;-ms-transition:all 0.2s linear;transition:all 0.2s linear;display:inline-block;}
-.people .person:shover .square{box-shadow:5px 0 10px -4px rgba(0, 0, 0, 0.6);-webkit-transition:all 0.2s linear;-moz-transition:all 0.2s linear;-o-transition:all 0.2s linear;-ms-transition:all 0.2s linear;transition:all 0.2s linear;}
-.people .person{display:table;cursor:pointer;display:inline-block;margin-bottom:10px;margin-right:12px;}.people .person .square{border-radius:25px;background:url(../img/avatars.png) no-repeat;display:inline-block;position:relative;z-index:11;width:60px;height:60px;box-shadow:0 0px 5px rgba(0, 0, 0, 0.7);}
-.people .person:nth-child(9) .square{background-position:-204px -136px;}
-.people .person:nth-child(8) .square{background-position:-136px -136px;}
-.people .person:nth-child(7) .square{background-position:-68px -136px;}
-.people .person:nth-child(6) .square{background-position:0px -136px;}
-.people .person:nth-child(5) .square{background-position:-272px -476px;}
-.people .person:nth-child(4) .square{background-position:-204px -68px;}
+.people .person{display:table;cursor:pointer;display:inline-block;margin-bottom:10px;margin-right:12px;border:5px solid transparent;border-radius:35px;}.people .person .square{background:url(../img/avatars.png) no-repeat;border-radius:35px;display:inline-block;position:relative;z-index:11;width:60px;height:60px;}
+.people .person:nth-child(1):hover{border:5px solid #009b95;}
+.people .person:nth-child(1) .square{background-position:0px -68px;}
+.people .person:nth-child(2):hover{border:5px solid #ff7100;}
+.people .person:nth-child(2) .square{background-position:-136px -340px;}
+.people .person:nth-child(3):hover{border:5px solid #ffa900;}
 .people .person:nth-child(3) .square{background-position:-136px -68px;}
-.people .person:nth-child(2) .square{background-position:-68px -68px;}
-.people .person:nth-child(10) .square{background-position:-272px -136px;}
-.people .person:nth-child(1) .square{background-position:-272px -544px;}
+.people .person:nth-child(4):hover{border:5px solid #fd0006;}
+.people .person:nth-child(4) .square{background-position:-204px -68px;}
+.people .person:nth-child(5):hover{border:5px solid #ff7100;}
+.people .person:nth-child(5) .square{background-position:-272px -68px;}
+.people .person:nth-child(6):hover{border:5px solid #ffa900;}
+.people .person:nth-child(6) .square{background-position:-340px -68px;}
+.people .person:nth-child(7):hover{border:5px solid #fd0006;}
+.people .person:nth-child(7) .square{background-position:0px -68px;}
+.people .person:nth-child(8):hover{border:5px solid #ff7100;}
+.people .person:nth-child(8) .square{background-position:-68px -136px;}
+.people .person:nth-child(9):hover{border:5px solid #ffa900;}
+.people .person:nth-child(9) .square{background-position:-136px -136px;}
+.people .person:nth-child(10):hover{border:5px solid #fd0006;}
+.people .person:nth-child(10) .square{background-position:-204px -136px;}
 .people .person.sel .square{outline:4px solid #08C;}

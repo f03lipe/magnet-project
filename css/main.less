@@ -5,7 +5,7 @@
     box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
 }
 
-.user-select(@wut: none) {
+.user-select (@wut: none) {
 	-moz-user-select: @wut;
 	-webkit-user-select: @wut;
 	-ms-user-select: @wut;
@@ -27,8 +27,26 @@
     transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
 }
  
+@spriteSize: 68px;
+
+.sprite (@x, @y, @size: @spriteSize) {
+   background-position: -(@x*@spriteSize) -(@y*@spriteSize);
+}
 
 ///////
+
+.b-color (@color) {
+	&:hover {
+		border: 5px solid @color; // box-shadow: 0 0 2px 5px @color;
+	}
+}
+
+///////
+
+@c0: #009B95;
+@c1: #FF7100;
+@c2: #FFA900;
+@c3: #FD0006;
 
 a {
 	cursor:pointer;
@@ -209,16 +227,6 @@ body.light .bg {
 	padding:10px 0 0 16px;
 	h2 { display: block;}
 
-	.person:shover {
-		.desc {
-			.transition(all, .2s, linear);
-			display:inline-block;
-		}
-		.square {
-			box-shadow:5px 0 10px -4px rgba(0, 0, 0, 0.6);
-			.transition(all, .2s, linear);
-		}
-	}
 	.person {
 		display:table;
 		cursor:pointer;
@@ -226,27 +234,34 @@ body.light .bg {
 		margin-bottom:10px;
 		margin-right:12px;
 		
+		border: 5px solid transparent;
+		border-radius: 35px;
+
 		.square {
-			border-radius: 25px;
 			background: url(../img/avatars.png) no-repeat;
+			border-radius: 35px;
 			display:inline-block;
 			position:relative;
 			z-index:11;
 			width:60px;
 			height:60px;
-			box-shadow:0 0px 5px rgba(0, 0, 0, 0.7);
 		}
 
-		&:nth-child(9) { .square { background-position:-204px -136px;	} }
-		&:nth-child(8) { .square { background-position:-136px -136px;	} }
-		&:nth-child(7) { .square { background-position:-68px -136px;	} }
-		&:nth-child(6) { .square { background-position:0px -136px;	} }
-		&:nth-child(5) { .square { background-position:-272px -476px;	} }
-		&:nth-child(4) { .square { background-position:-204px -68px;	} }
-		&:nth-child(3) { .square { background-position:-136px -68px;	} }
-		&:nth-child(2) { .square { background-position:-68px -68px;	} }
-		&:nth-child(10) { .square { background-position:-272px -136px;	} }
-		&:nth-child(1) { .square { background-position:-272px -544px;	} }
+		.square:hover {
+			//box-shadow: 0 0 15px rgba(0,0,0,.5),
+			//			0 0 1px 5px @c2;
+		}
+
+		&:nth-child(1)	{ .b-color(@c0); .square { .sprite(0, 1); } }
+		&:nth-child(2)	{ .b-color(@c1); .square { .sprite(2, 5); } }
+		&:nth-child(3)	{ .b-color(@c2); .square { .sprite(2, 1); } }
+		&:nth-child(4)	{ .b-color(@c3); .square { .sprite(3, 1); } }
+		&:nth-child(5)	{ .b-color(@c1); .square { .sprite(4, 1); } }
+		&:nth-child(6)	{ .b-color(@c2); .square { .sprite(5, 1); } }
+		&:nth-child(7)	{ .b-color(@c3); .square { .sprite(0, 1); } }
+		&:nth-child(8)	{ .b-color(@c1); .square { .sprite(1, 2); } }
+		&:nth-child(9)	{ .b-color(@c2); .square { .sprite(2, 2); } }
+		&:nth-child(10)	{ .b-color(@c3); .square { .sprite(3, 2); } }
 	}
 	.person.sel {
 		.square {
