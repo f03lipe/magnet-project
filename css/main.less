@@ -39,20 +39,13 @@
    background-position: -(@x*@spriteSize) -(@y*@spriteSize);
 }
 
-///////
-
-.b-color (@color) {
-// 	&:hover {
-// 		border: 5px solid @color; // box-shadow: 0 0 2px 5px @color;
-// 	}
-}
 
 ///////
 
-@c0: #009B95;
-@c1: #FF7100;
-@c2: #FFA900;
-@c3: #FD0006;
+@color0: #009B95;
+@color1: #FB202D;
+@color2: #00C90D;
+@color3: #FF7100;
 
 
 .tk-museo { font-family: museo, "Open Sans", Arial; }
@@ -82,10 +75,11 @@ header {
 	text-align: center;
 	
 	h1 {
-		font: bolder 120px/80px Lora, Montserrat, "Monofett", "Open Sans";
-		&:nth-child(2) { color: #F5001D; }
+		font: bold 120px/80px Losra, Montserrat, "Monofett", "Open Sans";
 		letter-spacing: -2px;
-		color: #444;
+		color: #057D9F;
+		&:nth-child(2) { color: #FF7100; // #F5001D;
+		}
 		text-transform: uppercase;
 		text-shadow: 0px 0 5px rgba(0,0,0,.3);
 	}
@@ -173,7 +167,7 @@ header {
 		&:nth-child(4)	.square { .sprite(3, 3); }
 		&:nth-child(5)	.square { .sprite(6, 1); }
 		&:nth-child(6)	.square { .sprite(5, 1); }
-		&:nth-child(7)	.square { .sprite(0, 1); }
+		&:nth-child(7)	.square { .sprite(7, 1); }
 		&:nth-child(8)	.square { .sprite(1, 2); }
 		&:nth-child(9)	.square { .sprite(2, 2); }
 		&:nth-child(10)	.square { .sprite(3, 2); }
@@ -184,16 +178,16 @@ header {
 		}
 
 		body[data-hoverschool=CEFET] &[data-school=CEFET],
-		&[data-school=CEFET]:hover { border: 5px solid #08C; }
+		&[data-school=CEFET]:hover { border: 5px solid @color0; }
 
 		body[data-hoverschool=CM] &[data-school=CM],
-		&[data-school=CM]:hover { border: 5px solid #FB202D; }
+		&[data-school=CM]:hover { border: 5px solid @color1; }
 		
 		body[data-hoverschool=CAP] &[data-school=CAP],
-		&[data-school=CAP]:hover { border: 5px solid #00C90D; }
+		&[data-school=CAP]:hover { border: 5px solid @color2; }
 
 		body[data-hoverschool=CP2] &[data-school=CP2],
-		&[data-school=CP2]:hover { border: 5px solid #FF7100; }
+		&[data-school=CP2]:hover { border: 5px solid @color3; }
 	}
 }
 
@@ -229,7 +223,7 @@ body.dark1 .bg {
 	z-index: -1;
 	opacity: .9;
 	// background: #fff url('../img/bg.jpg') repeat top left;
-	background: #fff url('../img/tiny_grid_@2X.png') repeat top left;
+	background: #fff url('../img/noisy_grid_@2X.png') repeat top left;
 	// background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAL0lEQVQYV2OMq7zlw4ADfONih8swghQualfbgksxTHwgFYY0P/RZUytP2I1DQCEA7+AnDx0g6NMAAAAASUVORK5CYII=) !important;
 }
 
@@ -247,7 +241,7 @@ body.bg2 .bg {
 }
 
 body.bg3 .bg {
-	background: #fff url('../img/noisy_grid.png') repeat top left;
+	background: #fff url('../img/noisy_grid_@2X.png') repeat top left;
 }
 
 
