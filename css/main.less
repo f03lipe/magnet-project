@@ -129,7 +129,7 @@ header {
 		margin-right: 10px;
 		.box-shadow(0,0, 10px, .3);
 		
-		border: 5px solid transparent;
+		border: 5px solid white;
 		border-radius: 35px;
 
 		.square
@@ -160,7 +160,7 @@ header {
 				background: rgba(255,255,255,.5); // contrast with h3
 				color: black;
 				border: none;
-				font: bold 15px Montserrat;
+				font: 15px Montserrat;
 				border-radius: 0;
 			}
 		}
@@ -181,7 +181,7 @@ header {
 		&[data-school=CEFET]:hover {
 			border: 5px solid #08C;
 			.square {
-			box-shadow: inset 0 0 10px rgba(0,0,0,.5);				
+				box-shadow: inset 0 0 10px rgba(0,0,0,.5);				
 			}
 		}
 
@@ -189,7 +189,7 @@ header {
 		&[data-school=CM]:hover {
 			border: 5px solid #FB000D;
 			.square {
-			box-shadow: inset 0 0 10px rgba(0,0,0,.5);				
+				box-shadow: inset 0 0 10px rgba(0,0,0,.5);				
 			}
 		}
 		
@@ -197,7 +197,7 @@ header {
 		&[data-school=CAP]:hover {
 			border: 5px solid #00C90D;
 			.square {
-			box-shadow: inset 0 0 10px rgba(0,0,0,.5);				
+				box-shadow: inset 0 0 10px rgba(0,0,0,.5);				
 			}
 		}
 
@@ -205,15 +205,8 @@ header {
 		&[data-school=CP2]:hover {
 			border: 5px solid #FFA900;
 			.square {
-			box-shadow: inset 0 0 10px rgba(0,0,0,.5);				
+				box-shadow: inset 0 0 10px rgba(0,0,0,.5);				
 			}
-		}
-	}
-
-
-	.person.sel {
-		.square {
-			outline:4px solid #08C;
 		}
 	}
 }
@@ -228,8 +221,22 @@ header {
 	top:0; bottom:0;
 
 	z-index: -1;
-	opacity: .4;
+	opacity: .9;
+	// background: #fff url('../img/bg.jpg') repeat top left;
+	background: #fff url('../img/noisy_grid_@2X.png') repeat top left;
+	// background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAL0lEQVQYV2OMq7zlw4ADfONih8swghQualfbgksxTHwgFYY0P/RZUytP2I1DQCEA7+AnDx0g6NMAAAAASUVORK5CYII=) !important;
+}
+
+body.bg1 .bg {
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAL0lEQVQYV2OMq7zlw4ADfONih8swghQualfbgksxTHwgFYY0P/RZUytP2I1DQCEA7+AnDx0g6NMAAAAASUVORK5CYII=) !important;
+}
+
+body.bg2 .bg {
 	background: #fff url('../img/bg.jpg') repeat top left;
+}
+
+body.bg3 .bg {
+	background: #fff url('../img/noisy_grid.png') repeat top left;
 }
 
 canvas {
