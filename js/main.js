@@ -112,4 +112,7 @@ $().ready(function() {
 		.mouseout(function (evt) {
 			delete document.body.dataset.hoverschool;
 		})
+		.mouseleave(function (evt) {
+			delete document.body.dataset.hoverschool;
+		})
 });
