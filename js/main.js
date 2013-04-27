@@ -11,7 +11,7 @@ MagneticCamp = new (function () {
 	// Globals: you may touch this
 	var LAPSE = 60
 		, COLORS = ['#FF7100', '#FFA900', '#FD0006', '#009B95']
-		, COLORS = ['#009B95', '#FF7100', '#00C90D', '#FB202D', '#057DBF']
+		, COLORS = ['#009B95', '#FF7100', '#00C90D', '#FB202D', '#AAA']
 		, SEED = Math.random() // still useless :(
 		, NUMLINES = 10
 		;
