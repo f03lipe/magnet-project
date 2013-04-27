@@ -10,11 +10,11 @@ MagneticCamp = new (function () {
 
 	// Globals: you may touch this
 	var LAPSE = 60
-		, COLORS = ['#FF7100', '#FFA900', '#FD0006', '#009B95']
-		, COLORS = ['#009B95', '#FF7100', '#00C90D', '#FB202D', '#AAA']
 		, COLORS = ['#BBB']
+		, COLORS = ['#FF7100', '#FFA900', '#FD0006', '#009B95']
+		, COLORS = ['#009B95', '#FF7100', '#00C90D', '#FB202D']
 		, SEED = Math.random() // still useless :(
-		, NUMLINES = 10
+		, NUMLINES = 13
 		;
 
 	// Variables defined in this.init()
@@ -26,8 +26,8 @@ MagneticCamp = new (function () {
 			start: function () {
 				this.color = COLORS[_.random(1, COLORS.length)-1];
 				this.thickness = 3+random()*1;
-				this.vel = (Math.random()>.5?-1:1)*max(1, random()*4)*2;
-				this.dx = random()*500-250; // = [-300, 300[
+				this.vel = (Math.random()>.5?-1:1)*max(1, random()*4)*4;
+				this.dx = random()*600-300; // = [-300, 300[
 				this.dy = 150;
 				return this;
 			},
@@ -35,7 +35,7 @@ MagneticCamp = new (function () {
 			tic: function (timeLapse) {		
 				this.dx += this.vel*.2;
 				this.dy += max(1, abs(this.vel))*0.1;
-				if (abs(this.dx) > 300 || abs(this.dy) > 400)
+				if (abs(this.dx) > 400 || abs(this.dy) > 500)
 					this.start();
 			},
 
@@ -81,8 +81,8 @@ MagneticCamp = new (function () {
 		$('canvas.fullscreen')[0].height = $(window).height();
 		Mx = canvas.width/2;
 		My = $('header').offset().top+$('header').height()/2;
-		d1 = {x: Mx, y: My-100};
-		d2 = {x: Mx, y: My+100};
+		d1 = {x: Mx, y: My-130};
+		d2 = {x: Mx, y: My+130};
 	}
 
 	$(window).resize(Setup);
@@ -98,7 +98,7 @@ MagneticCamp = new (function () {
 
 $().ready(function () {	MagneticCamp.init() });
 
-$(".person .square").tooltip({html:true, delay: 0})
+$(".person .square").tooltip({html:true, delay: 0, placement:'bottom'})
 
 $().ready(function() {
 	$("[data-school]")

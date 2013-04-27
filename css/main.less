@@ -54,42 +54,59 @@
 body {
 	font-family: "Open Sans", sans-serif;
 	color: #333;
+
 	*:not(canvas)
 	{
 		z-index: 1;
 	}
 }
 
+.container {
+	// outline: 1px solid red;
+}
+
+
 header {
-	@height: 205px;
+	@height: 505px;
 	@width: 700px;
 
-	position: absolute;
-	top: 40%; left: 50%;
-	height: @height; width: @width;
-	margin-top: -(@height/2);
+	position: relative;
+	
+	left: 50%;
+	width: @width;
 	margin-left: -(@width/2);
+	
+	margin-top: 200px;
+	margin-bottom: 90px;
+	// top: 40%;
+	// height: @height;
+	// margin-top: -(@height/2);
 	
 	z-index: 3;
 	vertical-align: middle;
 	text-align: center;
-	
+
+	height: 205px;
+
 	h1 {
 		font: bold 120px/80px Losra, Montserrat, "Monofett", "Open Sans";
 		letter-spacing: -2px;
-		color: #057D9F;
-		&:nth-child(2) { color: #FF7100; // #F5001D;
+		color: white;
+		&:nth-child(2) { cosor: #FF7500; // #F5001D;
 		}
 		text-transform: uppercase;
 		text-shadow: 0px 0 7px rgba(0,0,0,.5);
 	}
 
 	h2 {
-		font: bold 18px Montserrat, "Open Sans", Arial;
+		font: 18px Montserrat, "Open Sans", Arial;
 		margin-top: 15px;
+		color: white;
 		text-transform: none;
-		text-shadow: 0px 0 1px white;
+		// text-shadow: 0px 0 1px white;
 	}
+
+	h2 a { color: white; font-weight: bold; text-decoration: none !important; }
 }
 
 
@@ -98,12 +115,15 @@ header {
 	@dim: 60px;
 	@width: 1000px;
 	
-	position: absolute;
+	// position: absolute;
+	position: relative;
 	width: @width;
-	left: 50%; bottom: 40px;
+	left: 50%;
 	margin-left: -(@width/2);
+	// bottom: 40px;
+	margin-bottom: 70px;
+
 	cursor: default;
-	
 	text-align: center;
 	font-family: Montserrat, "Open Sans", Arial;
 	padding: 10px 0 0 16px;
@@ -191,7 +211,22 @@ header {
 	}
 }
 
+.bg {
+	position:fixed;
+	left:0;	right:0;
+	top:0; bottom:0;
 
+	z-index: -1;
+	background: #fff url('../img/dark_fish_skin.png') repeat top left;
+}
+
+
+.light-bg {
+	box-shadow: 0 0 25px rgba(0,0,0,.5);
+	z-index: 2;
+	position: relative;
+	background: #fff url('../img/tiny_grid.png') repeat top left;
+}
 
 body.dark, body.dark1 {
 	color: white;
@@ -214,16 +249,31 @@ body.dark1 .bg {
 }
 
 
+.container {
+	padding-bottom: 30px;
+}
 
-.bg {
-	position:absolute;
+.darsk {
+	position: absolute;
+	bottom: 0; top: 0;
+	opacisty: .7;
+	z-index: ;
+	
+	left: 0; right: 0;
+	background: #fff url('../img/dark_fish_skin.png') repeat top left;
+}
+
+
+
+.bsg {
+	position:fixed;
 	left:0;	right:0;
 	top:0; bottom:0;
 
 	z-index: -1;
-	opacity: .9;
+	opacity: .6;
 	// background: #fff url('../img/bg.jpg') repeat top left;
-	background: #fff url('../img/noisy_grid_@2X.png') repeat top left;
+	background: #fff url('../img/noisy_grid.png') repeat top left;
 	// background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAL0lEQVQYV2OMq7zlw4ADfONih8swghQualfbgksxTHwgFYY0P/RZUytP2I1DQCEA7+AnDx0g6NMAAAAASUVORK5CYII=) !important;
 }
 

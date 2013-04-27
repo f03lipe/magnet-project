@@ -1,9 +1,10 @@
 .tk-museo{font-family:museo,"Open Sans",Arial;}
 .tk-museo-sans{font-family:museo-sans,"Open Sans",Arial;}
 body{font-family:"Open Sans",sans-serif;color:#333;}body *:not(canvas){z-index:1;}
-header{position:absolute;top:40%;left:50%;height:205px;width:700px;margin-top:-102.5px;margin-left:-350px;z-index:3;vertical-align:middle;text-align:center;}header h1{font:bold 120px/80px Losra,Montserrat,"Monofett","Open Sans";letter-spacing:-2px;color:#057D9F;text-transform:uppercase;text-shadow:0px 0 7px rgba(0, 0, 0, 0.5);}header h1:nth-child(2){color:#FF7100;}
-header h2{font:bold 18px Montserrat,"Open Sans",Arial;margin-top:15px;text-transform:none;text-shadow:0px 0 1px white;}
-.people{position:absolute;width:1000px;left:50%;bottom:40px;margin-left:-500px;cursor:default;text-align:center;font-family:Montserrat,"Open Sans",Arial;padding:10px 0 0 16px;}.people h3{font:bold 20px Montserrat,"Open Sans",Arial;}
+header{position:relative;left:50%;width:700px;margin-left:-350px;margin-top:200px;margin-bottom:90px;z-index:3;vertical-align:middle;text-align:center;height:205px;}header h1{font:bold 120px/80px Losra,Montserrat,"Monofett","Open Sans";letter-spacing:-2px;color:white;text-transform:uppercase;text-shadow:0px 0 7px rgba(0, 0, 0, 0.5);}header h1:nth-child(2){cosor:#FF7500;}
+header h2{font:18px Montserrat,"Open Sans",Arial;margin-top:15px;color:white;text-transform:none;}
+header h2 a{color:white;font-weight:bold;text-decoration:none !important;}
+.people{position:relative;width:1000px;left:50%;margin-left:-500px;margin-bottom:70px;cursor:default;text-align:center;font-family:Montserrat,"Open Sans",Arial;padding:10px 0 0 16px;}.people h3{font:bold 20px Montserrat,"Open Sans",Arial;}
 .people .person{width:60px;height:60px;display:table;cursor:pointer;display:inline-block;margin-bottom:10px;margin-right:10px;border:5px solid white;border-radius:35px;-webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.3);-moz-box-shadow:0 0 10px rgba(0, 0, 0, 0.3);box-shadow:0 0 10px rgba(0, 0, 0, 0.3);-webkit-transition:all linear 0.2s;-moz-transition:all linear 0.2s;-o-transition:all linear 0.2s;-ms-transition:all linear 0.2s;transition:all linear 0.2s;}.people .person .square{width:60px;height:60px;background:url(../img/avatars.png) no-repeat;border-radius:35px;display:inline-block;position:relative;z-index:11;}.people .person .square:hover{box-shadow:inset 0 0 4px black;}
 .people .person .tooltip .tooltip-arrow{border-top-color:rgba(255, 255, 255, 0.8);}
 .people .person .tooltip .tooltip-inner{text-align:left;background:rgba(255, 255, 255, 0.5);color:black;border:none;font:15px Montserrat;border-radius:0;}
@@ -23,12 +24,16 @@ body[data-hoverschool=CEFET] .people .person[data-school=CEFET],.people .person[
 body[data-hoverschool=CM] .people .person[data-school=CM],.people .person[data-school=CM]:hover{border:5px solid #fb202d;}
 body[data-hoverschool=CAP] .people .person[data-school=CAP],.people .person[data-school=CAP]:hover{border:5px solid #00c90d;}
 body[data-hoverschool=CP2] .people .person[data-school=CP2],.people .person[data-school=CP2]:hover{border:5px solid #ff7100;}
+.bg{position:fixed;left:0;right:0;top:0;bottom:0;z-index:-1;background:#ffffff url('../img/dark_fish_skin.png') repeat top left;}
+.light-bg{box-shadow:0 0 25px rgba(0, 0, 0, 0.5);z-index:2;position:relative;background:#ffffff url('../img/tiny_grid.png') repeat top left;}
 body.dark,body.dark1{color:white;}body.dark .bg,body.dark1 .bg{background:#ffffff url('../img/inflicted_@2X.png') repeat top left;}
 body.dark .person h3,body.dark1 .person h3{color:white;text-shadow:0px 0 2px black;}
 body.dark .person .tooltip-inner,body.dark1 .person .tooltip-inner{color:white !important;background:rgba(0, 0, 0, 0.3) !important;}
 body.dark header h2,body.dark1 header h2{text-shadow:0px 0 2px black;}
 body.dark1 .bg{background:#ffffff url('../img/inflicted.png') repeat top left;}
-.bg{position:absolute;left:0;right:0;top:0;bottom:0;z-index:-1;opacity:.9;background:#ffffff url('../img/noisy_grid_@2X.png') repeat top left;}
+.container{padding-bottom:30px;}
+.darsk{position:absolute;bottom:0;top:0;opacisty:.7;z-index:;left:0;right:0;background:#ffffff url('../img/dark_fish_skin.png') repeat top left;}
+.bsg{position:fixed;left:0;right:0;top:0;bottom:0;z-index:-1;opacity:.6;background:#ffffff url('../img/noisy_grid.png') repeat top left;}
 body.bg0 .bg{background:#ffffff url('../img/noisy_grid_@2X.png') repeat top left;}
 body.bg1 .bg{opacity:.4;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAL0lEQVQYV2OMq7zlw4ADfONih8swghQualfbgksxTHwgFYY0P/RZUytP2I1DQCEA7+AnDx0g6NMAAAAASUVORK5CYII=) !important;}
 body.bg2 .bg{background:#ffffff url('../img/bg.jpg') repeat top left;}
