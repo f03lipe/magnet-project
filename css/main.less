@@ -83,7 +83,7 @@ header {
 	
 	h1 {
 		font: bolder 120px/80px Lora, Montserrat, "Monofett", "Open Sans";
-		&:nth-child(2) { color: #C00; }
+		&:nth-child(2) { color: #F5001D; }
 		letter-spacing: -2px;
 		color: #444;
 		text-transform: uppercase;
@@ -94,7 +94,7 @@ header {
 		font: bold 18px Montserrat, "Open Sans", Arial;
 		margin-top: 15px;
 		text-transform: none;
-		text-shadow: 0px 0 3px rgba(120,120,120,.5);
+		text-shadow: 0px 0 1px white;
 	}
 }
 
@@ -128,10 +128,11 @@ header {
 		display: inline-block;
 		margin-bottom: 10px;
 		margin-right: 10px;
-		.box-shadow(0,0, 10px, .3);
 		
 		border: 5px solid white;
 		border-radius: 35px;
+		.box-shadow(0,0, 10px, .3);
+		.transition(all, linear, .2s);
 
 		.square
 		{
@@ -140,9 +141,9 @@ header {
 
 			background: url(../img/avatars.png) no-repeat;
 			border-radius: 35px;
-			display:inline-block;
-			position:relative;
-			z-index:11;
+			display: inline-block;
+			position: relative;
+			z-index: 11;
 			
 			&:hover {
 				// box-shadow: 0 0 15px rgba(0,0,0,.5),
@@ -186,13 +187,13 @@ header {
 		&[data-school=CEFET]:hover { border: 5px solid #08C; }
 
 		body[data-hoverschool=CM] &[data-school=CM],
-		&[data-school=CM]:hover { border: 5px solid #FB000D; }
+		&[data-school=CM]:hover { border: 5px solid #FB202D; }
 		
 		body[data-hoverschool=CAP] &[data-school=CAP],
 		&[data-school=CAP]:hover { border: 5px solid #00C90D; }
 
 		body[data-hoverschool=CP2] &[data-school=CP2],
-		&[data-school=CP2]:hover { border: 5px solid #FFA900; }
+		&[data-school=CP2]:hover { border: 5px solid #FF7100; }
 	}
 }
 
