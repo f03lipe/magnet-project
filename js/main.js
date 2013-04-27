@@ -12,6 +12,7 @@ MagneticCamp = new (function () {
 	var LAPSE = 60
 		, COLORS = ['#FF7100', '#FFA900', '#FD0006', '#009B95']
 		, COLORS = ['#009B95', '#FF7100', '#00C90D', '#FB202D', '#AAA']
+		, COLORS = ['#BBB']
 		, SEED = Math.random() // still useless :(
 		, NUMLINES = 10
 		;
@@ -24,7 +25,7 @@ MagneticCamp = new (function () {
 		return {
 			start: function () {
 				this.color = COLORS[_.random(1, COLORS.length)-1];
-				this.thickness = 3+random()*3;
+				this.thickness = 3+random()*1;
 				this.vel = (Math.random()>.5?-1:1)*max(1, random()*4)*2;
 				this.dx = random()*500-250; // = [-300, 300[
 				this.dy = 150;
