@@ -32,7 +32,7 @@ body.dark1 .bg{background:#ffffff url('../img/inflicted.png') repeat top left;}
 body.bg0 .bg{background:#ffffff url('../img/noisy_grid_@2X.png') repeat top left;}
 body.bg1 .bg{opacity:.4;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAL0lEQVQYV2OMq7zlw4ADfONih8swghQualfbgksxTHwgFYY0P/RZUytP2I1DQCEA7+AnDx0g6NMAAAAASUVORK5CYII=) !important;}
 body.bg2 .bg{background:#ffffff url('../img/bg.jpg') repeat top left;}
-body.bg3 .bg{background:#ffffff url('../img/noisy_grid_@2X.png') repeat top left;}
+body.bg3 .bg{background:#ffffff url('../img/noisy_grid.png') repeat top left;}
 body.bg4 .bg{background:#ffffff url('../img/noisy_grid_@2X.png') repeat top left;}
 canvas{position:absolute;top:0;bottom:0;left:0;right:0;z-index:1;}
 img.typekit-badge{display:none !important;}
