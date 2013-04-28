@@ -15,58 +15,47 @@
 
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600,700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Quantico:400,700' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Exo:300,400,700,800,900|Monofett|Passion+One|Sansita+One|Oxygen:400,700|Montserrat:400,700,800,900|Source+Sans+Pro:400,700|Graduate:400,700,800,900|Lora:600,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Exo:300,400,700,800,900|Monofett|Passion+One|Sansita+One|Oxygen:400,700|Montserrat:400,700,800,900|Source+Sans+Pro:400,700|Graduate:400,700,800,900|Lora:600,700|Bree Serif:400&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
 		<script type="text/javascript" src="//use.typekit.net/mtc6ekw.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 		<link rel="stylesheet" href="css/main.css">
+		<style type="text/css">
+			img.typekit-badge { display: none !important; }
+		</style>
 
 		<script src="js/vendor/modernizr-2.6.2.min.js"></script>
 	</head>
-	<body class="light">
+	<body>
 		<!--[if lt IE 7]>
 			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 		<![endif]-->
 		
-		<div class="bg"></div>
-
-		<div style="position: relative; box-shadow: inset 0 -10px 20px -10px rgba(0,0,0,.3);">
-			<div class="dark"></div>
-		<canvas class="fullscreen" id="mag"></canvas>
-			<div class="container">
-				<header>
-					<h1>Magnet</h1>
-					<h1>Project</h1>
-					<h2>Helping students from <a href="#">Rio's top magnet schools</a> to get there!</h2>
-				</header>
-			</div>
+		<canvas class="fullscreen" id="mag" data-stellar-ratio=".2"></canvas>
+		<div class="container">
+			<header>
+				<h1>Magnet</h1>
+				<h1>Project</h1>
+				<h2>Helping students from <a href="#">Rio's top magnet schools</a> to get there!</h2>
+			</header>
 		</div>
 
-<div class="light-bg">
-		
-<!-- 	<nav>
-			<li><a href="">About</a></li>
-			<li><a href="">Students</a></li>
-			<li><a href="">Partnerships</a></li>
-			<li><a href="">Donate</a></li>
-			<li><a href="">Prses</a></li>
-		</nav>  -->
+	<div class="light-bg">
 
-		<div class="container">
-			<div class="people">
-				<h3>The 2013's Team</h3>
+			<div class="container" id="people">
+				<h3>Our 2013's Team</h3>
 				<div class="person" data-school="CEFET">
-					<div class="square" title="<strong>Jamal Malic</strong><br>17 anos<br>CEFET RJ"></div>
+					<div class="square" title="<strong>Alessandra Bastos</strong><br>17 anos<br>CEFET RJ"></div>
 				</div>
 				<div class="person" data-school="CM">
 					<div class="square" title="<strong>Jamal Malic</strong><br>19 anos<br>CM Tijuca"></div>	
 				</div>
 				<div class="person" data-school="CEFET">
-					<div class="square" title="<strong>Jamal Malic</strong><br>16 anos<br>CEFET RJ"></div>
+					<div class="square" title="<strong>Felipe Aragão</strong><br>16 anos<br>CEFET RJ"></div>
 				</div>
 				<div class="person" data-school="CM">
-					<div class="square" title="<strong>Jamal Malic</strong><br>17 anos<br>CM Tijuca"></div>
+					<div class="square" title="<strong>Ivo Malic</strong><br>17 anos<br>CM Tijuca"></div>
 				</div>
 				<div class="person" data-school="CM">
 					<div class="square" title="<strong>Jamal Malic</strong><br>18 anos<br>CM Tijuca"></div>	
@@ -90,16 +79,151 @@
 					<div class="square" title="<strong>Jamal Malic</strong><br>17 anos<br>CAP UERJ"></div>
 				</div>
 			</div>
-		</div>	
-			
+
+			<div class="container">
+				<div class="row-fluid">
+					<div class="span6 lead">
+						<br>
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+					</div>
+					<div class="span6 tk-museo-sans text-justify">
+						<h1>The Idea Behind</h1>
+						Lorem ipsum dolor sit amet, <abbr title="consectetuer adipiscing elit">magnet schools</abbr>, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Curabitur vel odio justo. Etiam eu sapien eu lacus ultricies vehicula. Morbi luctus, purus nec aliquam tincidunt, tortor libero mattis est, eu tempor nisi lacus ac justo. Curabitur vel odio justo. 
+					</div>
+				</div>
+			</div>
+
+			<div class="container" id="donate">
+				<div class="row">
+					<div class="span3 offset2">
+						<button>Donate!</button>
+					</div>
+					<div class="span6 offset1">
+						meta: <h1>R$ 0,0/40 mil</h1>
+						<div class="progress progress-striped active">
+						<div class="bar" style="width: 60%;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
 			<div class="container">
 				<div class="row">
 					<div class="span6">
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+						<h2>How it all started</h2>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor bibendum posuere. Mauris in tortor velit, non blandit arcu. Ut fermentum viverra tellus, aliquet imperdiet ligula mollis et. Duis tincidunt odio eu mi sollicitudin ut mollis risus laoreet. Nunc dignissim pretium erat a facilisis. Fusce suscipit aliquam sem, at feugiat eros rutrum id. Curabitur vel odio justo. Etiam eu sapien eu lacus ultricies vehicula. Morbi luctus, purus nec aliquam tincidunt, tortor libero mattis est, eu tempor nisi lacus ac justo. Maecenas sodales adipiscing dolor et feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec metus enim, porttitor ut porttitor non, feugiat id nibh. Pellentesque pulvinar ligula in felis euismod nec cursus nisl convallis. Fusce volutpat velit ut ante lacinia condimentum.
 					</div>
 					<div class="span6">
-						<h3>The Idea Behind</h3>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+						meta: <h1>R$ 0,0/40 mil</h1>
+						<div class="progress progress-striped active">
+						<div class="bar" style="width: 60%;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<h1>Our students!</h1>
+
+				<div class="students">
+					<div class="student" data-school="CEFET">
+						<img src="http://placehold.it/100x100" class="img-circle">
+						<div class="">
+							<h3>Alessandra Bastos</h3>
+							<h4>17 anos</h4>
+							<h4>CEFET RJ</h4>
+						</div>
+						<div class="square" title="<strong>Alessandra Bastos</strong><br>17 anos<br>CEFET RJ"></div>
+					</div>
+					<div class="student" data-school="CM">
+						<img src="http://placehold.it/100x100" class="img-circle">
+						<div class="">
+							<h3>Jamal Malic</h3>
+							<h4>19 anos</h4>
+							<h4>CM Tijuca</h4>
+						</div>
+						<div class="square" title="<strong>Jamal Malic</strong><br>19 anos<br>CM Tijuca"></div>	
+					</div>
+					<div class="student" data-school="CEFET">
+						<img src="http://placehold.it/100x100" class="img-circle">
+						<div class="">
+							<h3>Felipe Aragão</h3>
+							<h4>16 anos</h4>
+							<h4>CEFET RJ</h4>
+						</div>
+						<div class="square" title="<strong>Felipe Aragão</strong><br>16 anos<br>CEFET RJ"></div>
+					</div>
+					<div class="student" data-school="CM">
+						<img src="http://placehold.it/100x100" class="img-circle">
+						<div class="">
+							<h3>Ivo Malic</h3>
+							<h4>17 anos</h4>
+							<h4>CM Tijuca</h4>
+						</div>
+						<div class="square" title="<strong>Ivo Malic</strong><br>17 anos<br>CM Tijuca"></div>
+					</div>
+					<div class="student" data-school="CM">
+						<img src="http://placehold.it/100x100" class="img-circle">
+						<div class="">
+							<h3>Jamal Malic</h3>
+							<h4>18 anos</h4>
+							<h4>CM Tijuca</h4>
+						</div>
+						<div class="square" title="<strong>Jamal Malic</strong><br>18 anos<br>CM Tijuca"></div>	
+					</div>
+					<div class="student" data-school="CP2">
+						<img src="http://placehold.it/100x100" class="img-circle">
+						<div class="">
+							<h3>Jamal Malic</h3>
+							<h4>17 anos</h4>
+							<h4>CP2 Tijuca</h4>
+						</div>
+						<div class="square" title="<strong>Jamal Malic</strong><br>17 anos<br>CP2 Tijuca"></div>	
+					</div>
+					<div class="student" data-school="CEFET">
+						<img src="http://placehold.it/100x100" class="img-circle">
+						<div class="">
+							<h3>Jamal Malic</h3>
+							<h4>16 anos</h4>
+							<h4>CEFET RJ</h4>
+						</div>
+						<div class="square" title="<strong>Jamal Malic</strong><br>16 anos<br>CEFET RJ"></div>	
+					</div>
+					<div class="student" data-school="CM">
+						<img src="http://placehold.it/100x100" class="img-circle">
+						<div class="">
+							<h3>Jamal Malic</h3>
+							<h4>17 anos</h4>
+							<h4>CM Tijuca</h4>
+						</div>
+						<div class="square" title="<strong>Jamal Malic</strong><br>17 anos<br>CM Tijuca"></div>	
+					</div>
+					<div class="student" data-school="CAP">
+						<img src="http://placehold.it/100x100" class="img-circle">
+						<div class="">
+							<h3>Jamal Malic</h3>
+							<h4>17 anos</h4>
+							<h4>CAP UFRJ</h4>
+						</div>
+						<div class="square" title="<strong>Jamal Malic</strong><br>17 anos<br>CAP UFRJ"></div>
+					</div>
+					<div class="student" data-school="CEFET">
+						<img src="http://placehold.it/100x100" class="img-circle">
+						<div class="">
+							<h3>Jamal Malic</h3>
+							<h4>18 anos</h4>
+							<h4>CEFET RJ</h4>
+						</div>
+						<div class="square" title="<strong>Jamal Malic</strong><br>18 anos<br>CEFET RJ"></div>	
+					</div>
+					<div class="student" data-school="CAP">
+						<img src="http://placehold.it/100x100" class="img-circle">
+						<div class="">
+							<h3>Jamal Malic</h3>
+							<h4>17 anos</h4>
+							<h4>CAP UERJ</h4>
+						</div>
+						<div class="square" title="<strong>Jamal Malic</strong><br>17 anos<br>CAP UERJ"></div>
 					</div>
 				</div>
 			</div>
@@ -110,46 +234,38 @@
 						<h2>Contact us!</h2>
 						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
 					</div>
-						<div class="span6">
-						<form>
+					<div class="span1"></div>
+					<div class="span5">
+						<form id="contact">
 							<fieldset>
-								<legend>Wha</legend>
-								<label>Label name</label>
-								<input type="text" placeholder="Type something…">
-								<span class="help-block">Example block-level help text here.</span>
-								<label class="checkbox">
-								<input type="checkbox"> Check me out
-								</label>
-								<button type="submit" class="btn">Submit</button>
-
-								<div class="control-group">
-									<label class="control-label" for="inputSuccess">Input with success</label>
-									<div class="controls">
-										<textarea type="text" id="inputSuccess"></textarea>
-										<span class="help-inline">Woohoo!</span>
-									</div>
-								</div>
-								
-								<div class="control-group info">
+								<legend>What do you have in mind?</legend>
+								<input type="text" placeholder="Your Name" required><br>
+								<input type="email" placeholder="Your Email" required>		
+								<textarea rows="5" style="width: 100%" type="text" placeholder="Your message goes here! :)" required></textarea>
+								<button type="submit" onclick="return false;" class="btn-submit">Submit</button>
+								<h6>Your email adress is safe with us!</h6>
 							</fieldset>
 						</form>
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
 					</div>
 				</div>
 			</div>
-</div>
+	</div>
+
 
 	<div class="container" style="margin-top: 50px; color: white">
 		<footer>
 			<div class="row">
 				<div class="span4">
-					<h5>Filiado à ONG <a href="#">TurmaCidadã Brasil</a></h5>
-				</div>
-				<div class="span4">
-					<h5>Desenvolvido por <a href="#">Felipe Aragão Pires</a></h5>
-				</div>
-				<div class="span4" style="text-align: right">
 					<h5>MagnetProject.us &reg; 2013<br>All Rights Reserved</a></h5>
+					<h6>Desenvolvimedo por <a href="http://twitter.com/f03lipe">Felipe Aragão Pires</a></h6>
+				</div>
+				<div class="span3 offset5" style="text-align: right">
+					<address>
+					<strong>Apoio Institucional:<br><a href="#">Turma Cidadã  Brasil</a></strong><br>
+					795 Folsom Ave, Suite 600<br>
+					San Francisco, CA 94107<br>
+					<abbr title="Phone">P:</abbr> (123) 456-7890
+					</address>
 				</div>
 			</div>
 		</footer>
@@ -157,6 +273,8 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
 	
 		<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
 		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+		<script src="js/jquery.stellar.min.js"></script>
+
 		<!-- 	
 		<div id="panel" style="display: none">
 			<h2><a href="../../../">Experiments</a> / Magnetic  / 03</h2>
@@ -169,6 +287,7 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
 					document.body.classList.add(location.hash.slice(1, 82398))
 				}
 			})
+			$(window).stellar();
 		</script>
 
 		<script src="js/underscore-min.js"></script>
