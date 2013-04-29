@@ -65,11 +65,6 @@ MagneticCamp = new (function () {
 			lines[i].tic(1/LAPSE);	// tic
 			lines[i].draw(context);	// toc
 		}
-		// Sort so that lines in the front are redered last.
-		lines = _.sortBy(lines,
-					function (e) {
-						return -e.dx+e.thickness*(e.vel>0)?1:-1;
-					});
 		setTimeout(Draw, LAPSE);
 	}
 
@@ -90,7 +85,6 @@ MagneticCamp = new (function () {
 		Setup();
 		Draw();
 	}
-
 });
 
 $().ready(function () {	MagneticCamp.init() });
@@ -111,3 +105,13 @@ $().ready(function() {
 		mouseleave: function (evt) { delete document.body.dataset.hoverschool; },
 	})
 });
+
+$(document).scroll(function() {
+	var top = $(document).scrollTop();
+
+	if (Math.abs(top - $('#donate .progress').offset().top) < 500) {
+		console.log('oi')
+		$("#donate .progress").addClass('visible');
+	}
+	
+})
