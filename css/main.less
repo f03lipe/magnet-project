@@ -68,6 +68,7 @@
 @color3: #FF7100;
 
 body {
+	color: white;
 	font-family: Montserrat, "Open Sans", sans-serif;
 	background: #333 fixed url('../img/dark_fish_skin.png') repeat top left ;
 	font-family: "Open Sans";
@@ -225,30 +226,36 @@ canvas {
 	}
 
 	&#students {
-		height: 400px;
+		heisght: 400px;
+		position: relative;
 		overflow: hidden;
 
-		& * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-		
+			.flex-control-nav { position: static; }
+		.slides {
+			outline: 1px solid red;
+
+		}
+
+		.slides:nth-child(1) .li { display: run-in; }
 		.student {
-			width: 50%;
-			margin-right: -3px;
-			sdisplay: inline-block;
 			display: none;
+			outline: 1px solid blue;
+
+			box-sizing: border-box;
+
+			.name { font: bold 20px Montserrat; }
+			.age, .school { font: bold 16px Montserrat; }
+			
 			padding: 10px;
-
+			text-align: center;
 			p {
-
 				border-radius: 5px;
 				padding: 10px;
 				border: 1px solid #888;
 			}
-			text-align: center;
+
 		}
 
-		.student.show {
-			display: run-in;
-		}
 	}
 
 	&#donate {
@@ -331,7 +338,10 @@ a:hover, a:link, a:active {
 }
 
 .light-bg {
+
+
 	position: relative;
+	color: #444;
 	box-shadow: 0 0 25px rgba(0,0,0,.7);
 	background: #fff url('../img/tiny_grid.png') repeat top left;
 

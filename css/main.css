@@ -1,7 +1,7 @@
 .text-justify{text-align:justify;}
 .tk-museo{font-family:museo,"Open Sans",Arial;}
 .tk-museo-sans{font-family:museo-sans,"Open Sans",Arial;}
-body{font-family:Montserrat,"Open Sans",sans-serif;background:#333333 fixed url('../img/dark_fish_skin.png') repeat top left;font-family:"Open Sans";font-family:Montserrat;font-family:museo, Montserrat;font-family:museo-sans,Montserrat;}
+body{color:white;font-family:Montserrat,"Open Sans",sans-serif;background:#333333 fixed url('../img/dark_fish_skin.png') repeat top left;font-family:"Open Sans";font-family:Montserrat;font-family:museo, Montserrat;font-family:museo-sans,Montserrat;}
 header{position:relative;margin-top:200px;margin-bottom:70px;text-align:center;color:white;}header h1{font:bolder 120px/80px Losra,Montserrat,"Monofett","Open Sans";letter-spacing:-2px;text-transform:uppercase;text-shadow:0px 0 7px rgba(0, 0, 0, 0.5);}
 header h2{font:18px Montserrat;margin-top:15px;text-shadow:0px 0 1px black;}
 header h2 a{color:inherit;font-weight:bold;text-decoration:none !important;}
@@ -28,9 +28,12 @@ body[data-hoverschool=CEFET] .container#people .person[data-school=CEFET],.conta
 body[data-hoverschool=CM] .container#people .person[data-school=CM],.container#people .person[data-school=CM]:hover{border:5px solid #fb202d;}
 body[data-hoverschool=CAP] .container#people .person[data-school=CAP],.container#people .person[data-school=CAP]:hover{border:5px solid #00c90d;}
 body[data-hoverschool=CP2] .container#people .person[data-school=CP2],.container#people .person[data-school=CP2]:hover{border:5px solid #ff7100;}
-.container#students{height:400px;overflow:hidden;}.container#students *{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
-.container#students .student{width:50%;margin-right:-3px;sdisplay:inline-block;display:none;padding:10px;text-align:center;}.container#students .student p{border-radius:5px;padding:10px;border:1px solid #888;}
-.container#students .student.show{display:run-in;}
+.container#students{heisght:400px;position:relative;overflow:hidden;}.container#students .flex-control-nav{position:static;}
+.container#students .slides{outline:1px solid red;}
+.container#students .slides:nth-child(1) .li{display:run-in;}
+.container#students .student{display:none;outline:1px solid blue;box-sizing:border-box;padding:10px;text-align:center;}.container#students .student .name{font:bold 20px Montserrat;}
+.container#students .student .age,.container#students .student .school{font:bold 16px Montserrat;}
+.container#students .student p{border-radius:5px;padding:10px;border:1px solid #888;}
 .container#donate button{position:relative;padding:20px 35px;background:#009B95;border:1px solid #444;box-shadow:0 1px 4px rgba(0, 0, 0, 0.8);border-radius:4px;color:white;font:bold 44px/150% Montserrat;}
 .container#donate .progress .bar{-webkit-transition:all ease-out 1s;-moz-transition:all ease-out 1s;-o-transition:all ease-out 1s;-ms-transition:all ease-out 1s;transition:all ease-out 1s;width:0% !important;}
 .container#donate .progress.visible .bar{width:30% !important;}
@@ -42,7 +45,7 @@ form#contact h5,form#contact h6{margin-left:20px;display:inline-block;font-weigh
 form#contact input,form#contact textarea{box-shadow:none;font-family:inherit;border-radius:0;}
 form#contact .btn-submit:active{top:2px;box-shadow:0 0px 3px rgba(0, 0, 0, 0.6);}
 a:hover,a:link,a:active{color:#4AE;text-decoration:none;}
-.light-bg{position:relative;box-shadow:0 0 25px rgba(0, 0, 0, 0.7);background:#ffffff url('../img/tiny_grid.png') repeat top left;}.light-bg a:hover,.light-bg a:visited,.light-bg a:link,.light-bg a:active{color:#08C;}
+.light-bg{position:relative;color:#444;box-shadow:0 0 25px rgba(0, 0, 0, 0.7);background:#ffffff url('../img/tiny_grid.png') repeat top left;}.light-bg a:hover,.light-bg a:visited,.light-bg a:link,.light-bg a:active{color:#08C;}
 #example1{float:left;margin:0 27% 0 27%;}
 .sharrre{margin:55px 0 0 50px;float:left;}
 .sharrre .box a:hover{text-decoration:none;}
