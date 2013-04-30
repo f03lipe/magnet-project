@@ -110,7 +110,6 @@ $(document).scroll(function() {
 	var top = $(document).scrollTop();
 
 	if (Math.abs(top - $('#donate .progress').offset().top) < 500) {
-		console.log('oi')
 		$("#donate .progress").addClass('visible');
 	}
 	

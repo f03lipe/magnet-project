@@ -137,7 +137,7 @@ canvas {
 
 	padding-bottom: 50px;
 
-	&#people
+	&#people, #people
 	{
 		@dim: 60px;	
 
@@ -175,9 +175,8 @@ canvas {
 				border-radius: 35px;
 				display: inline-block;
 				position: relative;
-				z-index: 11;
 				
-				&:hover { box-shadow: inset 0 0 4px black; }
+				// &:hover { box-shadow: inset 0 0 4px black; }
 			}
 
 			.tooltip {
@@ -208,50 +207,94 @@ canvas {
 			&:nth-child(11)	.square { .sprite(3, 4); }
 			
 			&[data-school]:hover .square {
-				box-shadow: inset 0 0 10px rgba(0,0,0,.5);
+				// box-shadow: inset 0 0 10px rgba(0,0,0,.5);
 			}
 
+			border-width: 5px;
+			border-style: solid;
+
 			body[data-hoverschool=CEFET] &[data-school=CEFET],
-			&[data-school=CEFET]:hover { border: 5px solid @color0; }
+			&[data-school=CEFET]:hover { border-color: @color0; }
 
 			body[data-hoverschool=CM] &[data-school=CM],
-			&[data-school=CM]:hover { border: 5px solid @color1; }
+			&[data-school=CM]:hover { border-color: @color1; }
 			
 			body[data-hoverschool=CAP] &[data-school=CAP],
-			&[data-school=CAP]:hover { border: 5px solid @color2; }
+			&[data-school=CAP]:hover { border-color: @color2; }
 
 			body[data-hoverschool=CP2] &[data-school=CP2],
-			&[data-school=CP2]:hover { border: 5px solid @color3; }
+			&[data-school=CP2]:hover { border-color: @color3; }
 		}
 	}
 
+	.central {
+		text-align: center;
+		font-family: museo;
+	}
+
+
 	&#students {
-		heisght: 400px;
-		position: relative;
-		overflow: hidden;
 
-			.flex-control-nav { position: static; }
-		.slides {
-			outline: 1px solid red;
+		margin-bottom: 30px;
 
+		.flex-control-nav { position: static; display: none; }
+
+
+		.row {
+			border-top: 1px dotted #444;
+			border-bottom: 1px dotted #444;
+			padding-top: 20px;
+		}
+		
+		body.test & {
+			.student {
+				outline: 1px solid blue;
+			}
+
+			[class*=span] {
+				outline: 1px solid red;
+			}
 		}
 
-		.slides:nth-child(1) .li { display: run-in; }
+		#people {
+
+			text-align: right !important;
+			
+			.person {
+				display: inline-block;
+				border-width: 3px;
+				border-radius: 10px !important;
+				.square { border-radius: 7px !important; }
+			}
+
+			.person.active {
+				border-color: grey;
+			}
+
+		}
+		
 		.student {
-			display: none;
-			outline: 1px solid blue;
 
-			box-sizing: border-box;
+			img {
+				border-radius: 10px;
+				display: inline-block;
+			}
 
-			.name { font: bold 20px Montserrat; }
-			.age, .school { font: bold 16px Montserrat; }
+			hgroup {
+				* { padding: ; }
+				.name { font: bold 20px Montserrat; }
+				.age, .school { font: bold 16px Montserrat; }
+			}
+			
 			
 			padding: 10px;
 			text-align: center;
-			p {
+
+			.text {
+				padding: 10px;
 				border-radius: 5px;
 				padding: 10px;
-				border: 1px solid #888;
+				border: 1px solid #DDD;
 			}
 
 		}
@@ -260,6 +303,7 @@ canvas {
 
 	&#donate {
 
+			text-align: center;
 		button {
 			position: relative;
 			padding: 20px 35px;

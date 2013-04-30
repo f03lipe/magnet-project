@@ -8,33 +8,38 @@ header h2 a{color:inherit;font-weight:bold;text-decoration:none !important;}
 .social-btn{position:fixed;top:15px;right:15px;}.social-btn img{position:relative;cursor:pointer !important;border-radius:20px;background:white;margin-left:3px;box-shadow:0 0 5px #000000;outline:none !important;}
 .social-btn img:active{top:2px;}
 canvas{position:fixed;width:100%;height:100%;}
-.container{padding-bottom:50px;}.container#people{cursor:default;text-align:center;font-family:Montserrat,"Open Sans",Arial;padding-top:10px;}.container#people h3{font:bold 20px Montserrat,"Open Sans",Arial;}
-.container#people .person{width:60px;height:60px;display:table;cursor:pointer;display:inline-block;margin-bottom:10px;margin-right:10px;border:5px solid white;border-radius:35px;-webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.3);-moz-box-shadow:0 0 10px rgba(0, 0, 0, 0.3);box-shadow:0 0 10px rgba(0, 0, 0, 0.3);-webkit-transition:all linear 0.2s;-moz-transition:all linear 0.2s;-o-transition:all linear 0.2s;-ms-transition:all linear 0.2s;transition:all linear 0.2s;}.container#people .person .square{width:60px;height:60px;background:url(../img/avatars.png) no-repeat;border-radius:35px;display:inline-block;position:relative;z-index:11;}.container#people .person .square:hover{box-shadow:inset 0 0 4px black;}
-.container#people .person .tooltip .tooltip-arrow{border-top-color:rgba(255, 255, 255, 0.8);}
-.container#people .person .tooltip .tooltip-inner{text-align:left;background:rgba(255, 255, 255, 0.5);color:black;border:none;font:15px Montserrat;border-radius:0;}
-.container#people .person:nth-child(1) .square{background-position:-408px -408px;}
-.container#people .person:nth-child(2) .square{background-position:-408px -340px;}
-.container#people .person:nth-child(3) .square{background-position:-408px -272px;}
-.container#people .person:nth-child(4) .square{background-position:-204px -204px;}
-.container#people .person:nth-child(5) .square{background-position:-408px -68px;}
-.container#people .person:nth-child(6) .square{background-position:-340px -68px;}
-.container#people .person:nth-child(7) .square{background-position:-476px -68px;}
-.container#people .person:nth-child(8) .square{background-position:-68px -136px;}
-.container#people .person:nth-child(9) .square{background-position:-136px -136px;}
-.container#people .person:nth-child(10) .square{background-position:-204px -136px;}
-.container#people .person:nth-child(11) .square{background-position:-204px -272px;}
-.container#people .person[data-school]:hover .square{box-shadow:inset 0 0 10px rgba(0, 0, 0, 0.5);}
-body[data-hoverschool=CEFET] .container#people .person[data-school=CEFET],.container#people .person[data-school=CEFET]:hover{border:5px solid #009b95;}
-body[data-hoverschool=CM] .container#people .person[data-school=CM],.container#people .person[data-school=CM]:hover{border:5px solid #fb202d;}
-body[data-hoverschool=CAP] .container#people .person[data-school=CAP],.container#people .person[data-school=CAP]:hover{border:5px solid #00c90d;}
-body[data-hoverschool=CP2] .container#people .person[data-school=CP2],.container#people .person[data-school=CP2]:hover{border:5px solid #ff7100;}
-.container#students{heisght:400px;position:relative;overflow:hidden;}.container#students .flex-control-nav{position:static;}
-.container#students .slides{outline:1px solid red;}
-.container#students .slides:nth-child(1) .li{display:run-in;}
-.container#students .student{display:none;outline:1px solid blue;box-sizing:border-box;padding:10px;text-align:center;}.container#students .student .name{font:bold 20px Montserrat;}
-.container#students .student .age,.container#students .student .school{font:bold 16px Montserrat;}
-.container#students .student p{border-radius:5px;padding:10px;border:1px solid #888;}
-.container#donate button{position:relative;padding:20px 35px;background:#009B95;border:1px solid #444;box-shadow:0 1px 4px rgba(0, 0, 0, 0.8);border-radius:4px;color:white;font:bold 44px/150% Montserrat;}
+.container{padding-bottom:50px;}.container#people,.container #people{cursor:default;text-align:center;font-family:Montserrat,"Open Sans",Arial;padding-top:10px;}.container#people h3,.container #people h3{font:bold 20px Montserrat,"Open Sans",Arial;}
+.container#people .person,.container #people .person{width:60px;height:60px;display:table;cursor:pointer;display:inline-block;margin-bottom:10px;margin-right:10px;border:5px solid white;border-radius:35px;-webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.3);-moz-box-shadow:0 0 10px rgba(0, 0, 0, 0.3);box-shadow:0 0 10px rgba(0, 0, 0, 0.3);-webkit-transition:all linear 0.2s;-moz-transition:all linear 0.2s;-o-transition:all linear 0.2s;-ms-transition:all linear 0.2s;transition:all linear 0.2s;border-width:5px;border-style:solid;}.container#people .person .square,.container #people .person .square{width:60px;height:60px;background:url(../img/avatars.png) no-repeat;border-radius:35px;display:inline-block;position:relative;}
+.container#people .person .tooltip .tooltip-arrow,.container #people .person .tooltip .tooltip-arrow{border-top-color:rgba(255, 255, 255, 0.8);}
+.container#people .person .tooltip .tooltip-inner,.container #people .person .tooltip .tooltip-inner{text-align:left;background:rgba(255, 255, 255, 0.5);color:black;border:none;font:15px Montserrat;border-radius:0;}
+.container#people .person:nth-child(1) .square,.container #people .person:nth-child(1) .square{background-position:-408px -408px;}
+.container#people .person:nth-child(2) .square,.container #people .person:nth-child(2) .square{background-position:-408px -340px;}
+.container#people .person:nth-child(3) .square,.container #people .person:nth-child(3) .square{background-position:-408px -272px;}
+.container#people .person:nth-child(4) .square,.container #people .person:nth-child(4) .square{background-position:-204px -204px;}
+.container#people .person:nth-child(5) .square,.container #people .person:nth-child(5) .square{background-position:-408px -68px;}
+.container#people .person:nth-child(6) .square,.container #people .person:nth-child(6) .square{background-position:-340px -68px;}
+.container#people .person:nth-child(7) .square,.container #people .person:nth-child(7) .square{background-position:-476px -68px;}
+.container#people .person:nth-child(8) .square,.container #people .person:nth-child(8) .square{background-position:-68px -136px;}
+.container#people .person:nth-child(9) .square,.container #people .person:nth-child(9) .square{background-position:-136px -136px;}
+.container#people .person:nth-child(10) .square,.container #people .person:nth-child(10) .square{background-position:-204px -136px;}
+.container#people .person:nth-child(11) .square,.container #people .person:nth-child(11) .square{background-position:-204px -272px;}
+body[data-hoverschool=CEFET] .container#people .person[data-school=CEFET],body[data-hoverschool=CEFET] .container #people .person[data-school=CEFET],.container#people .person[data-school=CEFET]:hover,.container #people .person[data-school=CEFET]:hover{border-color:#009b95;}
+body[data-hoverschool=CM] .container#people .person[data-school=CM],body[data-hoverschool=CM] .container #people .person[data-school=CM],.container#people .person[data-school=CM]:hover,.container #people .person[data-school=CM]:hover{border-color:#fb202d;}
+body[data-hoverschool=CAP] .container#people .person[data-school=CAP],body[data-hoverschool=CAP] .container #people .person[data-school=CAP],.container#people .person[data-school=CAP]:hover,.container #people .person[data-school=CAP]:hover{border-color:#00c90d;}
+body[data-hoverschool=CP2] .container#people .person[data-school=CP2],body[data-hoverschool=CP2] .container #people .person[data-school=CP2],.container#people .person[data-school=CP2]:hover,.container #people .person[data-school=CP2]:hover{border-color:#ff7100;}
+.container .central{text-align:center;font-family:museo;}
+.container#students{margin-bottom:30px;}.container#students .flex-control-nav{position:static;display:none;}
+.container#students .row{border-top:1px dotted #444;border-bottom:1px dotted #444;padding-top:20px;}
+body.test .container#students .student{outline:1px solid blue;}
+body.test .container#students [class*=span]{outline:1px solid red;}
+.container#students #people{text-align:right !important;}.container#students #people .person{display:inline-block;border-width:3px;border-radius:10px !important;}.container#students #people .person .square{border-radius:7px !important;}
+.container#students #people .person.active{border-color:grey;}
+.container#students .student{padding:10px;text-align:center;}.container#students .student img{border-radius:10px;display:inline-block;}
+.container#students .student hgroup *{padding:;}
+.container#students .student hgroup .name{font:bold 20px Montserrat;}
+.container#students .student hgroup .age,.container#students .student hgroup .school{font:bold 16px Montserrat;}
+.container#students .student .text{border-radius:5px;padding:10px;border:1px solid #DDD;}
+.container#donate{text-align:center;}.container#donate button{position:relative;padding:20px 35px;background:#009B95;border:1px solid #444;box-shadow:0 1px 4px rgba(0, 0, 0, 0.8);border-radius:4px;color:white;font:bold 44px/150% Montserrat;}
 .container#donate .progress .bar{-webkit-transition:all ease-out 1s;-moz-transition:all ease-out 1s;-o-transition:all ease-out 1s;-ms-transition:all ease-out 1s;transition:all ease-out 1s;width:0% !important;}
 .container#donate .progress.visible .bar{width:30% !important;}
 .container#donate .progress.visible .bar{width:30% !important;-webkit-transition:all ease-out 3s;-moz-transition:all ease-out 3s;-o-transition:all ease-out 3s;-ms-transition:all ease-out 3s;transition:all ease-out 3s;}
