@@ -64,8 +64,9 @@ body.test .container#students [class*=span]{outline:1px solid red;}
 .container#contact form .btn-submit:active{top:2px;box-shadow:0 0px 3px rgba(0, 0, 0, 0.6);}
 footer{color:white;}footer .social-btn{position:static !important;top:15px;right:15px;}footer .social-btn img{position:relative;cursor:pointer !important;border-radius:20px;background:white;margin-left:3px;box-shadow:0 0 5px #000000;outline:none !important;}
 footer .social-btn img:active{top:2px;}
-footer .social-btn .share{display:inline-block;margin-left:10px;}footer .social-btn .share .sharrre{vertical-align:middle;display:inline-block;}
-footer .social-btn .share .sharrre .box:active{position:relative;top:2px;box-shadow:0 0 3px #333333;}
-footer .social-btn .share .sharrre .share{display:inline-block;padding:5px 5px;text-align:center;font-weight:bold;}
-footer .social-btn .share .sharrre .share{line-height:14px;color:#ffffff;font-size:13px;text-shadow:0px 1px 0px rgba(0, 0, 0, 0.35);}
-footer .social-btn .share .sharrre .share span{background:url("../img/share-btns.png") no-repeat scroll 0 0 transparent;width:18px;height:10px;display:inline-block;}
+footer .social-btn .social-share{display:inline-block;margin-left:10px;}footer .social-btn .social-share .sharrre{vertical-align:middle;display:inline-block;}
+footer .social-btn .social-share .sharrre .box:active{position:relative;top:2px;box-shadow:0 0 3px #333333;}
+footer .social-btn .social-share .sharrre .share{display:inline-block;padding:5px 5px;text-align:center;font-weight:bold;}
+footer .social-btn .social-share .sharrre .share{line-height:14px;color:#ffffff;font-size:13px;text-shadow:0px 1px 0px rgba(0, 0, 0, 0.35);}
+footer .social-btn .social-share #facebook .share span{background-position:0 -35px;height:12px;}
+footer .social-btn .social-share .sharrre .share span{background:url("../img/share-btns.png") no-repeat scroll 0 0 transparent;width:18px;height:10px;display:inline-block;}
