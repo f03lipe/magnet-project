@@ -298,7 +298,7 @@
 				<div class="row">
 					<div class="span6">
 						<h2>Contact us!</h2>
-						Get in touch if you have any doubts about the program, if you wish to discuss a partnership <strike>or say random stuff to a stranger</strike>. Don't forget to leave your email, so we can contact you back. You can also email us at <a href="mailto:pires.a.felipe@gmail.com"><strong>pires.a.felipe@gmail.com</strong></a>.
+						Get in touch if you have any doubts about the program or wish to discuss a partnership <strike>or say random stuff to a stranger</strike>. Don't forget to leave your email, so we can contact you back. You can also email us at <a href="mailto:pires.a.felipe@gmail.com"><strong>pires.a.felipe@gmail.com</strong></a>.
 						
 						Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
 					</div>
@@ -331,9 +331,14 @@
 						<img tabindex="0" src="img/twitter_32.png"></img>
 						<img tabindex="0" src="img/facebook_32.png"></img>
 						<img tabindex="0" src="img/gplus_32.png"></img>
+						<div style="width: 5px"></div>
+						<div id="twitter" data-url="http://magnetproject.us" data-text="MagnetProject, Helping students from Rio's top magnet schools to get there!"></div>
+						<div id="facebook" data-url="http://magnetproject.us" data-text="MagnetProject, Helping students from Rio's top magnet schools to get there!"></div>
 					</div>
 				</div>
-				<div class="span4 offset4" style="text-align: right">
+				<div class="span4">
+				</div>
+				<div class="span4" style="text-align: right">
 					<address style="float: left; padding-top: 15px">
 						<strong>A <a href="http://turmacidada.org">Turma Cidadã</a> Project</strong>
 						<br>
@@ -386,32 +391,34 @@
 		<script src="js/main.js"></script>
 
 
-		<script>
-$('#twitter').sharrre({ share: { twitter: true }, enableHover: false, enableTracking: true, buttons: { twitter: {via: '_JulienH'}},
-  click: function(api, options){api.simulateClick();api.openPopup('twitter');}
+<script>
+$('#twitter').sharrre({
+	share: {
+		twitter: true
+	},
+	template: '<a class="box" href="#"><div class="share"><span></span>Tweet</div></a>',
+	enableHover: false,
+	enableTracking: true,
+	buttons: { twitter: {via: '_JulienH'}},
+	click: function(api, options){
+		api.simulateClick();
+		api.openPopup('twitter');
+	}
 });
+
 $('#facebook').sharrre({
-  share: {
-    facebook: true
-  },
-  enableHover: false,
-  enableTracking: true,
-  click: function(api, options){
-    api.simulateClick();
-    api.openPopup('facebook');
-  }
+	share: {
+		facebook: true
+	},
+	template: '<a class="box" href="#"><div class="share"><span></span>Like</div></a>',
+	enableHover: false,
+	enableTracking: true,
+	click: function(api, options){
+		api.simulateClick();
+		api.openPopup('facebook');
+	}
 });
-$('#googleplus').sharrre({
-  share: {
-    googlePlus: true
-  },
-  enableHover: false,
-  enableTracking: true,
-  click: function(api, options){
-    api.simulateClick();
-    api.openPopup('googlePlus');
-  }
-});
+
 </script>
 	</body>
 </html>
