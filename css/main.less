@@ -77,6 +77,36 @@ body {
 	font-family: museo-sans, Montserrat;
 }
 
+.tc-banner {
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	
+	img {
+		position: relative;
+		z-index: 2;
+	}
+
+	.box {
+		position: relative;
+		z-index:1;
+		padding: 10px 15px;
+		display: inline-block;
+		margin-left: -7px;
+		font-family: Montserrat;
+		font-weight: bosld;
+		font-size: 12px;
+		line-height: 15px;
+		background: rgba(0,0,0,.5);
+		vertical-align: middle;
+		opacity: 0;
+		cursor: default;
+		a { font-weight: bold; }
+	}
+
+	&:hover .box { opacity: 1; }
+}
+
 header {
 	position: relative;
 	margin-top: 200px;
@@ -84,6 +114,7 @@ header {
 	
 	text-align: center;
 	color: white;
+
 
 	h1 {
 		font: bolder 120px/80px Losra, Montserrat, "Monofett", "Open Sans";
@@ -132,11 +163,7 @@ canvas {
 	height: 100%;
 }
 
-.tc-banner {
-	position: fixed;
-	top: 10px;
-	left: 10px;
-}
+
 
 .container {
 

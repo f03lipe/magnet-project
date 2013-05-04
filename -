@@ -1,0 +1,8 @@
+
+(gnome-terminal:3782): Gtk-CRITICAL **: _gtk_css_section_to_string: assertion `section != NULL' failed
+
+** (gnome-terminal:3782): WARNING **: Can't load fallback CSS resource: (null)Failed to import: The resource at '/org/gnome/adwaita/gtk-fallback.css' does not exist
+
+(gnome-terminal:3782): Gtk-CRITICAL **: _gtk_css_section_to_string: assertion `section != NULL' failed
+
+** (gnome-terminal:3782): WARNING **: Can't load fallback CSS resource: (null)Failed to import: The resource at '/org/gnome/adwaita/gtk-fallback.css' does not exist

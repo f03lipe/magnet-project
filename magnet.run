@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Setup production for magnet-project
+gnome-terminal -x sh -c "cd ~/Projects/magnet-project/css && bash watch.sh" 2>- # & disown
+cd ~/Projects/magnet-project
+sublime-text & disown
+gnome-terminal -x sh -c "python -m SimpleHTTPServer" # & disown
+sudo modprobe pcspkr
