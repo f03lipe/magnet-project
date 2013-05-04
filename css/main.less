@@ -104,8 +104,14 @@ body {
 		cursor: default;
 		a { font-weight: bold; }
 	}
+	cursor: pointer;
+	opacity: .6;
+	.transition(all, linear, 0.2s);
 
-	&:hover .box { opacity: 1; }
+	&:hover {
+		opacity: 1;
+		.box { opacity: 1; }
+	}
 }
 
 
