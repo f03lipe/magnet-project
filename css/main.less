@@ -58,12 +58,8 @@
 @color3: #FF7100;
 
 body {
-	font-family: Montserrat, "Open Sans", sans-serif;
-	background: #333 fixed url('../img/dark_fish_skin.png') repeat top left ;
-	font-family: "Open Sans";
-	font-family: Montserrat;
-	font-family: museo, Montserrat;
-	font-family: museo-sans, Montserrat;
+	background: #333 fixed url('../img/dark_fish_skin.png') repeat top left;
+	font-family: museo-sans, Montserrat, "Open Sans", sans-serif;
 }
 
 hr {
@@ -75,12 +71,24 @@ h1,h2,h3,h4,h5,h6 {
 	font-family: Montserrat, museo;
 }
 
+.container > blockquote {
+	p, & {
+
+	font-size: 130%;
+	}
+}
+
 .text-justify { text-align: justify; }
 
 a:hover, a:link, a:active {
 	color: #4AE;
 	text-decoration: none;
 }
+
+strike {
+	color: #AAA;
+}
+
 
 //
 
