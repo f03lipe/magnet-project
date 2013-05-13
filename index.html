@@ -10,12 +10,13 @@
 		<meta name="viewport" content="width=device-width">
 		<title>Magnet Project 2013</title>
 
-		<meta property="og:url" content="http://url.com/" />
-		<meta property="og:site_name" content="My Web" />
+
+		<meta property="og:url" content="http://magnetproject.us/" />
+		<meta property="og:site_name" content="Turma Cidadã" />
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="My Web.com" />
-		<meta property="og:image" content="http://url.com/logo.png" />
-		<meta property="og:description" content="My Web is a new community" />
+		<meta property="og:title" content="TurmaCidadã" />
+		<meta property="og:image" content="http://turmacidada.herokuapp.com/static/images/logo.png" />
+		<meta property="og:description" content="A TurmaCidadã desenvolve e apoia projetos sustentáveis voltados para a comunidada, promovendo o desenvolvimento 'socio-pessoa-ambiental'" />
 		<meta property="fb:app_id" content="7363627862327638" />
 
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600,700' rel='stylesheet' type='text/css'>
@@ -29,312 +30,188 @@
 
 		<script src="js/vendor/modernizr-2.6.2.min.js"></script>
 	</head>
-	<body>
+	<body class="">
 		<!--[if lt IE 7]>
 			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 		<![endif]-->
-		
-		<canvas class="fullscreen" id="mag" data-stellar-ratio=".2"></canvas>
-		
-		<div class="container" id="header">
-			<div class="tc-banner">
-				<a href="http://turmacidada.org">
-					<img src="img/logo.png" width=50 /></a>
-				<div class="box">A Project by <br><a href="http://turmacidada.org">TurmaCidadã</a></div>
-			</div>
+	
+	<canvas class="fullscreen" id="mag" data-stellar-ratio=".2"></canvas>
 
-			<div class="social-btns">
-				<img tabindex="0" src="img/twitter_32.png"></img>
-				<img tabindex="0" src="img/facebook_32.png"></img>
-				<img tabindex="0" src="img/gplus_32.png"></img>
-			</div>
-
-			<header>
-				<h1>Magnet</h1>
-				<h1>Project</h1>
-				<h2>Helping students from <a href="#">Rio's top magnet schools</a> to get there!</h2>
-			</header>
+	<div class="container" id="header">
+		<div class="tc-banner">
+			<a href="http://turmacidada.org">
+				<img src="img/logo.png" width=50 /></a>
+			<div class="box">A Project by <br><a href="http://turmacidada.org">TurmaCidadã</a></div>
 		</div>
 
+		<div class="social-btns">
+			<div class="social-share">
+				<div class="twitter" data-url="http://magnetproject.us" data-text="MagnetProject, Helping students from Rio's top magnet schools to get there!"></div>
+				<div class="facebook" data-url="http://magnetproject.us" data-text="MagnetProject, Helping students from Rio's top magnet schools to get there!"></div>
+			</div>
+			<img tabindex="0" src="img/twitter_32.png"></img>
+			<img tabindex="0" src="img/facebook_32.png"></img>
+			<img tabindex="0" src="img/gplus_32.png"></img>
+		</div>
 
-<div class="light-bg">
+		<header>
+			<h1>Magnet</h1>
+			<h1>Project</h1>
+			<h2>Helping students from <a href="#">Rio's top magnet schools</a> to get there!</h2>
+		</header>
+	</div>
 
-			<div class="container" id="people">
-				<h3>Our 2013's Team</h3>
-				<div class="person" >
-					<div class="square" data-school="CEFET" title="<strong>Alessandra Bastos</strong><br>17 anos<br>CEFET RJ"></div>
-				</div>
-				<div class="person" data-school="CM">
-					<div class="square" title="<strong>Jamal Malic</strong><br>19 anos<br>CM Tijuca"></div>	
-				</div>
-				<div class="person" data-school="CEFET">
-					<div class="square" title="<strong>Felipe Aragão</strong><br>16 anos<br>CEFET RJ"></div>
-				</div>
-				<div class="person" data-school="CM">
-					<div class="square" title="<strong>Ivo Malic</strong><br>17 anos<br>CM Tijuca"></div>
-				</div>
-				<div class="person" data-school="CM">
-					<div class="square" title="<strong>Jamal Malic</strong><br>18 anos<br>CM Tijuca"></div>	
-				</div>
-				<div class="person" data-school="CP2">
-					<div class="square" title="<strong>Jamal Malic</strong><br>17 anos<br>CP2 Tijuca"></div>	
-				</div>
-				<div class="person" data-school="CEFET">
-					<div class="square" title="<strong>Jamal Malic</strong><br>16 anos<br>CEFET RJ"></div>	
-				</div>
-				<div class="person" data-school="CM">
-					<div class="square" title="<strong>Jamal Malic</strong><br>17 anos<br>CM Tijuca"></div>	
-				</div>
-				<div class="person" data-school="CAP">
-					<div class="square" title="<strong>Jamal Malic</strong><br>17 anos<br>CAP UFRJ"></div>
-				</div>
-				<div class="person" data-school="CEFET">
-					<div class="square" title="<strong>Jamal Malic</strong><br>18 anos<br>CEFET RJ"></div>	
-				</div>
-				<div class="person" data-school="CAP">
-					<div class="square" title="<strong>Jamal Malic</strong><br>17 anos<br>CAP UERJ"></div>
+	<div class="light-bg">
+
+		<div class="container" id="people">
+			<h2 class="central">The 2013's Team</h2>
+			<!-- Dear Javascript, students go here. -->
+		</div>
+
+		<div class="container" id="students">
+			<div class="row">
+				<div class="span12">
+					<ul class="slides">
+					</ul>
 				</div>
 			</div>
+		</div>
 
-			<div class="container">
-				<div class="row-fluid">
-					<div class="span6 lead">
-						<br>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-					</div>
-					<div class="span6 tk-museo-sans text-justify">
-						<h1>The Idea Behind</h1>
-						Lorem ipsum dolor sit amet, <abbr title="consectetuer adipiscing elit">magnet schools</abbr>, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Curabitur vel odio justo. Etiam eu sapien eu lacus ultricies vehicula. Morbi luctus, purus nec aliquam tincidunt, tortor libero mattis est, eu tempor nisi lacus ac justo. Curabitur vel odio justo. 
-					</div>
+	<div class="scrollblock">
+		<div id="box">box</div>
+	</div>
+
+		<div class="container">
+			<div class="row-fluid">
+				<div class="span6 lead">
+					<br>
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
 				</div>
-				
-				<blockquote>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-					<small>Silvino Neto, <cite title="Source Title">CEO TurmaCidadã Brasil</cite></small>
-				</blockquote>
-			</div>
-
-			<div class="container">
-
-				<div class="row">
-					<div class="span6">
-						<h2>Escolas envolvidas</h2>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor bibendum posuere. Mauris in tortor velit, non blandit arcu. Ut fermentum viverra tellus, aliquet imperdiet ligula mollis et. Duis tincidunt odio eu mi sollici
-					</div>
-					<div class="span6">
-						tudin ut mollis risus laoreet. Nunc dignissim pretium erat a facilisis. Fusce suscipit aliquam sem, at feugiat eros rutrum id. Curabitur vel odio justo. Etiam eu sapien eu lacus ultricies vehicula. Morbi luctus, purus nec aliquam tincidunt, tortor libero mattis est, eu tempor nisi lacus ac justo. Maecenas sodales adipiscing dolor et feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec metus enim, porttitor ut porttitor non, feugiat id nibh. Pellentesque pulvinar ligula in felis euismod nec cursus nisl convallis. Fusce volutpat velit ut ante lacinia condimentum.
-					</div>
-				</div>
-				<div class="row">
-					<div class="span6">
-						<h1>Our students!</h1>
-						<h3>Escolas Envolvidas</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor bibendum posuere. Mauris in tortor velit, non blandit arcu. Ut fermentum viverra tellus, aliquet imperdiet ligula mollis et. Duis tincidunt odio eu mi sollicitudin ut mollis risus laoreet. Nunc dignissim pretium erat a facilisis. Fusce suscipit aliquam sem, at feugiat eros rutrum id. Curabitur vel odio justo.</p>
-					</div>
+				<div class="span6 tk-museo-sans text-justify">
+					<h1>The Idea Behind</h1>
+					Lorem ipsum dolor sit amet, <abbr title="consectetuer adipiscing elit">magnet schools</abbr>, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Curabitur vel odio justo. Etiam eu sapien eu lacus ultricies vehicula. Morbi luctus, purus nec aliquam tincidunt, tortor libero mattis est, eu tempor nisi lacus ac justo. Curabitur vel odio justo. 
 				</div>
 			</div>
-
-			<div class="container" id="foo">
-
-				<div class="row">
-					<div class="span6">
-						<h1>Escolas envolvidas</h1>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor bibendum posuere. Mauris in tortor velit, non blandit arcu. Ut fermentum viverra tellus, aliquet imperdiet ligula mollis et. Duis tincidunt odio eu mi sollici
-					</div>
-					<div class="span6">
-						<h3>Our Selection Standards</h3>
-						<p>All students in our team stand out as one of the best in their schools. This is what we're looking for</p>
-						<ul>
-							<li>fluency in English (<strong>and Portuguese!</strong>)</li>
-							<li>high standard grades</li>
-							<li>developed interest in multiple areas</li>
-							<li>Be willing to get there (lol #wtf?)</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-
-
-
-			<div class="container" id="students">
-				<h1 class="central">The 2013's Team</h1>
-				<div class="row">
-					<div class="span8">
-						<ul class="slides">
-							<li>
-								<div class="student" data-school="CEFET">
-								<img src="http://placehold.it/100x100" class="thumbnail img-rounded">
-								<hgroup>
-									<h3 class="name">Alessandra Bastos</h3>
-									<h4 class="age">17 anos, Rio de Janeiro</h4>
-									<h4 classs="school">CEFET RJ</h4>
-								</hgroup>
-								<div class="text">
-									Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-								</div>
-								<div class="square" title="<strong>Alessandra Bastos</strong><br>17 anos<br>CEFET RJ"></div>
-								</div>
-							</li>
-							
-							<li>
-								<div class="student" data-school="CM">
-								<img src="http://placehold.it/100x100" class="thumbnail img-rounded">
-								<hgroup>
-									<h3>Jamal Malic</h3>
-									<h4>19 anos, Rio de Janeiro</h4>
-									<h4>CM Tijuca</h4>
-								</hgroup>
-								<div class="text">
-									Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-								</div>
-								<div class="square" title="<strong>Jamal Malic</strong><br>19 anos<br>CM Tijuca"></div>	
-								</div>
-							</li>
-							<li>
-								<div class="student" data-school="CEFET">
-								<img src="http://placehold.it/100x100" class="thumbnail img-rounded">
-								<hgroup>
-									<h3>Felipe Aragão</h3>
-									<h4>16 anos, Rio de Janeiro</h4>
-									<h4>CEFET RJ</h4>
-								</hgroup>
-								<div class="text">
-									Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-								</div>
-								<div class="square" title="<strong>Felipe Aragão</strong><br>16 anos<br>CEFET RJ"></div>
-								</div>
-							</li>
-							<li>
-								<div class="student" data-school="CM">
-								<img src="http://placehold.it/100x100" class="thumbnail img-rounded">
-								<hgroup>
-									<h3>Ivo Malic</h3>
-									<h4>17 anos, Rio de Janeiro</h4>
-									<h4>CM Tijuca</h4>
-								</hgroup>
-								<div class="text">
-									Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-								</div>
-								<div class="square" title="<strong>Ivo Malic</strong><br>17 anos<br>CM Tijuca"></div>
-								</div>
-							</li>
-						</ul>
-					</div>
-
-					<div class="span4" id="people">
-						<div class="person active" data-school="CEFET">
-							<div class="square"></div>
-						</div>
-						<div class="person" data-school="CM">
-							<div class="square"></div>
-						</div>
-						<div class="person" data-school="CEFET">
-							<div class="square"></div>
-						</div>
-						<div class="person" data-school="CM">
-							<div class="square"></div>
-						</div>
-						<div class="person" data-school="CM">
-							<div class="square"></div>
-						</div>
-						<div class="person" data-school="CP2">
-							<div class="square"></div>
-						</div>
-						<div class="person" data-school="CEFET">
-							<div class="square"></div>
-						</div>
-						<div class="person" data-school="CM">
-							<div class="square"></div>
-						</div>
-						<div class="person" data-school="CAP">
-							<div class="square"></div>
-						</div>
-						<div class="person" data-school="CEFET">
-							<div class="square"></div>
-						</div>
-						<div class="person" data-school="CAP">
-							<div class="square"></div>
-						</div>
-					</div>
-				</div>
-			</div>
+		</div>
 		
+		<div class="container">
+			<blockquote>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+				<small>Silvino Neto, <cite title="Source Title">CEO TurmaCidadã Brasil</cite></small>
+			</blockquote>
+		</div>
 
-			<div class="container" id="cost"> 
-				<div class="row">
-					<div class="span7">
-						<h1>Per Student Cost</h1>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor bibendum posuere. Mauris in tortor velit, non blandit arcu. Ut fermentum viverra tellus, aliquet imperdiet ligula mollis et. Duis tincidunt odio eu mi sollicitudin ut mollis risus laoreet. Nunc dignissim pretium erat a facilisis. Fusce suscipit aliquam sem, at feugiat eros rutrum id. Curabitur vel odio justo. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat
-						</p>
-					</div>
-					<div class="span4 offset1">
-						<br>
-						<table>
-							<tr><td>3 x R$500,00</td><td>SAT tests</td></tr>
-							<tr><td>1 x R$1.700</td><td>SAT course</td></tr>
-							<tr><td>7 x R$110,00</td><td>college fees</td></tr>
-							<tr><td>7 x R$110,00</td><td>college fees</td></tr>
-						</table>
-						<hr>
-						<h2>R$4.000 <small>per student</small></h2>
+		<div class="container" id="foo">
+
+			<div class="row">
+				<div class="span6">
+					<h1>Our Students</h1>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor bibendum posuere. Mauris in tortor velit, non blandit arcu. Ut fermentum viverra tellus, aliquet imperdiet ligula mollis et. Duis tincidunt odio eu mi sollici
+				</div>
+				<div class="span6">
+					<h3>The Selection</h3>
+					<p>The students in our team stand out as one of the best in their schools. This is what we're looking for</p>
+					<ul>
+						<li>fluency in English (<strong>and Portuguese!</strong>)</li>
+						<li>high standard grades</li>
+						<li>developed interest in multiple areas</li>
+						<li>Be willing to get there (lol #wtf?)</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="span6">
+					<h1>Schools envolved</h1>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor bibendum posuere. Mauris in tortor velit, non blandit arcu. Ut fermentum viverra tellus, aliquet imperdiet ligula mollis et. Duis tincidunt odio eu mi sollici
+				</div>
+				<div class="span6">
+					tudin ut mollis risus laoreet. Nunc dignissim pretium erat a facilisis. Fusce suscipit aliquam sem, at feugiat eros rutrum id. Curabitur vel odio justo. Etiam eu sapien eu lacus ultricies vehicula. Morbi luctus, purus nec aliquam tincidunt, tortor libero mattis est, eu tempor nisi lacus ac justo. Maecenas sodales adipiscing dolor et feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec metus enim, porttitor ut porttitor non, feugiat id nibh. Pellentesque pulvinar ligula in felis euismod nec cursus nisl convallis. Fusce volutpat velit ut ante lacinia condimentum.
+				</div>
+			</div>
+			<div class="row">
+				<div class="span6">
+					<h3>Escolas Envolvidas</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor bibendum posuere. Mauris in tortor velit, non blandit arcu. Ut fermentum viverra tellus, aliquet imperdiet ligula mollis et. Duis tincidunt odio eu mi sollicitudin ut mollis risus laoreet. Nunc dignissim pretium erat a facilisis. Fusce suscipit aliquam sem, at feugiat eros rutrum id. Curabitur vel odio justo.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="container" id="cost"> 
+			<div class="row">
+				<div class="span7">
+					<h1>Per Student Cost</h1>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor bibendum posuere. Mauris in tortor velit, non blandit arcu. Ut fermentum viverra tellus, aliquet imperdiet ligula mollis et. Duis tincidunt odio eu mi sollicitudin ut mollis risus laoreet. Nunc dignissim pretium erat a facilisis. Fusce suscipit aliquam sem, at feugiat eros rutrum id. Curabitur vel odio justo. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat
+					</p>
+				</div>
+				<div class="span4 offset1">
+					<br>
+					<table>
+						<tr><td>3 x R$500,00</td><td>SAT tests</td></tr>
+						<tr><td>1 x R$1.700</td><td>SAT course</td></tr>
+						<tr><td>7 x R$110,00</td><td>college fees</td></tr>
+						<tr><td>7 x R$110,00</td><td>college fees</td></tr>
+					</table>
+					<hr>
+					<h2>≃ R$4.000 <small>per student</small></h2>
+				</div>
+			</div>
+		</div>
+
+		<div class="container hidden" id="donate">
+			<div class="row">
+				<div class="span6 offse2t2">
+					<button>Donate!</button>
+				</div>
+				<div class="span6 offs1et1">
+					meta: <h1>R$ 0,0/40 mil</h1>
+					<div class="progress progress-striped active">
+						<div class="bar" style="width: 60%;"></div>
 					</div>
 				</div>
 			</div>
+		</div>
 
-			<div class="container" id="donate">
-				<div class="row">
-					<div class="span6 offse2t2">
-						<button>Donate!</button>
-					</div>
-					<div class="span6 offs1et1">
-						meta: <h1>R$ 0,0/40 mil</h1>
-						<div class="progress progress-striped active">
-							<div class="bar" style="width: 60%;"></div>
-						</div>
-					</div>
+		<div class="container double-padding" id="contact" style="position: relative">
+			<div class="row">
+				<div class="span6">
+					<h1>Contact us!</h1>
+					Get in touch if you have any doubts about the program or wish to discuss a partnership <strike>or talk random stuff to a stranger</strike>. Don't forget to leave your email, so we can contact you back. You can also email us at <a href="mailto:pires.a.felipe@gmail.com"><strong>pires.a.felipe@gmail.com</strong></a>. We'll come back to you as soon as we can!
+				</div>
+				<div class="span5 offset1">
+					<form>
+						<fieldset class="scsrollblock">
+							<legend>What do you have in mind?</legend>
+							<input type="text" placeholder="Your Name" required><br>
+							<input type="email" placeholder="Your Email" required>		
+							<textarea rows="5" style="width: 100%" type="text" placeholder="Your message goes here! :)" required></textarea>
+							<button type="submit" onclick="return false;" class="btn-submit" id="susbmit">Submit</button>
+							<h6>Your email adress is safe with us!</h6>
+						</fieldset>
+					</form>
 				</div>
 			</div>
-
-	
-			<div class="container double-padding" id="contact">
-				<div class="row">
-					<div class="span6">
-						<h1>Contact us!</h1>
-						Get in touch if you have any doubts about the program or wish to discuss a partnership <strike>or say random stuff to a stranger</strike>. Don't forget to leave your email, so we can contact you back. You can also email us at <a href="mailto:pires.a.felipe@gmail.com"><strong>pires.a.felipe@gmail.com</strong></a>. We'll come back to you as soon as we can!
-					</div>
-					<div class="spa"></div>
-					<div class="span5 offset1">
-						<form>
-							<fieldset>
-								<legend>What do you have in mind?</legend>
-								<input type="text" placeholder="Your Name" required><br>
-								<input type="email" placeholder="Your Email" required>		
-								<textarea rows="5" style="width: 100%" type="text" placeholder="Your message goes here! :)" required></textarea>
-								<button type="submit" onclick="return false;" class="btn-submit">Submit</button>
-								<h6>Your email adress is safe with us!</h6>
-							</fieldset>
-						</form>
-					</div>
-				</div>
-			</div>
+		</div>
 	</div>
 
 
 	<div class="container">
-		<footer>
+		<footer id="footer">
 			<div class="row">
 				<div class="span5">
 					<h5>MagnetProject.us &reg; 2013<br>All Rights Reserved</a></h5>
 					<h6>Concept and development by <a href="http://twitter.com/f03lipe">Felipe Aragão Pires</a></h6>
 					
 					<div class="social-btn">
-						<img tabindex="0" src="img/twitter_32.png"></img>
-						<img tabindex="0" src="img/facebook_32.png"></img>
-						<img tabindex="0" src="img/gplus_32.png"></img>
+						<img tabindex="0" alt="" src="img/twitter_32.png">
+						<img tabindex="0" alt="" src="img/facebook_32.png">
+						<img tabindex="0" alt="" src="img/gplus_32.png">
 						<div class="social-share">
-							<div id="twitter" data-url="http://magnetproject.us" data-text="MagnetProject, Helping students from Rio's top magnet schools to get there!"></div>
-							<div id="facebook" data-url="http://magnetproject.us" data-text="MagnetProject, Helping students from Rio's top magnet schools to get there!"></div>
+							<div clas="twitter" data-url="http://magnetproject.us" data-text="MagnetProject, Helping students from Rio's top magnet schools to get there!"></div>
+							<div clas="facebook" data-url="http://magnetproject.us" data-text="MagnetProject, Helping students from Rio's top magnet schools to get there!"></div>
 						</div>
 					</div>
 				</div>
@@ -350,46 +227,112 @@
 					</address>
 					<img style="float: right" width=100 src="img/logo.png">
 				</div>
+			</div>
 		</footer>
 	</div>
+
+
+	<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+	<script src="js/jquery.scrollorama.js"></script>
+	<script src="js/jquery.sharrre-1.3.4.min.js"></script>
+	<script src="js/jquery.flexslider-min.js"></script>
 	
-		<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
-		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-		<script src="js/jquery.stellar.min.js"></script>
-		<script src="js/jquery.sharrre-1.3.4.min.js"></script>
-		<script src="js/jquery.flexslider-min.js"></script>
+	<script src="js/underscore-min.js"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
 		
-		<!-- 	
-		<div id="panel" style="display: none">
-			<h2><a href="../../../">Experiments</a> / Magnetic  / 03</h2>
-			<p>Particles orbit around magnets which can be dragged around.<br/><b>Double click</b> to add more magnets.<br/>Change skin with keyboard <b><a id="prevSkin" href="#">left</a> / <a id="nextSkin" href="#">right</a></b>.</p>
-		</div> -->
+	<script type="template/text" id="slider-template">
+		<li>
+			<div class="student" data-id="<%= id %>">
+				<img src="<%= avatar %>" class="thumbnail img-rounded">
+				<div>
+					<hgroup>
+						<h3><%= name %></h3>, 
+						<h4 data-school="<%= school_label %>"><%= school %></h4>
+						<br><h4><%= age %>, Rio de Janeiro</h4>
+						
+					</hgroup>
+					<div class="text">
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+					</div>
+				</div>
+			</div>
+		</li>
+	</script>
+	<script type="template/text" id="person-template">
+		<div class="person" data-school="<%= school_label %>" data-id="<%= id %>">
+			<div class="square" title="<strong><%= name %></strong><br><%= school %>"></div>
+		</div>
+	</script>
 
-		<script type="text/javascript">
-			$().ready(function() {
-				if (location.hash) {
-					document.body.classList.add(location.hash.slice(1, 82398))
-				}
-			})
-			$(window).stellar();
-			$(window).ready(function() {
-				$('#students .slides').parent().flexslider({
-					animation: "slide",
-					after: function (evt) {
-						var i = $(".flex-active-slide").index()%evt.children().length;
-						e = evt;
-						console.log(i)
-						$("#students .person").removeClass('active');
-						$($("#students .person")[i]).addClass('active');
-					}
-				});
-			});
-		</script>
+<script>
 
-		<script src="js/underscore-min.js"></script>
-		<script src="js/vendor/bootstrap.min.js"></script>
+	$(window).ready(function() {
+		scrollorama = $.scrollorama({
+			blocks: '.scrollblock',
+			enablsePin: false
+		});
 
-		<script src="js/plugins.js"></script>
-		<script src="js/main.js"></script>
+		scrollorama.animate('#box', {duration: 300, property:'opacity', end: .5});
+	});
+	
+	var students = [
+		{ id:0, school_label:'CM', name:'Jamal Malic', age:'19 anos', school:'CM Tijuca', avatar:'http://placehold.it/300x300' },
+		{ id:1, school_label:'CEFET', name:'Felipe Aragão', age:'16 anos', school:'CEFET RJ', avatar:'http://placehold.it/300x300' },
+		{ id:2, school_label:'CM', name:'Ivo Malic', age:'17 anos', school:'CM Tijuca', avatar:'http://placehold.it/300x300' },
+		{ id:3, school_label:'CM', name:'Jamal Malic', age:'18 anos', school:'CM Tijuca', avatar:'http://placehold.it/300x300' },
+		{ id:4, school_label:'CP2', name:'Caleb Rourke', age:'17 anos', school:'CP2 Tijuca', avatar:'http://placehold.it/300x300' },
+		{ id:5, school_label:'CEFET', name:'Jamal Malic', age:'16 anos', school:'CEFET RJ', avatar:'http://placehold.it/300x300' },
+		{ id:6, school_label:'CM', name:'Lily Bridgett', age:'17 anos', school:'CM Tijuca', avatar:'http://placehold.it/300x300' },
+		{ id:7, school_label:'CAP', name:'Jamal Malic', age:'17 anos', school:'CAP UFRJ', avatar:'http://placehold.it/300x300' },
+		{ id:8, school_label:'CEFET', name:'Jamal Malic', age:'18 anos', school:'CEFET RJ', avatar:'http://placehold.it/300x300' },
+		{ id:9, school_label:'CAP', name:'Jamal Malic', age:'17 anos', school:'CAP UERJ', avatar:'http://placehold.it/300x300' },
+		{ id:10, school_label:'CAP', name:'Jacqui Flemming', age:'17 anos', school:'CAP UERJ', avatar:'http://placehold.it/300x300' },
+		{ id:11, school_label:'CAP', name:'Jamal Malic', age:'17 anos', school:'CAP UERJ', avatar:'http://placehold.it/300x300' },
+		{ id:12, school_label:'CAP', name:'Sergio Tallent', age:'17 anos', school:'CAP UERJ', avatar:'http://placehold.it/300x300' },
+		{ id:13, school_label:'CAP', name:'Ana Caronte', age:'17 anos', school:'CAP UERJ', avatar:'http://placehold.it/300x300' }
+	]
+
+	var E = document.querySelector('#people'),
+		slider = document.querySelector('#students .slides');
+
+	for (var i=0; i<students.length; i++) {
+		$(slider).append(_.template($('#slider-template').html(), students[i]));
+		$(E).append(_.template($('#person-template').html(), students[i]));
+	}
+
+	$('.flex-viewport').css('overflow', 'auto')
+
+</script>
+
+<script type="text/javascript">
+	$().ready(function() {
+		if (location.hash) {
+			document.body.classList.add(location.hash.slice(1, 82398))
+		}
+	})
+
+	$(window).ready(function() {	
+		$('#students .slides').parent().flexslider({
+			animation: "slide",
+			after: function (evt) {
+				e = evt;
+				$("#people .person").removeClass('active');
+				id = $(".flex-active-slide div")[0].dataset.id;
+				console.log('oi', id)
+				$("#people .person[data-id="+id+"]").addClass('active');
+			},
+			start: function (evt) {
+				$("#people .person").removeClass('active');
+				$($("#people .person")[0]).addClass('active');
+			}
+		});
+	});
+</script>
+
+
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
 	</body>
 </html>

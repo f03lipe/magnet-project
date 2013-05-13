@@ -1,4 +1,11 @@
 
+var schools = {
+	'cefet': { color: '#009B95' },
+	'cp2': { color: '#FF7100' },
+	'cm': { color: '#00C90D' },
+	'cap': { color: '#FB202D' },
+}
+
 MagneticCamp = new (function () {
 	
 	// Never do this without your parent's supervision.
@@ -8,8 +15,8 @@ MagneticCamp = new (function () {
 
 	// Globals: you may touch this
 	var LAPSE = 60
-		, COLORS = ['#009B95', '#FF7100', '#00C90D', '#FB202D']
-		, NUMLINES = 13
+		, COLORS = _.pluck(schools, 'color') // ['#009B95', '#FF7100', '#00C90D', '#FB202D']
+		, NUMLINES = 1
 		;
 
 	var header = $('header')
@@ -32,7 +39,7 @@ MagneticCamp = new (function () {
 			tic: function (timeLapse) {		
 				this.dx += this.vel*.2;
 				this.dy += max(1, abs(this.vel))*0.1;
-				if (abs(this.dx) > 400 || abs(this.dy) > 500)
+				if (abs(this.dx) > 500 || abs(this.dy) > 600)
 					this.start();
 			},
 
@@ -106,16 +113,18 @@ $().ready(function() {
 	})
 });
 
-$(document).scroll(function() {
-	var top = $(document).scrollTop();
+(function scrollAnimations() {
+	$(document).scroll(function() {
+		var top = $(document).scrollTop();
 
-	if (Math.abs(top - $('#donate .progress').offset().top) < 500) {
-		$("#donate .progress").addClass('visible');
-	}
-	
-})
+		if (Math.abs(top - $('#donate .progress').offset().top) < 500) {
+			$("#donate .progress").addClass('visible');
+		}
+		
+	})
+})();
 
-$('#twitter').sharrre({
+$('.twitter').sharrre({
 	share: { twitter: true },
 	template: '<a class="box" href="#"><div class="share"><span></span>Tweet</div></a>',
 	enableHover: false,
@@ -127,9 +136,9 @@ $('#twitter').sharrre({
 	}
 });
 
-$('#facebook').sharrre({
+$('.facebook').sharrre({
 	share: { facebook: true },
-	template: '<a class="box" href="#"><div class="share"><span></span>Like</div></a>',
+	template: '<a class="box" href="#"><div class="share"><span></span>Share</div></a>',
 	enableHover: false,
 	enableTracking: true,
 	click: function(api, options){

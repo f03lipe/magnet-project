@@ -57,6 +57,10 @@
 @color2: #00C90D;
 @color3: #FF7100;
 
+#box {
+	margin-left: 50px; width: 60px; height: 60px; background: red;
+}
+
 body {
 	background: #333 fixed url('../img/dark_fish_skin.png') repeat top left;
 	font-family: museo-sans, Montserrat, "Open Sans", sans-serif;
@@ -86,7 +90,7 @@ a:hover, a:link, a:active {
 }
 
 strike {
-	color: #AAA;
+	color: #666;
 }
 
 
@@ -97,6 +101,11 @@ canvas
 	position: fixed;
 	width: 100%;
 	height: 100%;
+}
+
+.scrollblock {
+	position: relative !important;
+	top: 0 !important;
 }
 
 //
@@ -133,8 +142,6 @@ canvas
 			a { font-weight: bold; }
 		}
 		cursor: pointer;
-		opacity: .8;
-		.transition(all, linear, 0.2s);
 
 		&:hover {
 			opacity: 1;
@@ -148,12 +155,13 @@ canvas
 		right: 15px;
 
 		img {
+			display: none;
 			position: relative;
 			cursor: pointer !important;
 			border-radius: 20px;
 			background: white;
 			margin-left: 3px;
-			box-shadow: 0 0 5px rgba(0,0,0,1);
+			boxs-shadow: 0 0 5px rgba(0,0,0,1);
 			outline: none !important;
 		}
 
@@ -199,7 +207,7 @@ canvas
 	color: #444;
 	margin-bottom: 50px;
 	box-shadow: 0 0 25px rgba(0,0,0,.7);
-	background: #fff url('../img/tiny_grid.png') repeat top left;
+	background: #fff url('../img/tiny_grid_@2X.png') repeat top left;
 
 	a:hover, a:visited, a:active {
 		color: #08C;
@@ -232,18 +240,22 @@ canvas
 		}
 	}
 
+	&#people {
+		margin-right: 0;
+		margin-left: 0;
+		width: 100%;
+		text-align: center;
+	}
+
+
 	&#people, #people
 	{
-		@dim: 60px;	
+		@dim: 60px;
 
 		cursor: default;
 		text-align: center;
 		font-family: Montserrat, "Open Sans", Arial;
 		padding-top: 10px;
-
-		h3 {
-			font: bold 20px Montserrat, "Open Sans", Arial;
-		}
 
 		.person
 		{
@@ -254,12 +266,15 @@ canvas
 			cursor: pointer;
 			display: inline-block;
 			margin-bottom: 10px;
-			margin-right: 10px;
+			margin-right: 7px;
 			
 			border: 5px solid white;
 			border-radius: 35px;
-			.box-shadow(0,0, 10px, .3);
+			// .box-shadow(0,0, 10px, .3);
 			.transition(all, linear, .2s);
+			
+			border-width: 2px;
+			border-style: solid;
 
 			.square
 			{
@@ -300,13 +315,15 @@ canvas
 			&:nth-child(9)	.square { .sprite(2, 2); }
 			&:nth-child(10)	.square { .sprite(3, 2); }
 			&:nth-child(11)	.square { .sprite(3, 4); }
+			&:nth-child(12)	.square { .sprite(4, 4); }
+			&:nth-child(13)	.square { .sprite(5, 4); }
+			&:nth-child(14)	.square { .sprite(1, 1); }
+			&:nth-child(15)	.square { .sprite(3, 6); }
+			&:nth-child(16)	.square { .sprite(3, 2); }
 			
 			&[data-school]:hover .square {
 				// box-shadow: inset 0 0 10px rgba(0,0,0,.5);
 			}
-
-			border-width: 5px;
-			border-style: solid;
 
 			body[data-hoverschool=CEFET] &[data-school=CEFET],
 			&[data-school=CEFET]:hover { border-color: @color0; }
@@ -320,18 +337,22 @@ canvas
 			body[data-hoverschool=CP2] &[data-school=CP2],
 			&[data-school=CP2]:hover { border-color: @color3; }
 		}
+
+		.person.active {
+			box-shadow: 0 0 5px rgba(0,0,0,1);
+		}
 	}
 
 
 	&#students
 	{
 
-		margin-bottom: 30px;
+		masrgin-bottom: 30px;
 
 		.flex-control-nav { position: static; display: none; }
 		.flex-direction-nav { display: none; }
 
-		.row {
+		.rsow {
 			border-top: 1px solid #DDD;
 			border-bottom: 1px solid #DDD;
 			padding-top: 20px;
@@ -347,50 +368,46 @@ canvas
 			}
 		}
 
-		#people {
-
-			text-align: right !important;
-			
-			.person {
-				display: inline-block;
-				border-width: 3px;
-				border-radius: 10px !important;
-				.square { border-radius: 7px !important; }
-				-webkit-box-shadow: none;
-				box-shadow: none;
-				border: 2px solid #DDD;
-			}
-
-			.person.active {
-				.box-shadow(0,0, 5px, .5);
-				border-color: grey;
-			}
-
-		}
 		
 		.student {
 
-			padding: 10px;
+			padding: 0 10px;
 			text-align: center;
 			
-
-			
 			img {
+				vertical-align: top;
+				
 				border-radius: 10px;
+				width: 150px;
+				display: inline-block;
+			}
+
+			& > div {
+				vertical-align: top;
+				margin-left: 40px;
+				text-align: left;
+
+				width: 600px;
 				display: inline-block;
 			}
 
 			hgroup {
-				* { padding: ; }
-				.name { font: bold 20px Montserrat; }
-				.age, .school { font: bold 16px Montserrat; }
+				display: inline-block;
+				
+				* {
+					display: inline-block;
+					margin-top: 5px; margin-bottom: 0px;
+				}
+
+				bordesr: 1px solid red;
+				
+				// .name { font: bold 20px Montserrat; }
+				// .age, .school { font: bold 16px Montserrat; }
 			}
 			
 			.text {
-				padding: 10px;
-				border-radius: 5px;
-				padding: 10px;
-				border: 1px solid #DDD;
+				padding: 10px 0;
+				font: 16px museo;
 			}
 		}
 	}
@@ -453,7 +470,7 @@ canvas
 
 			.btn-submit {
 				position: relative;
-				padding: 15px 25px;
+				padding: 10px 15px;
 				background: #009B95;
 				border: 1px solid #444;
 				box-shadow: 0 1px 4px rgba(0,0,0,.8);
@@ -483,70 +500,76 @@ canvas
 
 //
 
+
+.social-btn {
+	position: static !important;
+	top: 15px;
+	right: 15px;
+
+	img {
+		position: relative;
+		cursor: pointer !important;
+		border-radius: 20px;
+		background: white;
+		margin-left: 3px;
+		box-shadow: 0 0 5px rgba(0,0,0,1);
+		outline: none !important;
+	}
+
+	img:active {
+		top: 2px;
+	}
+	
+}
+
+
+
+.social-share
+{
+	display: inline-block;
+	margin-left: 10px;
+
+	.sharrre {
+		vertical-align: middle;
+		display: inline-block;
+	}
+
+	.sharrre .box:active {
+		position: relative;
+		top: 2px;
+		box-shadow: 0 0 3px #333333;
+	}
+
+	.sharrre .share {
+		display: inline-block;
+		padding: 5px 5px;
+		text-align: center;
+		font-weight: bold;
+	}
+
+	.sharrre .share {
+		line-height: 14px;
+		color: #ffffff;
+		font-size: 13px;
+		text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.35);
+	}
+
+	#facebook .share span {
+		background-position: 0 -35px;
+		height: 12px;
+	}
+
+	.sharrre .share span {
+		background: url("../img/share-btns.png") no-repeat scroll 0 0 transparent;
+		width: 18px;
+		height: 10px;
+		display: inline-block;
+	}
+}
+
 footer
 {
+	position: relative;
+	z-index: 2;
 	color: white;
-	
-	.social-btn {
-		position: static !important;
-		top: 15px;
-		right: 15px;
-
-		img {
-			position: relative;
-			cursor: pointer !important;
-			border-radius: 20px;
-			background: white;
-			margin-left: 3px;
-			box-shadow: 0 0 5px rgba(0,0,0,1);
-			outline: none !important;
-		}
-
-		img:active {
-			top: 2px;
-		}
-		
-		.social-share
-		{
-			display: inline-block;
-			margin-left: 10px;
-
-			.sharrre {
-				vertical-align: middle;
-				display: inline-block;
-			}
-
-			.sharrre .box:active {
-				position: relative;
-				top: 2px;
-				box-shadow: 0 0 3px #333333;
-			}
-
-			.sharrre .share {
-				display: inline-block;
-				padding: 5px 5px;
-				text-align: center;
-				font-weight: bold;
-			}
-
-			.sharrre .share {
-				line-height: 14px;
-				color: #ffffff;
-				font-size: 13px;
-				text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.35);
-			}
-
-			#facebook .share span {
-				background-position: 0 -35px;
-				height: 12px;
-			}
-
-			.sharrre .share span {
-				background: url("../img/share-btns.png") no-repeat scroll 0 0 transparent;
-				width: 18px;
-				height: 10px;
-				display: inline-block;
-			}
-		}
-	}
 }
