@@ -16,7 +16,7 @@ MagneticCamp = new (function () {
 	// Globals: you may touch this
 	var LAPSE = 60
 		, COLORS = _.pluck(schools, 'color') // ['#009B95', '#FF7100', '#00C90D', '#FB202D']
-		, NUMLINES = 1
+		, NUMLINES = 16
 		;
 
 	var header = $('header')
@@ -96,8 +96,6 @@ MagneticCamp = new (function () {
 
 $().ready(function () {	MagneticCamp.init() });
 
-$(".person .square").tooltip({html:true, delay: 0, placement:'bottom'})
-
 $().ready(function() {
 	$("[data-school]").bind({
 		mouseover: function (evt) {
@@ -129,7 +127,7 @@ $('.twitter').sharrre({
 	template: '<a class="box" href="#"><div class="share"><span></span>Tweet</div></a>',
 	enableHover: false,
 	enableTracking: true,
-	buttons: { twitter: {via: '_JulienH'}},
+	buttons: { twitter: {via: 'magnetproject'}},
 	click: function(api, options){
 		api.simulateClick();
 		api.openPopup('twitter');

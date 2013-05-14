@@ -1,0 +1,47 @@
+
+// macro.less
+// Homemade macros for lessc
+
+.box-shadow (@x: 0px, @y: 3px, @blur: 5px, @alpha: .5) when not (iscolor(@alpha)) {
+    -webkit-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+    -moz-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+    box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+}
+
+.box-shadow (@x: 0px, @y: 3px, @blur: 5px, @alpha: black) when (iscolor(@alpha)) {
+    -webkit-box-shadow: @x @y @blur @alpha;
+    -moz-box-shadow: @x @y @blur @alpha;
+    box-shadow: @x @y @blur @alpha;
+}
+
+.user-select (@wut: none) {
+	-moz-user-select: @wut;
+	-webkit-user-select: @wut;
+	-ms-user-select: @wut;
+}
+
+.transition (@prop: all, @time: 1s, @ease: linear) {
+    -webkit-transition: @prop @time @ease;
+    -moz-transition: @prop @time @ease;
+    -o-transition: @prop @time @ease;
+    -ms-transition: @prop @time @ease;
+    transition: @prop @time @ease;
+}
+
+.transform (@rotate: 90deg, @scale: 1, @skew: 1deg, @translate: 10px) {
+    -webkit-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+    -moz-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+    -o-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+    -ms-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+    transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+}
+
+.border-radius (@r) {
+	-webkit-border-radius: @r;
+	-moz-border-radius: @r;
+	border-radius: @r;
+}
+
+.sprite (@x, @y, @size) {
+   background-position: -(@x*@size) -(@y*@size);
+}

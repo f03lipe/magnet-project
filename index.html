@@ -3,45 +3,66 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="description" content="">
-		<meta name="viewport" content="width=device-width">
-		<title>Magnet Project 2013</title>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<title>Magnet Project 2013</title>
 
+	<meta property="og:url" content="http://magnetproject.us/" />
+	<meta property="og:site_name" content="Turma Cidadã" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="TurmaCidadã" />
+	<meta property="og:image" content="http://turmacidada.herokuapp.com/static/images/logo.png" />
+	<meta property="og:description" content="A TurmaCidadã desenvolve e apoia projetos sustentáveis voltados para a comunidada, promovendo o desenvolvimento 'socio-pessoa-ambiental'" />
+	<meta property="fb:app_id" content="7363627862327638" />
 
-		<meta property="og:url" content="http://magnetproject.us/" />
-		<meta property="og:site_name" content="Turma Cidadã" />
-		<meta property="og:type" content="website" />
-		<meta property="og:title" content="TurmaCidadã" />
-		<meta property="og:image" content="http://turmacidada.herokuapp.com/static/images/logo.png" />
-		<meta property="og:description" content="A TurmaCidadã desenvolve e apoia projetos sustentáveis voltados para a comunidada, promovendo o desenvolvimento 'socio-pessoa-ambiental'" />
-		<meta property="fb:app_id" content="7363627862327638" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Quantico:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Exo:300,400,700,800,900|Monofett|Passion+One|Sansita+One|Oxygen:400,700|Montserrat:400,700,800,900|Source+Sans+Pro:400,700|Graduate:400,700,800,900|Lora:600,700|Bree Serif:400&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600,700' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Quantico:400,700' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Exo:300,400,700,800,900|Monofett|Passion+One|Sansita+One|Oxygen:400,700|Montserrat:400,700,800,900|Source+Sans+Pro:400,700|Graduate:400,700,800,900|Lora:600,700|Bree Serif:400&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/flexslider.css">
+	<link rel="stylesheet" href="css/main.css">
 
-		<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/flexslider.css">
-		<link rel="stylesheet" href="css/main.css">
+	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+	<script type="template/text" id="slider-nav-templ">
+		<li>
+			<div class="student" data-id="<%= id %>">
+				<img src="img/avatar1.jpg?<%= avatar %>" class="thumbnail img-rounded">
+				<div>
+					<hgroup>
+						<h3><%= name %></h3>
+						<h4><a href="#schools-<%= school_label %>" data-school="<%= school_label %>"><%= school %></a></h4>
+						<br><h4><%= age %>, Rio de Janeiro</h4>
+						
+					</hgroup>
+					<div class="text">
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+					</div>
+				</div>
+			</div>
+		</li></script>
+	<script type="template/text" id="slider-el-templ">
+		<div class="student" data-school="<%= school_label %>" data-id="<%= id %>" title="<strong><%= name %></strong><br><%= school %>">
+			<img src="<%= avatar %>" width=100 height=100 ></div>
+		</div></script>
+</head>
 
-		<script src="js/vendor/modernizr-2.6.2.min.js"></script>
-	</head>
-	<body class="">
-		<!--[if lt IE 7]>
-			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-		<![endif]-->
-	
+<body class="">
+	<!--[if lt IE 7]>
+		<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+	<![endif]-->
+
 	<canvas class="fullscreen" id="mag" data-stellar-ratio=".2"></canvas>
 
 	<div class="container" id="header">
 		<div class="tc-banner">
 			<a href="http://turmacidada.org">
 				<img src="img/logo.png" width=50 /></a>
-			<div class="box">A Project by <br><a href="http://turmacidada.org">TurmaCidadã</a></div>
+			<div class="box">Affiliated to <br><a href="http://turmacidada.org">TurmaCidadã</a></div>
 		</div>
 
 		<div class="social-btns">
@@ -57,18 +78,18 @@
 		<header>
 			<h1>Magnet</h1>
 			<h1>Project</h1>
-			<h2>Helping students from <a href="#">Rio's top magnet schools</a> to get there!</h2>
+			<h2>Helping students from <a href="#schools">Rio's top magnet schools</a> to get there!</h2>
 		</header>
 	</div>
 
 	<div class="light-bg">
 
-		<div class="container" id="people">
-			<h2 class="central">The 2013's Team</h2>
+		<div class="container" id="slider-nav">
+			<h2>The 2013's Team</h2>
 			<!-- Dear Javascript, students go here. -->
 		</div>
 
-		<div class="container" id="students">
+		<div class="container" id="students-slider">
 			<div class="row">
 				<div class="span12">
 					<ul class="slides">
@@ -76,11 +97,7 @@
 				</div>
 			</div>
 		</div>
-
-	<div class="scrollblock">
-		<div id="box">box</div>
-	</div>
-
+	
 		<div class="container">
 			<div class="row-fluid">
 				<div class="span6 lead">
@@ -101,8 +118,7 @@
 			</blockquote>
 		</div>
 
-		<div class="container" id="foo">
-
+		<div class="container" id="selection">
 			<div class="row">
 				<div class="span6">
 					<h1>Our Students</h1>
@@ -121,20 +137,22 @@
 			</div>
 		</div>
 
-		<div class="container">
+		<div class="container" id="schools">
+			<div id="schools-CEFET"></div> <div id="schools-CM"></div> <div id="schools-IFRJ"></div> <div id="schools-CAP"></div>
 			<div class="row">
-				<div class="span6">
+				<div class="span9">
 					<h1>Schools envolved</h1>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor bibendum posuere. Mauris in tortor velit, non blandit arcu. Ut fermentum viverra tellus, aliquet imperdiet ligula mollis et. Duis tincidunt odio eu mi sollici
 				</div>
-				<div class="span6">
-					tudin ut mollis risus laoreet. Nunc dignissim pretium erat a facilisis. Fusce suscipit aliquam sem, at feugiat eros rutrum id. Curabitur vel odio justo. Etiam eu sapien eu lacus ultricies vehicula. Morbi luctus, purus nec aliquam tincidunt, tortor libero mattis est, eu tempor nisi lacus ac justo. Maecenas sodales adipiscing dolor et feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec metus enim, porttitor ut porttitor non, feugiat id nibh. Pellentesque pulvinar ligula in felis euismod nec cursus nisl convallis. Fusce volutpat velit ut ante lacinia condimentum.
-				</div>
+
 			</div>
 			<div class="row">
 				<div class="span6">
 					<h3>Escolas Envolvidas</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor bibendum posuere. Mauris in tortor velit, non blandit arcu. Ut fermentum viverra tellus, aliquet imperdiet ligula mollis et. Duis tincidunt odio eu mi sollicitudin ut mollis risus laoreet. Nunc dignissim pretium erat a facilisis. Fusce suscipit aliquam sem, at feugiat eros rutrum id. Curabitur vel odio justo.</p>
+				</div>
+				<div class="span6">
+					tudin ut mollis risus laoreet. Nunc dignissim pretium erat a facilisis. Fusce suscipit aliquam sem, at feugiat eros rutrum id. Curabitur vel odio justo. Etiam eu sapien eu lacus ultricies vehicula. Morbi luctus, purus nec aliquam tincidunt, tortor libero mattis est, eu tempor nisi lacus ac justo. Maecenas sodales adipiscing dolor et feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec metus enim, porttitor ut porttitor non, feugiat id nibh. Pellentesque pulvinar ligula in felis euismod nec cursus nisl convallis. Fusce volutpat velit ut ante lacinia condimentum.
 				</div>
 			</div>
 		</div>
@@ -163,10 +181,10 @@
 
 		<div class="container hidden" id="donate">
 			<div class="row">
-				<div class="span6 offse2t2">
+				<div class="span6">
 					<button>Donate!</button>
 				</div>
-				<div class="span6 offs1et1">
+				<div class="span6">
 					meta: <h1>R$ 0,0/40 mil</h1>
 					<div class="progress progress-striped active">
 						<div class="bar" style="width: 60%;"></div>
@@ -175,7 +193,7 @@
 			</div>
 		</div>
 
-		<div class="container double-padding" id="contact" style="position: relative">
+		<div class="container" id="contact">
 			<div class="row">
 				<div class="span6">
 					<h1>Contact us!</h1>
@@ -196,7 +214,6 @@
 			</div>
 		</div>
 	</div>
-
 
 	<div class="container">
 		<footer id="footer">
@@ -231,108 +248,78 @@
 		</footer>
 	</div>
 
-
 	<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
 	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 
 	<script src="js/jquery.scrollorama.js"></script>
 	<script src="js/jquery.sharrre-1.3.4.min.js"></script>
 	<script src="js/jquery.flexslider-min.js"></script>
-	
+
 	<script src="js/underscore-min.js"></script>
 	<script src="js/vendor/bootstrap.min.js"></script>
-		
-	<script type="template/text" id="slider-template">
-		<li>
-			<div class="student" data-id="<%= id %>">
-				<img src="<%= avatar %>" class="thumbnail img-rounded">
-				<div>
-					<hgroup>
-						<h3><%= name %></h3>, 
-						<h4 data-school="<%= school_label %>"><%= school %></h4>
-						<br><h4><%= age %>, Rio de Janeiro</h4>
-						
-					</hgroup>
-					<div class="text">
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-					</div>
-				</div>
-			</div>
-		</li>
-	</script>
-	<script type="template/text" id="person-template">
-		<div class="person" data-school="<%= school_label %>" data-id="<%= id %>">
-			<div class="square" title="<strong><%= name %></strong><br><%= school %>"></div>
-		</div>
-	</script>
 
-<script>
+	<script>
+		$(window).ready(function() {
 
-	$(window).ready(function() {
-		scrollorama = $.scrollorama({
-			blocks: '.scrollblock',
-			enablsePin: false
+			$("#slider-nav .student").tooltip({html:true, delay: 0, placement:'bottom'})
+
+			scrollorama = $.scrollorama({
+				blocks: '.scrollblock',
+				enablsePin: false
+			});
+
+		//	scrollorama.animate('#box', {duration: 300, property:'opacity', end: .5});
 		});
 
-		scrollorama.animate('#box', {duration: 300, property:'opacity', end: .5});
-	});
-	
-	var students = [
-		{ id:0, school_label:'CM', name:'Jamal Malic', age:'19 anos', school:'CM Tijuca', avatar:'http://placehold.it/300x300' },
-		{ id:1, school_label:'CEFET', name:'Felipe Aragão', age:'16 anos', school:'CEFET RJ', avatar:'http://placehold.it/300x300' },
-		{ id:2, school_label:'CM', name:'Ivo Malic', age:'17 anos', school:'CM Tijuca', avatar:'http://placehold.it/300x300' },
-		{ id:3, school_label:'CM', name:'Jamal Malic', age:'18 anos', school:'CM Tijuca', avatar:'http://placehold.it/300x300' },
-		{ id:4, school_label:'CP2', name:'Caleb Rourke', age:'17 anos', school:'CP2 Tijuca', avatar:'http://placehold.it/300x300' },
-		{ id:5, school_label:'CEFET', name:'Jamal Malic', age:'16 anos', school:'CEFET RJ', avatar:'http://placehold.it/300x300' },
-		{ id:6, school_label:'CM', name:'Lily Bridgett', age:'17 anos', school:'CM Tijuca', avatar:'http://placehold.it/300x300' },
-		{ id:7, school_label:'CAP', name:'Jamal Malic', age:'17 anos', school:'CAP UFRJ', avatar:'http://placehold.it/300x300' },
-		{ id:8, school_label:'CEFET', name:'Jamal Malic', age:'18 anos', school:'CEFET RJ', avatar:'http://placehold.it/300x300' },
-		{ id:9, school_label:'CAP', name:'Jamal Malic', age:'17 anos', school:'CAP UERJ', avatar:'http://placehold.it/300x300' },
-		{ id:10, school_label:'CAP', name:'Jacqui Flemming', age:'17 anos', school:'CAP UERJ', avatar:'http://placehold.it/300x300' },
-		{ id:11, school_label:'CAP', name:'Jamal Malic', age:'17 anos', school:'CAP UERJ', avatar:'http://placehold.it/300x300' },
-		{ id:12, school_label:'CAP', name:'Sergio Tallent', age:'17 anos', school:'CAP UERJ', avatar:'http://placehold.it/300x300' },
-		{ id:13, school_label:'CAP', name:'Ana Caronte', age:'17 anos', school:'CAP UERJ', avatar:'http://placehold.it/300x300' }
-	]
+		var students = [
+			{ id:0, school_label:'CM', name:'Jamal Malic', age:'19 anos', school:'CM Tijuca', avatar:'http://placehold.it/300x300' },
+			{ id:1, school_label:'CEFET', name:'Felipe Aragão', age:'16 anos', school:'CEFET RJ', avatar:'http://placehold.it/300x300' },
+			{ id:2, school_label:'CM', name:'Ivo Malic', age:'17 anos', school:'CM Tijuca', avatar:'http://placehold.it/300x300' },
+			{ id:3, school_label:'CM', name:'Jamal Malic', age:'18 anos', school:'CM Tijuca', avatar:'http://placehold.it/300x300' },
+			{ id:4, school_label:'CP2', name:'Caleb Rourke', age:'17 anos', school:'CP2 Tijuca', avatar:'http://placehold.it/300x300' },
+			{ id:5, school_label:'CEFET', name:'Jamal Malic', age:'16 anos', school:'CEFET RJ', avatar:'http://placehold.it/300x300' },
+			{ id:6, school_label:'CM', name:'Lily Bridgett', age:'17 anos', school:'CM Tijuca', avatar:'http://placehold.it/300x300' },
+			{ id:7, school_label:'CAP', name:'Jamal Malic', age:'17 anos', school:'CAP UFRJ', avatar:'http://placehold.it/300x300' },
+			{ id:8, school_label:'CEFET', name:'Jamal Malic', age:'18 anos', school:'CEFET RJ', avatar:'http://placehold.it/300x300' },
+			{ id:9, school_label:'CP2', name:'Jamal Malic', age:'19 anos', school:'CP2 Tijuca', avatar:'http://placehold.it/300x300' },
+			{ id:10, school_label:'IFRJ', name:'Jacqui Flemming', age:'19 anos', school:'IFRJ', avatar:'http://placehold.it/300x300' },
+			{ id:11, school_label:'CAP', name:'Jamal Malic', age:'19 anos', school:'CAP UFRJ', avatar:'http://placehold.it/300x300' },
+			{ id:12, school_label:'CM', name:'Sergio Tallent', age:'17 anos', school:'CM', avatar:'http://placehold.it/300x300' },
+			{ id:13, school_label:'CEFET', name:'Ana Carolina', age:'17 anos', school:'CEFET RJ', avatar:'http://placehold.it/300x300' },
+		]
 
-	var E = document.querySelector('#people'),
-		slider = document.querySelector('#students .slides');
-
-	for (var i=0; i<students.length; i++) {
-		$(slider).append(_.template($('#slider-template').html(), students[i]));
-		$(E).append(_.template($('#person-template').html(), students[i]));
-	}
-
-	$('.flex-viewport').css('overflow', 'auto')
-
-</script>
-
-<script type="text/javascript">
-	$().ready(function() {
-		if (location.hash) {
-			document.body.classList.add(location.hash.slice(1, 82398))
+		for (var i=0; i<students.length; i++) {
+			$('#students-slider .slides').append(_.template($('#slider-nav-templ').html(), students[i]));
+			$('#slider-nav').append(_.template($('#slider-el-templ').html(), students[i]));
 		}
-	})
 
-	$(window).ready(function() {	
-		$('#students .slides').parent().flexslider({
+		var updateSlider = function (evt) {
+			$("#slider-nav .student").removeClass('active');
+			var id = $(".flex-active-slide div")[0].dataset.id;
+			$("#slider-nav .student[data-id="+id+"]").addClass('active');
+		}
+		$('#students-slider .slides').parent().flexslider({
 			animation: "slide",
-			after: function (evt) {
-				e = evt;
-				$("#people .person").removeClass('active');
-				id = $(".flex-active-slide div")[0].dataset.id;
-				console.log('oi', id)
-				$("#people .person[data-id="+id+"]").addClass('active');
-			},
-			start: function (evt) {
-				$("#people .person").removeClass('active');
-				$($("#people .person")[0]).addClass('active');
-			}
+			after: updateSlider, 
+			start: updateSlider,
+			manualControls: $("#slider-nav .student")
 		});
-	});
-</script>
 
+		$(document).ready(function(){
+		$('a[href^="#"]').on('click',function (e) {
+		e.preventDefault();
+		var target = this.hash,
+		$target = $(target);
+		$('html, body').stop().animate({
+		'scrollTop': $target.offset().top
+		}, 900, 'swing', function () {
+		window.location.hash = target;
+		});
+		});
+		});
+	</script>
 
-<script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
-	</body>
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
+</body>
 </html>

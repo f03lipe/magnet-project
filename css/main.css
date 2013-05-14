@@ -1,64 +1,40 @@
 @import "font.css";
 .tk-museo{font-family:museo,"Open Sans",Arial;}
 .tk-museo-sans{font-family:museo-sans,"Open Sans",Arial;}
-#box{margin-left:50px;width:60px;height:60px;background:red;}
-body{background:#333333 fixed url('../img/dark_fish_skin.png') repeat top left;font-family:museo-sans,Montserrat,"Open Sans",sans-serif;}
-hr{height:0;border-bottom:1px solid #444;}
+body{background:#333333 fixed url('../img/dark_fish_skin.png') repeat top left;font-family:museo-sans,Montserrat,"Open Sans",sans-serif;overflow-x:hidden;color:white;}
 h1,h2,h3,h4,h5,h6{font-family:Montserrat, museo;}
-.container>blockquote p,.container>blockquote{font-size:130%;}
-.text-justify{text-align:justify;}
 a:hover,a:link,a:active{color:#4AE;text-decoration:none;}
-strike{color:#666;}
 canvas{position:fixed;width:100%;height:100%;}
-.scrollblock{position:relative !important;top:0 !important;}
 #header{color:white;}#header .tc-banner{position:fixed;top:10px;left:10px;cursor:pointer;}#header .tc-banner img{position:relative;z-index:1;vertical-align:middle;}
 #header .tc-banner .box{position:relative;z-index:0;padding:10px 15px;display:inline-block;margin-left:-10px;font-family:Montserrat;font-weight:bosld;font-size:12px;line-height:15px;background:rgba(0, 0, 0, 0.5);vertical-align:middle;opacity:0;cursor:default;}#header .tc-banner .box a{font-weight:bold;}
 #header .tc-banner:hover{opacity:1;}#header .tc-banner:hover .box{opacity:1;}
 #header .social-btns{position:fixed;top:15px;right:15px;}#header .social-btns img{display:none;position:relative;cursor:pointer !important;border-radius:20px;background:white;margin-left:3px;boxs-shadow:0 0 5px #000000;outline:none !important;}
 #header .social-btns img:active{top:2px;}
-#header header{position:relative;margin-top:200px;margin-bottom:70px;text-align:center;color:white;}#header header h1{font:bolder 120px/80px Losra,Montserrat,"Monofett","Open Sans";letter-spacing:-2px;text-transform:uppercase;text-shadow:0px 0 7px rgba(0, 0, 0, 0.5);}
+#header header{position:relative;margin-top:200px;margin-bottom:70px;text-align:center;color:white;}#header header h1{font:bolder 120px/80px Montserrat,"Monofett","Open Sans";letter-spacing:-2px;text-transform:uppercase;text-shadow:0px 0 7px rgba(0, 0, 0, 0.5);}
 #header header h2{font:18px Montserrat;margin-top:15px;text-shadow:0px 0 1px black;}
 #header header h2 a{color:inherit;font-weight:bold;text-decoration:none !important;}
-.light-bg{position:relative;color:#444;margin-bottom:50px;box-shadow:0 0 25px rgba(0, 0, 0, 0.7);background:#ffffff url('../img/tiny_grid_@2X.png') repeat top left;}.light-bg a:hover,.light-bg a:visited,.light-bg a:active{color:#08C;}
-.container{padding-bottom:50px;}.container p{font-size:15px;}
-.container.double-padding{padding-top:50px;}
-.container .central{text-align:center;font-family:museo;}
-.container#foo li{font-size:150%;margin-bottom:10px;font-family:museo,"Open Sans";list-style-image:url(../img/tick.png);}
-.container#people{margin-right:0;margin-left:0;width:100%;text-align:center;}
-.container#people,.container #people{cursor:default;text-align:center;font-family:Montserrat,"Open Sans",Arial;padding-top:10px;}.container#people .person,.container #people .person{width:60px;height:60px;display:table;cursor:pointer;display:inline-block;margin-bottom:10px;margin-right:7px;border:5px solid white;border-radius:35px;-webkit-transition:all linear 0.2s;-moz-transition:all linear 0.2s;-o-transition:all linear 0.2s;-ms-transition:all linear 0.2s;transition:all linear 0.2s;border-width:2px;border-style:solid;}.container#people .person .square,.container #people .person .square{width:60px;height:60px;background:url(../img/avatars.png) no-repeat;border-radius:35px;display:inline-block;position:relative;}
-.container#people .person .tooltip .tooltip-arrow,.container #people .person .tooltip .tooltip-arrow{border-top-color:rgba(255, 255, 255, 0.8);}
-.container#people .person .tooltip .tooltip-inner,.container #people .person .tooltip .tooltip-inner{text-align:left;background:rgba(255, 255, 255, 0.5);color:black;border:none;font:15px Montserrat;border-radius:0;}
-.container#people .person:nth-child(1) .square,.container #people .person:nth-child(1) .square{background-position:-408px -408px;}
-.container#people .person:nth-child(2) .square,.container #people .person:nth-child(2) .square{background-position:-408px -340px;}
-.container#people .person:nth-child(3) .square,.container #people .person:nth-child(3) .square{background-position:-408px -272px;}
-.container#people .person:nth-child(4) .square,.container #people .person:nth-child(4) .square{background-position:-204px -204px;}
-.container#people .person:nth-child(5) .square,.container #people .person:nth-child(5) .square{background-position:-408px -68px;}
-.container#people .person:nth-child(6) .square,.container #people .person:nth-child(6) .square{background-position:-340px -68px;}
-.container#people .person:nth-child(7) .square,.container #people .person:nth-child(7) .square{background-position:-476px -68px;}
-.container#people .person:nth-child(8) .square,.container #people .person:nth-child(8) .square{background-position:-68px -136px;}
-.container#people .person:nth-child(9) .square,.container #people .person:nth-child(9) .square{background-position:-136px -136px;}
-.container#people .person:nth-child(10) .square,.container #people .person:nth-child(10) .square{background-position:-204px -136px;}
-.container#people .person:nth-child(11) .square,.container #people .person:nth-child(11) .square{background-position:-204px -272px;}
-.container#people .person:nth-child(12) .square,.container #people .person:nth-child(12) .square{background-position:-272px -272px;}
-.container#people .person:nth-child(13) .square,.container #people .person:nth-child(13) .square{background-position:-340px -272px;}
-.container#people .person:nth-child(14) .square,.container #people .person:nth-child(14) .square{background-position:-68px -68px;}
-.container#people .person:nth-child(15) .square,.container #people .person:nth-child(15) .square{background-position:-204px -408px;}
-.container#people .person:nth-child(16) .square,.container #people .person:nth-child(16) .square{background-position:-204px -136px;}
-body[data-hoverschool=CEFET] .container#people .person[data-school=CEFET],body[data-hoverschool=CEFET] .container #people .person[data-school=CEFET],.container#people .person[data-school=CEFET]:hover,.container #people .person[data-school=CEFET]:hover{border-color:#009b95;}
-body[data-hoverschool=CM] .container#people .person[data-school=CM],body[data-hoverschool=CM] .container #people .person[data-school=CM],.container#people .person[data-school=CM]:hover,.container #people .person[data-school=CM]:hover{border-color:#fb202d;}
-body[data-hoverschool=CAP] .container#people .person[data-school=CAP],body[data-hoverschool=CAP] .container #people .person[data-school=CAP],.container#people .person[data-school=CAP]:hover,.container #people .person[data-school=CAP]:hover{border-color:#00c90d;}
-body[data-hoverschool=CP2] .container#people .person[data-school=CP2],body[data-hoverschool=CP2] .container #people .person[data-school=CP2],.container#people .person[data-school=CP2]:hover,.container #people .person[data-school=CP2]:hover{border-color:#ff7100;}
-.container#people .person.active,.container #people .person.active{box-shadow:0 0 5px #000000;}
-.container#students{masrgin-bottom:30px;}.container#students .flex-control-nav{position:static;display:none;}
-.container#students .flex-direction-nav{display:none;}
-.container#students .rsow{border-top:1px solid #DDD;border-bottom:1px solid #DDD;padding-top:20px;}
-body.test .container#students .student{outline:1px solid blue;}
-body.test .container#students [class*=span]{outline:1px solid red;}
-.container#students .student{padding:0 10px;text-align:center;}.container#students .student img{vertical-align:top;border-radius:10px;width:150px;display:inline-block;}
-.container#students .student>div{vertical-align:top;margin-left:40px;text-align:left;width:600px;display:inline-block;}
-.container#students .student hgroup{display:inline-block;bordesr:1px solid red;}.container#students .student hgroup *{display:inline-block;margin-top:5px;margin-bottom:0px;}
-.container#students .student .text{padding:10px 0;font:16px museo;}
-.container#cost table{font:150% museo;}.container#cost table td:nth-child(1){font-weight:bold;}
+.light-bg{position:relative;padding-top:10px;margin-bottom:50px;box-shadow:0 0 25px rgba(0, 0, 0, 0.7);background:#ffffff url('../img/tiny_grid_@2X.png') repeat top left;color:#444;}.light-bg a:hover,.light-bg a:visited,.light-bg a:active{color:#08C;}
+.light-bg strike{color:#666;}
+.container>.text-justify{text-align:justify;}
+.container>blockquote p,.container>blockquote{font-size:24px;}
+.container{font-size:16px;padding-bottom:50px;}.container#selection li{font-size:22px;margin-bottom:10px;font-family:museo,"Open Sans";list-style-image:url(../img/tick.png);}
+.container .flex-viewport{overflow:visible !important;}.container .flex-viewport li:not(.flex-active-slide){opacity:.3;}
+.container#slider-nav{font-family:museo,Montserrat,"Open Sans",Arial;width:100%;text-align:center;cursor:default;margin-bottom:10px;}.container#slider-nav .tooltip .tooltip-arrow{border-bottom-color:rgba(0, 0, 0, 0.8);}
+.container#slider-nav .tooltip .tooltip-inner{text-align:left;background:rgba(255, 255, 255, 0);color:black;border:none;font:15px Montserrat;border-radius:0;}
+.container#slider-nav .student{width:60px;height:60px;cursor:pointer;display:inline-block;margin-right:7px;-webkit-transition:all linear 0.2s;-moz-transition:all linear 0.2s;-o-transition:all linear 0.2s;-ms-transition:all linear 0.2s;transition:all linear 0.2s;border:5px solid white;-webkit-border-radius:35px;-moz-border-radius:35px;border-radius:35px;}
+.container#slider-nav .student img{-webkit-border-radius:35px;-moz-border-radius:35px;border-radius:35px;}
+body[data-hoverschool=CEFET] .container#slider-nav .student[data-school=CEFET],.container#slider-nav .student[data-school=CEFET]:hover,.container#slider-nav .student[data-school=CEFET].active{border-color:#009b95;}
+body[data-hoverschool=CM] .container#slider-nav .student[data-school=CM],.container#slider-nav .student[data-school=CM]:hover,.container#slider-nav .student[data-school=CM].active{border-color:#fb202d;}
+body[data-hoverschool=CAP] .container#slider-nav .student[data-school=CAP],.container#slider-nav .student[data-school=CAP]:hover,.container#slider-nav .student[data-school=CAP].active{border-color:#00c90d;}
+body[data-hoverschool=CP2] .container#slider-nav .student[data-school=CP2],.container#slider-nav .student[data-school=CP2]:hover,.container#slider-nav .student[data-school=CP2].active{border-color:#ff7100;}
+.container#students-slider .flex-control-nav{position:static;display:none;}
+.container#students-slider .flex-direction-nav{display:none;}
+.container#students-slider .student{padding:0 10px;text-align:center;}.container#students-slider .student img{vertical-align:top;display:inline-block;border-radius:10px;background:white;width:150px;}
+.container#students-slider .student>div{vertical-align:top;display:inline-block;margin-left:40px;text-align:left;width:600px;}
+.container#students-slider .student hgroup *{display:inline-block;margin:5px 5px 0 0;}
+.container#students-slider .student .text{padding:10px 0;font:16px museo;}
+.container#cost hr{height:0;border-bottom:1px solid #444;}
+.container#cost table{font:20px museo;}.container#cost table td:nth-child(1){font-weight:bold;}
 .container#cost table td{padding-right:2px;}
 .container#donate{text-align:center;}.container#donate button{position:relative;padding:20px 35px;background:#009B95;border:1px solid #444;box-shadow:0 1px 4px rgba(0, 0, 0, 0.8);border-radius:4px;color:white;font:bold 44px/150% Montserrat;}
 .container#donate .progress .bar{-webkit-transition:all ease-out 1s;-moz-transition:all ease-out 1s;-o-transition:all ease-out 1s;-ms-transition:all ease-out 1s;transition:all ease-out 1s;width:0% !important;}
@@ -77,4 +53,4 @@ body.test .container#students [class*=span]{outline:1px solid red;}
 .social-share .sharrre .share{line-height:14px;color:#ffffff;font-size:13px;text-shadow:0px 1px 0px rgba(0, 0, 0, 0.35);}
 .social-share #facebook .share span{background-position:0 -35px;height:12px;}
 .social-share .sharrre .share span{background:url("../img/share-btns.png") no-repeat scroll 0 0 transparent;width:18px;height:10px;display:inline-block;}
-footer{position:relative;z-index:2;color:white;}
+footer{position:relative;z-index:2;font-size:15px;color:white;}

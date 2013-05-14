@@ -1,114 +1,47 @@
 
-.box-shadow (@x: 0px, @y: 3px, @blur: 5px, @alpha: .5) when not (iscolor(@alpha)) {
-    -webkit-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
-    -moz-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
-    box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
-}
+// main.less
+// for magnetproject.us
+// by f03lipe
 
-.box-shadow (@x: 0px, @y: 3px, @blur: 5px, @alpha: black) when (iscolor(@alpha)) {
-    -webkit-box-shadow: @x @y @blur @alpha;
-    -moz-box-shadow: @x @y @blur @alpha;
-    box-shadow: @x @y @blur @alpha;
-}
-
-.user-select (@wut: none) {
-	-moz-user-select: @wut;
-	-webkit-user-select: @wut;
-	-ms-user-select: @wut;
-}
-
-.transition (@prop: all, @time: 1s, @ease: linear) {
-    -webkit-transition: @prop @time @ease;
-    -moz-transition: @prop @time @ease;
-    -o-transition: @prop @time @ease;
-    -ms-transition: @prop @time @ease;
-    transition: @prop @time @ease;
-}
-
-.transform (@rotate: 90deg, @scale: 1, @skew: 1deg, @translate: 10px) {
-    -webkit-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
-    -moz-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
-    -o-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
-    -ms-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
-    transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
-}
-
-
- 
-@spriteSize: 68px;
-
-.sprite (@x, @y, @size: @spriteSize) {
-   background-position: -(@x*@spriteSize) -(@y*@spriteSize);
-}
-
-
-///
-
+@import "macros.less";
+@import "font.css";
 
 .tk-museo { font-family: museo, "Open Sans", Arial; }
 .tk-museo-sans { font-family: museo-sans, "Open Sans", Arial; }
-
-///////
-
-@import "font.css";
 
 @color0: #009B95;
 @color1: #FB202D;
 @color2: #00C90D;
 @color3: #FF7100;
 
-#box {
-	margin-left: 50px; width: 60px; height: 60px; background: red;
-}
 
 body {
 	background: #333 fixed url('../img/dark_fish_skin.png') repeat top left;
 	font-family: museo-sans, Montserrat, "Open Sans", sans-serif;
+	overflow-x: hidden; // for slider
+	color: white;
 }
 
-hr {
-	height: 0;
-	border-bottom: 1px solid #444;
-}
 
 h1,h2,h3,h4,h5,h6 {
 	font-family: Montserrat, museo;
 }
 
-.container > blockquote {
-	p, & {
 
-	font-size: 130%;
-	}
-}
-
-.text-justify { text-align: justify; }
-
-a:hover, a:link, a:active {
+a:hover,a:link,a:active {
 	color: #4AE;
 	text-decoration: none;
 }
 
-strike {
-	color: #666;
-}
 
+// HEADER
+// #header, canvas
 
-//
-
-canvas
-{
+canvas {
 	position: fixed;
 	width: 100%;
 	height: 100%;
 }
-
-.scrollblock {
-	position: relative !important;
-	top: 0 !important;
-}
-
-//
 
 #header
 {
@@ -179,7 +112,7 @@ canvas
 		color: white;
 
 		h1 {
-			font: bolder 120px/80px Losra, Montserrat, "Monofett", "Open Sans";
+			font: bolder 120px/80px Montserrat, "Monofett", "Open Sans";
 			letter-spacing: -2px;
 			text-transform: uppercase;
 			text-shadow: 0px 0 7px rgba(0,0,0,.5);
@@ -199,210 +132,144 @@ canvas
 	}
 }
 
-//
+
+// LIGHT-BG and CONTAINERS
+// .light-bg > .container
+
 
 .light-bg
 {
 	position: relative;
-	color: #444;
+	padding-top: 10px;
 	margin-bottom: 50px;
 	box-shadow: 0 0 25px rgba(0,0,0,.7);
 	background: #fff url('../img/tiny_grid_@2X.png') repeat top left;
+	color: #444;
 
 	a:hover, a:visited, a:active {
 		color: #08C;
 	}
+
+	strike {
+		color: #666;
+	}
 }
 
-//
-
+.container > .text-justify { text-align: justify; }
+.container > blockquote { p, & { font-size: 24px; } }
 .container
 {
 
-	p {
-		font-size: 15px;
-	}
-
+	font-size: 16px;
 	padding-bottom: 50px;
-	&.double-padding { padding-top: 50px; }
 
-	.central {
-		text-align: center;
-		font-family: museo;
-	}
-
-	&#foo {
+	&#selection {
 		li {
-			font-size: 150%;
+			font-size: 22px;
 			margin-bottom: 10px;
 			font-family: museo, "Open Sans";
 			list-style-image: url(../img/tick.png);
 		}
 	}
 
-	&#people {
-		margin-right: 0;
-		margin-left: 0;
-		width: 100%;
-		text-align: center;
+	.flex-viewport {
+		overflow: visible !important;
+		li:not(.flex-active-slide) {
+			opacity: .3;
+		}
 	}
 
 
-	&#people, #people
-	{
-		@dim: 60px;
+	&#slider-nav {
+		font-family: museo, Montserrat, "Open Sans", Arial;
 
-		cursor: default;
+		width: 100%;
 		text-align: center;
-		font-family: Montserrat, "Open Sans", Arial;
-		padding-top: 10px;
+		cursor: default;
+		margin-bottom: 10px;
 
-		.person
+		.tooltip {
+			.tooltip-arrow {
+				border-bottom-color: rgba(0,0,0,.8);
+			}
+			.tooltip-inner {
+				text-align: left;
+				background: rgba(255,255,255, 0); // contrast with h3
+				color: black;
+				border: none;
+				font: 15px Montserrat;
+				border-radius: 0;
+			}
+		}
+
+		.student
 		{
+			@dim: 60px;
 			width: @dim;
 			height: @dim;
 
-			display: table;
 			cursor: pointer;
 			display: inline-block;
-			margin-bottom: 10px;
 			margin-right: 7px;
 			
-			border: 5px solid white;
-			border-radius: 35px;
-			// .box-shadow(0,0, 10px, .3);
 			.transition(all, linear, .2s);
 			
-			border-width: 2px;
-			border-style: solid;
-
-			.square
-			{
-				width: @dim;
-				height: @dim;
-
-				background: url(../img/avatars.png) no-repeat;
-				border-radius: 35px;
-				display: inline-block;
-				position: relative;
-				
-				// &:hover { box-shadow: inset 0 0 4px black; }
-			}
-
-			.tooltip {
+			border: 5px solid white;
+			.border-radius(35px);
+			// .box-shadow(0,0, 10px, .3);
 			
-				.tooltip-arrow {
-					border-top-color: rgba(255,255,255,.8);
-				}
-				.tooltip-inner {
-					text-align: left;
-					background: rgba(255,255,255,.5); // contrast with h3
-					color: black;
-					border: none;
-					font: 15px Montserrat;
-					border-radius: 0;
-				}
-			}
+			&.active { }
 
-			&:nth-child(1)	.square { .sprite(6, 6); }
-			&:nth-child(2)	.square { .sprite(6, 5); }
-			&:nth-child(3)	.square { .sprite(6, 4); }
-			&:nth-child(4)	.square { .sprite(3, 3); }
-			&:nth-child(5)	.square { .sprite(6, 1); }
-			&:nth-child(6)	.square { .sprite(5, 1); }
-			&:nth-child(7)	.square { .sprite(7, 1); }
-			&:nth-child(8)	.square { .sprite(1, 2); }
-			&:nth-child(9)	.square { .sprite(2, 2); }
-			&:nth-child(10)	.square { .sprite(3, 2); }
-			&:nth-child(11)	.square { .sprite(3, 4); }
-			&:nth-child(12)	.square { .sprite(4, 4); }
-			&:nth-child(13)	.square { .sprite(5, 4); }
-			&:nth-child(14)	.square { .sprite(1, 1); }
-			&:nth-child(15)	.square { .sprite(3, 6); }
-			&:nth-child(16)	.square { .sprite(3, 2); }
+			img {
+				.border-radius(35px);
+			}
 			
-			&[data-school]:hover .square {
-				// box-shadow: inset 0 0 10px rgba(0,0,0,.5);
-			}
-
 			body[data-hoverschool=CEFET] &[data-school=CEFET],
-			&[data-school=CEFET]:hover { border-color: @color0; }
+			&[data-school=CEFET]:hover,
+			&[data-school=CEFET].active { border-color: @color0; }
 
 			body[data-hoverschool=CM] &[data-school=CM],
-			&[data-school=CM]:hover { border-color: @color1; }
+			&[data-school=CM]:hover,
+			&[data-school=CM].active { border-color: @color1; }
 			
 			body[data-hoverschool=CAP] &[data-school=CAP],
-			&[data-school=CAP]:hover { border-color: @color2; }
+			&[data-school=CAP]:hover,
+			&[data-school=CAP].active { border-color: @color2; }
 
 			body[data-hoverschool=CP2] &[data-school=CP2],
-			&[data-school=CP2]:hover { border-color: @color3; }
-		}
-
-		.person.active {
-			box-shadow: 0 0 5px rgba(0,0,0,1);
+			&[data-school=CP2]:hover,
+			&[data-school=CP2].active { border-color: @color3; }
 		}
 	}
 
-
-	&#students
+	&#students-slider
 	{
-
-		masrgin-bottom: 30px;
-
 		.flex-control-nav { position: static; display: none; }
 		.flex-direction-nav { display: none; }
-
-		.rsow {
-			border-top: 1px solid #DDD;
-			border-bottom: 1px solid #DDD;
-			padding-top: 20px;
-		}
-		
-		body.test & {
-			.student {
-				outline: 1px solid blue;
-			}
-
-			[class*=span] {
-				outline: 1px solid red;
-			}
-		}
-
 		
 		.student {
-
 			padding: 0 10px;
 			text-align: center;
 			
 			img {
 				vertical-align: top;
-				
-				border-radius: 10px;
-				width: 150px;
 				display: inline-block;
+				border-radius: 10px;
+				background: white;
+				width: 150px;
 			}
 
 			& > div {
 				vertical-align: top;
+				display: inline-block;
 				margin-left: 40px;
 				text-align: left;
-
 				width: 600px;
-				display: inline-block;
 			}
 
-			hgroup {
+			hgroup * {
 				display: inline-block;
-				
-				* {
-					display: inline-block;
-					margin-top: 5px; margin-bottom: 0px;
-				}
-
-				bordesr: 1px solid red;
-				
-				// .name { font: bold 20px Montserrat; }
-				// .age, .school { font: bold 16px Montserrat; }
+				margin: 5px 5px 0 0;
 			}
 			
 			.text {
@@ -412,12 +279,15 @@ canvas
 		}
 	}
 
-
 	&#cost
 	{
+		hr {
+			height: 0;
+			border-bottom: 1px solid #444;
+		}
 
 		table {
-			font: 150% museo;
+			font: 20px museo;
 			td:nth-child(1) {
 				font-weight: bold;
 			}
@@ -426,7 +296,6 @@ canvas
 			}
 		}
 	}
-
 
 	&#donate
 	{
@@ -498,8 +367,8 @@ canvas
 	}
 }
 
-//
-
+// FOOTER
+// footer
 
 .social-btn {
 	position: static !important;
@@ -518,8 +387,7 @@ canvas
 
 	img:active {
 		top: 2px;
-	}
-	
+	}	
 }
 
 
@@ -571,5 +439,6 @@ footer
 {
 	position: relative;
 	z-index: 2;
+	font-size: 15px;
 	color: white;
 }
