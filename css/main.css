@@ -6,20 +6,20 @@ h1,h2,h3,h4,h5,h6{font-family:Montserrat, museo;}
 a:hover,a:link,a:active{color:#4AE;text-decoration:none;}
 canvas{position:fixed;width:100%;height:100%;}
 #header{color:white;}#header .tc-banner{position:fixed;top:10px;left:10px;cursor:pointer;}#header .tc-banner img{position:relative;z-index:1;vertical-align:middle;}
-#header .tc-banner .box{position:relative;z-index:0;padding:10px 15px;display:inline-block;margin-left:-10px;font-family:Montserrat;font-weight:bosld;font-size:12px;line-height:15px;background:rgba(0, 0, 0, 0.5);vertical-align:middle;opacity:0;cursor:default;}#header .tc-banner .box a{font-weight:bold;}
-#header .tc-banner:hover{opacity:1;}#header .tc-banner:hover .box{opacity:1;}
-#header .social-btns{position:fixed;top:15px;right:15px;}#header .social-btns img{display:none;position:relative;cursor:pointer !important;border-radius:20px;background:white;margin-left:3px;boxs-shadow:0 0 5px #000000;outline:none !important;}
-#header .social-btns img:active{top:2px;}
+#header .tc-banner .box{position:relative;display:inline-block;z-index:0;padding:10px 15px;margin-left:-10px;vertical-align:middle;cursor:default;font:bold 13px/16px "Montserrat";background:rgba(0, 0, 0, 0.5);opacity:0;}#header .tc-banner .box a{font-weight:bold;color:#0BF;}
+#header .tc-banner:hover .box{opacity:1;}
+#header .social-share{position:fixed;top:15px;right:15px;}
 #header header{position:relative;margin-top:200px;margin-bottom:70px;text-align:center;color:white;}#header header h1{font:bolder 120px/80px Montserrat,"Monofett","Open Sans";letter-spacing:-2px;text-transform:uppercase;text-shadow:0px 0 7px rgba(0, 0, 0, 0.5);}
 #header header h2{font:18px Montserrat;margin-top:15px;text-shadow:0px 0 1px black;}
 #header header h2 a{color:inherit;font-weight:bold;text-decoration:none !important;}
-.light-bg{position:relative;padding-top:10px;margin-bottom:50px;box-shadow:0 0 25px rgba(0, 0, 0, 0.7);background:#ffffff url('../img/tiny_grid_@2X.png') repeat top left;color:#444;}.light-bg a:hover,.light-bg a:visited,.light-bg a:active{color:#08C;}
+.light-bg{position:relative;padding-top:10px;margin-bottom:30px;box-shadow:0 0 25px rgba(0, 0, 0, 0.7);background:#ffffff url('../img/tiny_grid_@2X.png') repeat top left;color:#444;}.light-bg a:hover,.light-bg a:visited,.light-bg a:active{color:#08C;}
 .light-bg strike{color:#666;}
 .container>.text-justify{text-align:justify;}
 .container>blockquote p,.container>blockquote{font-size:24px;}
-.container{font-size:16px;padding-bottom:50px;}.container#selection li{font-size:22px;margin-bottom:10px;font-family:museo,"Open Sans";list-style-image:url(../img/tick.png);}
+.container{font-size:16px;padding-bottom:50px;}.container#selection{padding-bottom:30px;}.container#selection li{font-size:20px;margin-bottom:10px;font-family:museo,"Open Sans";list-style-image:url(../img/tick.png);}
 .container .flex-viewport{overflow:visible !important;}.container .flex-viewport li:not(.flex-active-slide){opacity:.3;}
-.container#slider-nav{font-family:museo,Montserrat,"Open Sans",Arial;width:100%;text-align:center;cursor:default;margin-bottom:10px;}.container#slider-nav .tooltip .tooltip-arrow{border-bottom-color:rgba(0, 0, 0, 0.8);}
+.container#slider-nav{font-family:museo,Montserrat,"Open Sans",Arial;width:100%;text-align:center;cursor:default;margin-bottom:10px;}.container#slider-nav h2{font:bold 22px museo;}
+.container#slider-nav .tooltip .tooltip-arrow{border-bottom-color:rgba(0, 0, 0, 0.8);}
 .container#slider-nav .tooltip .tooltip-inner{text-align:left;background:rgba(255, 255, 255, 0);color:black;border:none;font:15px Montserrat;border-radius:0;}
 .container#slider-nav .student{width:60px;height:60px;cursor:pointer;display:inline-block;margin-right:7px;-webkit-transition:all linear 0.2s;-moz-transition:all linear 0.2s;-o-transition:all linear 0.2s;-ms-transition:all linear 0.2s;transition:all linear 0.2s;border:5px solid white;-webkit-border-radius:35px;-moz-border-radius:35px;border-radius:35px;}
 .container#slider-nav .student img{-webkit-border-radius:35px;-moz-border-radius:35px;border-radius:35px;}
@@ -35,7 +35,7 @@ body[data-hoverschool=CP2] .container#slider-nav .student[data-school=CP2],.cont
 .container#students-slider .student .text{padding:10px 0;font:16px museo;}
 .container#cost hr{height:0;border-bottom:1px solid #444;}
 .container#cost table{font:20px museo;}.container#cost table td:nth-child(1){font-weight:bold;}
-.container#cost table td{padding-right:2px;}
+.container#cost table td{padding-right:3px;}
 .container#donate{text-align:center;}.container#donate button{position:relative;padding:20px 35px;background:#009B95;border:1px solid #444;box-shadow:0 1px 4px rgba(0, 0, 0, 0.8);border-radius:4px;color:white;font:bold 44px/150% Montserrat;}
 .container#donate .progress .bar{-webkit-transition:all ease-out 1s;-moz-transition:all ease-out 1s;-o-transition:all ease-out 1s;-ms-transition:all ease-out 1s;transition:all ease-out 1s;width:0% !important;}
 .container#donate .progress.visible .bar{width:30% !important;}
@@ -45,12 +45,8 @@ body[data-hoverschool=CP2] .container#slider-nav .student[data-school=CP2],.cont
 .container#contact form h5,.container#contact form h6{margin-left:20px;display:inline-block;font-weight:normal;}
 .container#contact form input,.container#contact form textarea{box-shadow:none;font-family:inherit;border-radius:0;}
 .container#contact form .btn-submit:active{top:2px;box-shadow:0 0px 3px rgba(0, 0, 0, 0.6);}
-.social-btn{position:static !important;top:15px;right:15px;}.social-btn img{position:relative;cursor:pointer !important;border-radius:20px;background:white;margin-left:3px;box-shadow:0 0 5px #000000;outline:none !important;}
-.social-btn img:active{top:2px;}
-.social-share{display:inline-block;margin-left:10px;}.social-share .sharrre{vertical-align:middle;display:inline-block;}
-.social-share .sharrre .box:active{position:relative;top:2px;box-shadow:0 0 3px #333333;}
-.social-share .sharrre .share{display:inline-block;padding:5px 5px;text-align:center;font-weight:bold;}
-.social-share .sharrre .share{line-height:14px;color:#ffffff;font-size:13px;text-shadow:0px 1px 0px rgba(0, 0, 0, 0.35);}
-.social-share #facebook .share span{background-position:0 -35px;height:12px;}
-.social-share .sharrre .share span{background:url("../img/share-btns.png") no-repeat scroll 0 0 transparent;width:18px;height:10px;display:inline-block;}
-footer{position:relative;z-index:2;font-size:15px;color:white;}
+.social-share{display:inline-block;margin-left:10px;}.social-share .sharrre{vertical-align:middle;display:inline-block;}.social-share .sharrre .box:active{position:relative;top:2px;box-shadow:0 0 3px #333333;}
+.social-share .sharrre .share{display:inline-block;padding:5px 5px;text-align:center;font-weight:bold;line-height:14px;color:#ffffff;font-size:13px;text-shadow:0px 1px 0px rgba(0, 0, 0, 0.35);}.social-share .sharrre .share span{background:url("../img/share-btns.png") no-repeat scroll 0 0 transparent;width:18px;height:10px;display:inline-block;}
+.social-share .facebook .share span{background-position:0 -35px;height:12px;}
+footer{position:relative;z-index:2;font-size:15px;color:white;}footer .social-btn{position:static !important;top:15px;right:15px;}footer .social-btn img{position:relative;cursor:pointer !important;border-radius:20px;background:white;margin-left:3px;box-shadow:0 0 5px #000000;outline:none !important;}
+footer .social-btn img:active{top:2px;}
