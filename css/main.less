@@ -126,7 +126,7 @@ canvas {
 	padding-top: 10px;
 	margin-bottom: 30px;
 	box-shadow: 0 0 25px rgba(0,0,0,.7);
-	background: #fff url('../img/tiny_grid_@2X.png') repeat top left;
+	background: #fff; // url('../img/stiny_grid_@2X.png') repeat top left;
 	color: #444;
 
 	a:hover, a:visited, a:active {
@@ -136,6 +136,22 @@ canvas {
 	del {
 		color: #666;
 	}
+
+	& > * {
+		position: relative;
+		z-index: 2;
+	}
+
+	.bg {
+		z-index: 1;
+		position: absolute;
+		left: 0; top: 0; right: 0; bottom: 0;
+		width: 100%;
+		hesight: 100%;
+		background:  url('../img/noisy_grid.png') repeat top left;
+		opacity: 0.4;
+	}
+
 }
 
 .container > .text-justify { text-align: justify; }
