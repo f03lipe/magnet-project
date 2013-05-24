@@ -52,3 +52,10 @@ body[data-hoverschool=CP2] .container#slider-nav .student[data-school=CP2],.cont
 .social-share .facebook .share span{background-position:0 -35px;height:12px;}
 footer{position:relative;z-index:2;font-size:15px;color:white;}footer .social-btn{position:static !important;top:15px;right:15px;}footer .social-btn img{position:relative;cursor:pointer !important;border-radius:20px;background:white;margin-left:3px;box-shadow:0 0 5px #000000;outline:none !important;}
 footer .social-btn img:active{top:2px;}
+::-webkit-scrollbar-thumb{background-color:rgba(0, 0, 0, 0.2);background-clip:padding-box;border:solid transparent;border-width:1px 1px 1px 6px;min-height:28px;padding:100px 0 0;box-shadow:inset 1px 1px 0 rgba(0, 0, 0, 0.1),inset 0 -1px 0 rgba(0, 0, 0, 0.07);}
+::-webkit-scrollbar{height:16px;overflow:visible;width:12px;background:white;}
+::-webkit-scrollbar-track{background-clip:padding-box;border:solid transparent;border-width:0 0 0 4px;}
+::-webkit-scrollbar-corner{background:transparent;}
+::-webkit-scrollbar-thumb:vertical{border-width:2px 2px;min-height:40px;}
+::-webkit-scrollbar-thumb:hover{-webkit-transition:all linear 0.1s;-moz-transition:all linear 0.1s;-o-transition:all linear 0.1s;-ms-transition:all linear 0.1s;transition:all linear 0.1s;background-color:#AAA;}
+::-webkit-scrollbar-thumb:active{background-color:#777;}
