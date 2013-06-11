@@ -161,9 +161,15 @@ canvas {
 
 }
 
-.container > .text-justify { text-align: justify; }
-.container > blockquote { p, & { font-size: 24px; } }
-.container
+.container-fluid {
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 1100px; /* or 950px */
+}
+
+.container, .container-fluid > .text-justify { text-align: justify; }
+.container, .container-fluid > blockquote { p, & { font-size: 24px; } }
+.container, .container-fluid 
 {
 
 	font-size: 16px;
@@ -205,7 +211,7 @@ canvas {
 			.light-bg & .tooltip-inner { color: black; }
 
 			.tooltip-arrow {
-				border-bottom-color: rgba(0,0,0,.8);
+				border-bottom-color: #222; //rgba(0,0,0,1);
 			}
 			.tooltip-inner {
 				text-align: left;
@@ -219,24 +225,25 @@ canvas {
 
 		.student
 		{
-			@dim: 60px;
+			@bradius: 35px;
+			@dim: 50px;
 			width: @dim;
 			height: @dim;
 
 			cursor: pointer;
 			display: inline-block;
-			margin-right: 7px;
+			margin-right: 6px;
 			
 			.transition(all, linear, .2s);
 			
-			border: 5px solid white;
-			.border-radius(35px);
-			// .box-shadow(0,0, 10px, .3);
+			border: 3px solid white;
+			.border-radius(@bradius+2);
+			.box-shadow(0,0, 15px, .4);
 			
 			&.active { }
 
 			img {
-				.border-radius(35px);
+				.border-radius(@bradius);
 			}
 			
 			body[data-hoverschool=CEFET] &[data-school=CEFET],
@@ -254,6 +261,10 @@ canvas {
 			body[data-hoverschool=CP2] &[data-school=CP2],
 			&[data-school=CP2]:hover,
 			&[data-school=CP2].active { border-color: @color3; }
+
+			body[data-hoverschool=CP2] &[data-school=CP2],
+			&[data-school=CP2]:hover,
+			&[data-school=CP2].active { border-color: @color2; }
 		}
 	}
 

@@ -17,38 +17,40 @@ canvas{position:fixed;width:100%;height:100%;z-index:-1;}
 .light-bg del{color:#666;}
 .light-bg>*{position:relative;z-index:2;}
 .light-bg .bg{z-index:1;position:absolute;left:0;top:0;right:0;bottom:0;width:100%;hesight:100%;opacisty:0.4;}
-.container>.text-justify{text-align:justify;}
-.container>blockquote p,.container>blockquote{font-size:24px;}
-.container{font-size:16px;padding-bottom:50px;}.container#selection{padding-bottom:30px;}.container#selection li{font-size:20px;margin-bottom:10px;font-family:museo,"Open Sans";list-style-image:url(../img/tick.png);}
-.container .flex-viewport{overflow:visible !important;}.container .flex-viewport li:not(.flex-active-slide){opacity:0;}
-.container#slider-nav{margin-bottom:40px;padding-bottom:0;margin-top:5px;font-family:museo,Montserrat,"Open Sans",Arial;width:100%;text-align:center;cursor:default;}.container#slider-nav h2{font:bold 22px museo;}
-.light-bg .container#slider-nav .tooltip .tooltip-inner{color:black;}
-.container#slider-nav .tooltip .tooltip-arrow{border-bottom-color:rgba(0, 0, 0, 0.8);}
-.container#slider-nav .tooltip .tooltip-inner{text-align:left;background:rgba(255, 255, 255, 0);padding-top:0;border:none;font:15px Montserrat;border-radius:0;}
-.container#slider-nav .student{width:60px;height:60px;cursor:pointer;display:inline-block;margin-right:7px;-webkit-transition:all linear 0.2s;-moz-transition:all linear 0.2s;-o-transition:all linear 0.2s;-ms-transition:all linear 0.2s;transition:all linear 0.2s;border:5px solid white;-webkit-border-radius:35px;-moz-border-radius:35px;border-radius:35px;}
-.container#slider-nav .student img{-webkit-border-radius:35px;-moz-border-radius:35px;border-radius:35px;}
-body[data-hoverschool=CEFET] .container#slider-nav .student[data-school=CEFET],.container#slider-nav .student[data-school=CEFET]:hover,.container#slider-nav .student[data-school=CEFET].active{border-color:#009b95;}
-body[data-hoverschool=CM] .container#slider-nav .student[data-school=CM],.container#slider-nav .student[data-school=CM]:hover,.container#slider-nav .student[data-school=CM].active{border-color:#fb202d;}
-body[data-hoverschool=CAP] .container#slider-nav .student[data-school=CAP],.container#slider-nav .student[data-school=CAP]:hover,.container#slider-nav .student[data-school=CAP].active{border-color:#00c90d;}
-body[data-hoverschool=CP2] .container#slider-nav .student[data-school=CP2],.container#slider-nav .student[data-school=CP2]:hover,.container#slider-nav .student[data-school=CP2].active{border-color:#ff7100;}
-.container#students-slider{margin-top:20px;}.container#students-slider .flex-control-nav{position:static;display:none;}
-.container#students-slider .flex-direction-nav{display:none;}
-.container#students-slider .student{padding:0 10px;text-align:center;}.container#students-slider .student img{vertical-align:top;display:inline-block;border-radius:10px;background:white;width:150px;}
-.container#students-slider .student>div{vertical-align:top;display:inline-block;margin-left:40px;text-align:left;width:600px;}
-.container#students-slider .student hgroup *{display:inline-block;margin:5px 5px 0 0;}
-.container#students-slider .student .text{padding:10px 0;font:16px museo;}
-.container#cost hr{height:0;border-bottom:1px solid #444;}
-.container#cost table{font:20px museo;}.container#cost table td:nth-child(1){font-weight:bold;}
-.container#cost table td{padding-right:3px;}
-.container#donate{text-align:center;}.container#donate button{position:relative;padding:20px 35px;background:#009B95;border:1px solid #444;box-shadow:0 1px 4px rgba(0, 0, 0, 0.8);border-radius:4px;color:white;font:bold 44px/150% Montserrat;}
-.container#donate .progress .bar{-webkit-transition:all ease-out 1s;-moz-transition:all ease-out 1s;-o-transition:all ease-out 1s;-ms-transition:all ease-out 1s;transition:all ease-out 1s;width:0% !important;}
-.container#donate .progress.visible .bar{width:30% !important;}
-.container#donate .progress.visible .bar{width:30% !important;-webkit-transition:all ease-out 3s;-moz-transition:all ease-out 3s;-o-transition:all ease-out 3s;-ms-transition:all ease-out 3s;transition:all ease-out 3s;}
-.container#donate button:hover,.container#donate button:active,.container#donate button.active,.container#donate button.disabled,.container#donate button[disabled]{background-color:#51a351;}
-.container#contact form .btn-submit{position:relative;padding:10px 15px;background:#009B95;border:1px solid #444;box-shadow:0 1px 4px rgba(0, 0, 0, 0.8);border-radius:4px;color:white;font:bold 14px Montserrat;}
-.container#contact form h5,.container#contact form h6{margin-left:20px;display:inline-block;font-weight:normal;}
-.container#contact form input,.container#contact form textarea{box-shadow:none;font-family:inherit;border-radius:0;}
-.container#contact form .btn-submit:active{top:2px;box-shadow:0 0px 3px rgba(0, 0, 0, 0.6);}
+.container-fluid{margin-right:auto;margin-left:auto;max-width:1100px;}
+.container,.container-fluid>.text-justify{text-align:justify;}
+.container p,.container-fluid>blockquote p,.container,.container-fluid>blockquote{font-size:24px;}
+.container,.container-fluid{font-size:16px;padding-bottom:50px;}.container#selection,.container-fluid#selection{padding-bottom:30px;}.container#selection li,.container-fluid#selection li{font-size:20px;margin-bottom:10px;font-family:museo,"Open Sans";list-style-image:url(../img/tick.png);}
+.container .flex-viewport,.container-fluid .flex-viewport{overflow:visible !important;}.container .flex-viewport li:not(.flex-active-slide),.container-fluid .flex-viewport li:not(.flex-active-slide){opacity:0;}
+.container#slider-nav,.container-fluid#slider-nav{margin-bottom:40px;padding-bottom:0;margin-top:5px;font-family:museo,Montserrat,"Open Sans",Arial;width:100%;text-align:center;cursor:default;}.container#slider-nav h2,.container-fluid#slider-nav h2{font:bold 22px museo;}
+.light-bg .container#slider-nav .tooltip .tooltip-inner,.light-bg .container-fluid#slider-nav .tooltip .tooltip-inner{color:black;}
+.container#slider-nav .tooltip .tooltip-arrow,.container-fluid#slider-nav .tooltip .tooltip-arrow{border-bottom-color:#222;}
+.container#slider-nav .tooltip .tooltip-inner,.container-fluid#slider-nav .tooltip .tooltip-inner{text-align:left;background:rgba(255, 255, 255, 0);padding-top:0;border:none;font:15px Montserrat;border-radius:0;}
+.container#slider-nav .student,.container-fluid#slider-nav .student{width:50px;height:50px;cursor:pointer;display:inline-block;margin-right:6px;-webkit-transition:all linear 0.2s;-moz-transition:all linear 0.2s;-o-transition:all linear 0.2s;-ms-transition:all linear 0.2s;transition:all linear 0.2s;border:3px solid white;-webkit-border-radius:37px;-moz-border-radius:37px;border-radius:37px;-webkit-box-shadow:0 0 15px rgba(0, 0, 0, 0.4);-moz-box-shadow:0 0 15px rgba(0, 0, 0, 0.4);box-shadow:0 0 15px rgba(0, 0, 0, 0.4);}
+.container#slider-nav .student img,.container-fluid#slider-nav .student img{-webkit-border-radius:35px;-moz-border-radius:35px;border-radius:35px;}
+body[data-hoverschool=CEFET] .container#slider-nav .student[data-school=CEFET],body[data-hoverschool=CEFET] .container-fluid#slider-nav .student[data-school=CEFET],.container#slider-nav .student[data-school=CEFET]:hover,.container-fluid#slider-nav .student[data-school=CEFET]:hover,.container#slider-nav .student[data-school=CEFET].active,.container-fluid#slider-nav .student[data-school=CEFET].active{border-color:#009b95;}
+body[data-hoverschool=CM] .container#slider-nav .student[data-school=CM],body[data-hoverschool=CM] .container-fluid#slider-nav .student[data-school=CM],.container#slider-nav .student[data-school=CM]:hover,.container-fluid#slider-nav .student[data-school=CM]:hover,.container#slider-nav .student[data-school=CM].active,.container-fluid#slider-nav .student[data-school=CM].active{border-color:#fb202d;}
+body[data-hoverschool=CAP] .container#slider-nav .student[data-school=CAP],body[data-hoverschool=CAP] .container-fluid#slider-nav .student[data-school=CAP],.container#slider-nav .student[data-school=CAP]:hover,.container-fluid#slider-nav .student[data-school=CAP]:hover,.container#slider-nav .student[data-school=CAP].active,.container-fluid#slider-nav .student[data-school=CAP].active{border-color:#00c90d;}
+body[data-hoverschool=CP2] .container#slider-nav .student[data-school=CP2],body[data-hoverschool=CP2] .container-fluid#slider-nav .student[data-school=CP2],.container#slider-nav .student[data-school=CP2]:hover,.container-fluid#slider-nav .student[data-school=CP2]:hover,.container#slider-nav .student[data-school=CP2].active,.container-fluid#slider-nav .student[data-school=CP2].active{border-color:#ff7100;}
+body[data-hoverschool=CP2] .container#slider-nav .student[data-school=CP2],body[data-hoverschool=CP2] .container-fluid#slider-nav .student[data-school=CP2],.container#slider-nav .student[data-school=CP2]:hover,.container-fluid#slider-nav .student[data-school=CP2]:hover,.container#slider-nav .student[data-school=CP2].active,.container-fluid#slider-nav .student[data-school=CP2].active{border-color:#00c90d;}
+.container#students-slider,.container-fluid#students-slider{margin-top:20px;}.container#students-slider .flex-control-nav,.container-fluid#students-slider .flex-control-nav{position:static;display:none;}
+.container#students-slider .flex-direction-nav,.container-fluid#students-slider .flex-direction-nav{display:none;}
+.container#students-slider .student,.container-fluid#students-slider .student{padding:0 10px;text-align:center;}.container#students-slider .student img,.container-fluid#students-slider .student img{vertical-align:top;display:inline-block;border-radius:10px;background:white;width:150px;}
+.container#students-slider .student>div,.container-fluid#students-slider .student>div{vertical-align:top;display:inline-block;margin-left:40px;text-align:left;width:600px;}
+.container#students-slider .student hgroup *,.container-fluid#students-slider .student hgroup *{display:inline-block;margin:5px 5px 0 0;}
+.container#students-slider .student .text,.container-fluid#students-slider .student .text{padding:10px 0;font:16px museo;}
+.container#cost hr,.container-fluid#cost hr{height:0;border-bottom:1px solid #444;}
+.container#cost table,.container-fluid#cost table{font:20px museo;}.container#cost table td:nth-child(1),.container-fluid#cost table td:nth-child(1){font-weight:bold;}
+.container#cost table td,.container-fluid#cost table td{padding-right:3px;}
+.container#donate,.container-fluid#donate{text-align:center;}.container#donate button,.container-fluid#donate button{position:relative;padding:20px 35px;background:#009B95;border:1px solid #444;box-shadow:0 1px 4px rgba(0, 0, 0, 0.8);border-radius:4px;color:white;font:bold 44px/150% Montserrat;}
+.container#donate .progress .bar,.container-fluid#donate .progress .bar{-webkit-transition:all ease-out 1s;-moz-transition:all ease-out 1s;-o-transition:all ease-out 1s;-ms-transition:all ease-out 1s;transition:all ease-out 1s;width:0% !important;}
+.container#donate .progress.visible .bar,.container-fluid#donate .progress.visible .bar{width:30% !important;}
+.container#donate .progress.visible .bar,.container-fluid#donate .progress.visible .bar{width:30% !important;-webkit-transition:all ease-out 3s;-moz-transition:all ease-out 3s;-o-transition:all ease-out 3s;-ms-transition:all ease-out 3s;transition:all ease-out 3s;}
+.container#donate button:hover,.container-fluid#donate button:hover,.container#donate button:active,.container-fluid#donate button:active,.container#donate button.active,.container-fluid#donate button.active,.container#donate button.disabled,.container-fluid#donate button.disabled,.container#donate button[disabled],.container-fluid#donate button[disabled]{background-color:#51a351;}
+.container#contact form .btn-submit,.container-fluid#contact form .btn-submit{position:relative;padding:10px 15px;background:#009B95;border:1px solid #444;box-shadow:0 1px 4px rgba(0, 0, 0, 0.8);border-radius:4px;color:white;font:bold 14px Montserrat;}
+.container#contact form h5,.container-fluid#contact form h5,.container#contact form h6,.container-fluid#contact form h6{margin-left:20px;display:inline-block;font-weight:normal;}
+.container#contact form input,.container-fluid#contact form input,.container#contact form textarea,.container-fluid#contact form textarea{box-shadow:none;font-family:inherit;border-radius:0;}
+.container#contact form .btn-submit:active,.container-fluid#contact form .btn-submit:active{top:2px;box-shadow:0 0px 3px rgba(0, 0, 0, 0.6);}
 .social-share{display:inline-block;margin-left:10px;}.social-share .sharrre{vertical-align:middle;display:inline-block;}.social-share .sharrre .box:active{position:relative;top:2px;box-shadow:0 0 3px #333333;}
 .social-share .sharrre .share{display:inline-block;padding:5px 5px;text-align:center;font-weight:bold;line-height:14px;color:#ffffff;font-size:13px;text-shadow:0px 1px 0px rgba(0, 0, 0, 0.35);}.social-share .sharrre .share span{background:url("../img/share-btns.png") no-repeat scroll 0 0 transparent;width:18px;height:10px;display:inline-block;}
 .social-share .facebook .share span{background-position:0 -35px;height:12px;}
