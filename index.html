@@ -22,12 +22,12 @@
 	<link href='http://fonts.googleapis.com/css?family=Quantico:400,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Exo:300,400,700,800,900|Monofett|Passion+One|Sansita+One|Oxygen:400,700|Montserrat:400,700,800,900|Source+Sans+Pro:400,700|Graduate:400,700,800,900|Lora:600,700|Bree%20Serif:400&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
-	<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+	<!-- <link rel="stylesheet" href="css/bootstrap-responsive.min.css"> -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/flexslider.css">
 	<link rel="stylesheet" href="css/main.css">
 
-	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+	<script type="text/javascript" src="js/vendor/modernizr-2.6.2.min.js"></script>
 	<script type="template/text" id="slider-nav-templ">
 		<li>
 			<div class="student" data-id="<%= id %>">
@@ -211,12 +211,12 @@
 				</div>
 				<div class="span5 offset1">
 					<form>
-						<fieldset class="scsrollblock">
+						<fieldset>
 							<legend>What do you have in mind?</legend>
 							<input type="text" required placeholder="Your Name"><br>
 							<input type="email" required placeholder="Your Email">		
 							<textarea rows="5" required style="width: 100%" placeholder="Your message goes here! :)"></textarea>
-							<button type="submit" onclick="return false;" class="btn-submit" id="susbmit">Submit</button>
+							<button type="submit" onclick="return false;" class="btn btn-success btn-submit" id="submit">Submit</button>
 							<h6>Your email adress is safe with us!</h6>
 						</fieldset>
 					</form>
@@ -261,14 +261,15 @@
 	<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
 	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 
-	<script src="js/jquery.scrollorama.js"></script>
-	<script src="js/jquery.sharrre-1.3.4.min.js"></script>
-	<script src="js/jquery.flexslider-min.js"></script>
+	<script type="text/javascript" src="js/jquery.scrollorama.js"></script>
+	<script type="text/javascript" src="js/jquery.sharrre-1.3.4.min.js"></script>
+	<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
 
-	<script src="js/underscore-min.js"></script>
-	<script src="js/vendor/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/underscore-min.js"></script>
+	<script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
 
-	<script>
+	<script type="text/javascript">
+
 		$(window).ready(function() {
 
 			$("#slider-nav .student").tooltip({html:true, delay: 0, placement:'bottom'})
@@ -282,20 +283,20 @@
 		});
 
 		var students = [
-			{ id:0, school_label:'CM', name:'Jamal Malic', age:'19 anos', school:'CM Tijuca', avatar:'http://placehold.it/300x300' },
-			{ id:1, school_label:'CEFET', name:'Felipe Aragão', age:'16 anos', school:'CEFET RJ', avatar:'http://placehold.it/300x300' },
-			{ id:2, school_label:'CM', name:'Ivo Malic', age:'17 anos', school:'CM Tijuca', avatar:'http://placehold.it/300x300' },
-			{ id:3, school_label:'CM', name:'Jamal Malic', age:'18 anos', school:'CM Tijuca', avatar:'http://placehold.it/300x300' },
-			{ id:4, school_label:'CP2', name:'Caleb Rourke', age:'17 anos', school:'CP2 Tijuca', avatar:'http://placehold.it/300x300' },
-			{ id:5, school_label:'CEFET', name:'Jamal Malic', age:'16 anos', school:'CEFET RJ', avatar:'http://placehold.it/300x300' },
-			{ id:6, school_label:'CM', name:'Lily Bridgett', age:'17 anos', school:'CM Tijuca', avatar:'http://placehold.it/300x300' },
-			{ id:7, school_label:'CAP', name:'Jamal Malic', age:'17 anos', school:'CAP UFRJ', avatar:'http://placehold.it/300x300' },
-			{ id:8, school_label:'CEFET', name:'Jamal Malic', age:'18 anos', school:'CEFET RJ', avatar:'http://placehold.it/300x300' },
-			{ id:9, school_label:'CP2', name:'Jamal Malic', age:'19 anos', school:'CP2 Tijuca', avatar:'http://placehold.it/300x300' },
-			{ id:10, school_label:'IFRJ', name:'Jacqui Flemming', age:'19 anos', school:'IFRJ', avatar:'http://placehold.it/300x300' },
-			{ id:11, school_label:'CAP', name:'Jamal Malic', age:'19 anos', school:'CAP UFRJ', avatar:'http://placehold.it/300x300' },
-			{ id:12, school_label:'CM', name:'Sergio Tallent', age:'17 anos', school:'CM', avatar:'http://placehold.it/300x300' },
-			{ id:13, school_label:'CEFET', name:'Ana Carolina', age:'17 anos', school:'CEFET RJ', avatar:'http://placehold.it/300x300' },
+			{ id:0, school_label:'CM', name:'Jamal Malic', age:'19 anos', school:'CM Tijuca', avatar:'http://baconmockup.com/200/200' },
+			{ id:1, school_label:'CEFET', name:'Felipe Aragão', age:'16 anos', school:'CEFET RJ', avatar:'http://baconmockup.com/200/200' },
+			{ id:2, school_label:'CM', name:'Ivo Malic', age:'17 anos', school:'CM Tijuca', avatar:'http://baconmockup.com/200/200' },
+			{ id:3, school_label:'CM', name:'Jamal Malic', age:'18 anos', school:'CM Tijuca', avatar:'http://baconmockup.com/200/200' },
+			{ id:4, school_label:'CP2', name:'Caleb Rourke', age:'17 anos', school:'CP2 Tijuca', avatar:'http://baconmockup.com/200/200' },
+			{ id:5, school_label:'CEFET', name:'Jamal Malic', age:'16 anos', school:'CEFET RJ', avatar:'http://baconmockup.com/200/200' },
+			{ id:6, school_label:'CM', name:'Lily Bridgett', age:'17 anos', school:'CM Tijuca', avatar:'http://baconmockup.com/200/200' },
+			{ id:7, school_label:'CAP', name:'Jamal Malic', age:'17 anos', school:'CAP UFRJ', avatar:'http://baconmockup.com/200/200' },
+			{ id:8, school_label:'CEFET', name:'Jamal Malic', age:'18 anos', school:'CEFET RJ', avatar:'http://baconmockup.com/200/200' },
+			{ id:9, school_label:'CP2', name:'Jamal Malic', age:'19 anos', school:'CP2 Tijuca', avatar:'http://baconmockup.com/200/200' },
+			{ id:10, school_label:'IFRJ', name:'Jacqui Flemming', age:'19 anos', school:'IFRJ', avatar:'http://baconmockup.com/200/200' },
+			{ id:11, school_label:'CAP', name:'Jamal Malic', age:'19 anos', school:'CAP UFRJ', avatar:'http://baconmockup.com/200/200' },
+			{ id:12, school_label:'CM', name:'Sergio Tallent', age:'17 anos', school:'CM', avatar:'http://baconmockup.com/200/200' },
+			{ id:13, school_label:'CEFET', name:'Ana Carolina', age:'17 anos', school:'CEFET RJ', avatar:'http://baconmockup.com/200/200' },
 		]
 
 		for (var i=0; i<students.length; i++) {
@@ -303,11 +304,14 @@
 			$('#slider-nav').append(_.template($('#slider-el-templ').html(), students[i]));
 		}
 
+
+
 		var updateSlider = function (evt) {
 			$("#slider-nav .student").removeClass('active');
 			var id = $(".flex-active-slide div")[0].dataset.id;
 			$("#slider-nav .student[data-id="+id+"]").addClass('active');
 		}
+
 		$('#students-slider .slides').parent().flexslider({
 			animation: "slide",
 			after: updateSlider, 
@@ -329,7 +333,7 @@
 		});
 	</script>
 
-	<script src="js/plugins.js"></script>
-	<script src="js/main.js"></script>
+	<script type="text/javascript" src="js/plugins.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

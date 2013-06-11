@@ -29,7 +29,7 @@ MagneticCamp = new (function () {
 		return {
 			start: function () {
 				this.color = COLORS[_.random(1, COLORS.length)-1];
-				this.thickness = 3+random()*1;
+				this.thickness = 2+random()*1;
 				this.vel = (random()>.5?-1:1)*max(1, random()*4)*4;
 				this.dx = random()*600-300; // = [-300, 300[
 				this.dy = 150;

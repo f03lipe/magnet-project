@@ -16,7 +16,7 @@
 
 
 body {
-	background: #333 fixed url('../img/dark_fish_skin.png') repeat top left;
+	background: #333 fixed url('../img/infslicted.png') repeat top left;
 	font-family: museo-sans, Montserrat, "Open Sans", sans-serif;
 	overflow-x: hidden; // for slider
 	color: white;
@@ -27,6 +27,9 @@ h1,h2,h3,h4,h5,h6 {
 	font-family: Montserrat, museo;
 }
 
+a:link {
+	color :#4AE;
+}
 
 a:hover, a:link, a:active {
 	color: #4AE;
@@ -41,14 +44,15 @@ canvas {
 	position: fixed;
 	width: 100%;
 	height: 100%;
+	z-index: -1;
 }
 
 #header
 {
-	color: white;
+	padding-bottom: 0; // reset from .container
 
 	.tc-banner {
-		position: fixed;
+		position: absolute;
 		top: 10px;
 		left: 10px;
 		
@@ -69,7 +73,7 @@ canvas {
 
 			cursor: default;
 			font: bold 13px/16px "Montserrat";
-			background: rgba(0,0,0,.5);
+			backsground: rgba(0,0,0,.5);
 			opacity: 0;
 			
 			a { font-weight: bold; color: #0BF; }
@@ -81,7 +85,7 @@ canvas {
 	}
 
 	.social-share {
-		position: fixed;
+		position: absolute;
 		top: 15px;
 		right: 15px;
 	}
@@ -89,16 +93,17 @@ canvas {
 	header {
 		position: relative;
 		margin-top: 200px;
-		margin-bottom: 70px;
+		margin-bottom: 125px;
 		
 		text-align: center;
 		color: white;
 
 		h1 {
-			font: bolder 120px/80px Montserrat, "Monofett", "Open Sans";
+			cursor: default;
+			font: bolder 130px/80px Montserrat, "Monofett", "Open Sans";
 			letter-spacing: -2px;
 			text-transform: uppercase;
-			text-shadow: 0px 0 7px rgba(0,0,0,.5);
+			tesxt-shadow: 0px 0 7px rgba(0,0,0,.5);
 		}
 
 		h2 {
@@ -123,11 +128,13 @@ canvas {
 .light-bg
 {
 	position: relative;
-	padding-top: 10px;
-	margin-bottom: 30px;
+	// padding-top: 10px;
+	// margin: auto 60px;
+	// margin-bottom: 30px;
 	box-shadow: 0 0 25px rgba(0,0,0,.7);
 	background: #fff; // url('../img/stiny_grid_@2X.png') repeat top left;
 	color: #444;
+	overflow: hidden;
 
 	a:hover, a:visited, a:active {
 		color: #08C;
@@ -148,8 +155,8 @@ canvas {
 		left: 0; top: 0; right: 0; bottom: 0;
 		width: 100%;
 		hesight: 100%;
-		background:  url('../img/noisy_grid.png') repeat top left;
-		opacity: 0.4;
+		// background:  url('../img/ps_neutral.png') repeat top left;
+		opacisty: 0.4;
 	}
 
 }
@@ -175,31 +182,35 @@ canvas {
 	.flex-viewport {
 		overflow: visible !important;
 		li:not(.flex-active-slide) {
-			opacity: .3;
+			opacity: 0;
 		}
 	}
 
 
 	&#slider-nav {
+		margin-bottom: 40px;
+		padding-bottom: 0; // reset .container 
+		margin-top: 5px;
 		font-family: museo, Montserrat, "Open Sans", Arial;
 
 		width: 100%;
 		text-align: center;
 		cursor: default;
-		margin-bottom: 10px;
 
 		h2 {
 			font: bold 22px museo;
 		}
 
 		.tooltip {
+			.light-bg & .tooltip-inner { color: black; }
+
 			.tooltip-arrow {
 				border-bottom-color: rgba(0,0,0,.8);
 			}
 			.tooltip-inner {
 				text-align: left;
 				background: rgba(255,255,255, 0); // contrast with h3
-				color: black;
+				padding-top: 0;
 				border: none;
 				font: 15px Montserrat;
 				border-radius: 0;
@@ -250,6 +261,8 @@ canvas {
 	{
 		.flex-control-nav { position: static; display: none; }
 		.flex-direction-nav { display: none; }
+
+		margin-top: 20px;
 		
 		.student {
 			padding: 0 10px;
@@ -330,11 +343,19 @@ canvas {
 			width: 30% !important;
 			.transition(all,ease-out,3s);
 		}
-		
-		button:active {
-			top: 2px;
-			box-shadow: 0 0px 3px rgba(0,0,0,.6);
+
+		button:hover,
+		button:active,
+		button.active,
+		button.disabled,
+		button[disabled] {
+			background-color: #51a351;
 		}
+		
+		// button:active {
+		// 	top: 2px;
+		// 	box-shadow: 0 0px 3px rgba(0,0,0,.6);
+		// }
 	}
 
 	&#contact
@@ -421,6 +442,7 @@ footer
 	z-index: 2;
 	font-size: 15px;
 	color: white;
+	margin-top: 30px;
 
 	.social-btn {
 		position: static !important;
@@ -475,7 +497,7 @@ footer
 }
 
 ::-webkit-scrollbar-thumb:vertical {
-	border-width: 2px 2px;
+	border-width: 2px 1px;
 	min-height: 40px;
 }
 
