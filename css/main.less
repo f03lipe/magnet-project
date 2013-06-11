@@ -167,6 +167,8 @@ canvas {
 	max-width: 1100px; /* or 950px */
 }
 
+
+
 .container, .container-fluid > .text-justify { text-align: justify; }
 .container, .container-fluid > blockquote { p, & { font-size: 24px; } }
 .container, .container-fluid 
@@ -209,8 +211,7 @@ canvas {
 
 		.tooltip {
 			.light-bg & .tooltip-inner { color: black; }
-
-			.tooltip-arrow {
+			.-arrow {
 				border-bottom-color: #222; //rgba(0,0,0,1);
 			}
 			.tooltip-inner {
@@ -233,10 +234,11 @@ canvas {
 			cursor: pointer;
 			display: inline-block;
 			margin-right: 6px;
+			border: 3px solid white;
+
+			@media (min-width: 1000px) { margin-right: 10px; width: @dim+10; height: @dim+10; }
 			
 			.transition(all, linear, .2s);
-			
-			border: 3px solid white;
 			.border-radius(@bradius+2);
 			.box-shadow(0,0, 15px, .3);
 			
