@@ -1,7 +1,7 @@
 @import "fonts.css";
 .tk-museo{font-family:museo,"Open Sans",Arial;}
 .tk-museo-sans{font-family:museo-sans,"Open Sans",Arial;}
-body{background:#333333 fixed url('../img/infslicted.png') repeat top left;font-family:museo-sans,Montserrat,"Open Sans",sans-serif;overflow-x:hidden;color:white;}
+body{background:#333;font-family:museo-sans,Montserrat,"Open Sans",sans-serif;overflow-x:hidden;color:white;}
 h1,h2,h3,h4,h5,h6{font-family:museo;}
 a:link{color:#4AE;}
 a:hover,a:link,a:active{color:#4AE;text-decoration:none;}
@@ -13,6 +13,8 @@ canvas{position:fixed;width:100%;height:100%;z-index:-1;}
 #header header{position:relative;margin-top:200px;margin-bottom:125px;text-align:center;color:white;}#header header h1{cursor:default;font:bolder 130px/80px Montserrat,"Monofett","Open Sans";letter-spacing:-2px;text-transform:uppercase;tesxt-shadow:0px 0 7px rgba(0, 0, 0, 0.5);}
 #header header h2{font:18px Montserrat;margin-top:15px;text-shadow:0px 0 1px black;}
 #header header h2 a{color:inherit;font-weight:bold;text-decoration:none !important;}
+#back-up{position:fixed;top:30px;right:50px;opacity:0;-webkit-transition:opacity linear 0.4s;-moz-transition:opacity linear 0.4s;-o-transition:opacity linear 0.4s;-ms-transition:opacity linear 0.4s;transition:opacity linear 0.4s;}#back-up i{color:#444;cursor:pointer;font-size:50px;opacity:.8;}
+#back-up i:hover{opacity:1;}
 .light-bg{position:relative;box-shadow:0 0 25px rgba(0, 0, 0, 0.7);background:#fff;color:#444;overflow:hidden;}.light-bg a:hover,.light-bg a:visited,.light-bg a:active{color:#08C;}
 .light-bg del{color:#666;}
 .light-bg>*{position:relative;z-index:2;}

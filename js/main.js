@@ -16,7 +16,7 @@ MagneticCamp = new (function () {
 	// Globals: you may touch this
 	var LAPSE = 60
 		, COLORS = _.pluck(schools, 'color') // ['#009B95', '#FF7100', '#00C90D', '#FB202D']
-		, NUMLINES = 16
+		, NUMLINES = 10
 		;
 
 	var header = $('header')
@@ -94,9 +94,9 @@ MagneticCamp = new (function () {
 	}
 });
 
-$().ready(function () {	MagneticCamp.init() });
-
 $().ready(function() {
+	MagneticCamp.init()/
+
 	$("[data-school]").bind({
 		mouseover: function (evt) {
 			target = $(evt.target);
@@ -109,38 +109,48 @@ $().ready(function() {
 		mouseout: function (evt) { delete document.body.dataset.hoverschool; },
 		mouseleave: function (evt) { delete document.body.dataset.hoverschool; },
 	})
+	$('.twitter').sharrre({
+		share: { twitter: true },
+		template: '<a class="box" href="#"><div class="share"><span></span>Tweet</div></a>',
+		enableHover: false,
+		enableTracking: true,
+		buttons: { twitter: {via: 'magnetproject'}},
+		click: function(api, options){
+			api.simulateClick();
+			api.openPopup('twitter');
+		}
+	});
+	$('.facebook').sharrre({
+		share: { facebook: true },
+		template: '<a class="box" href="#"><div class="share"><span></span>Share</div></a>',
+		enableHover: false,
+		enableTracking: true,
+		click: function(api, options){
+			api.simulateClick();
+			api.openPopup('facebook');
+		}
+	});
+
 });
 
 (function scrollAnimations() {
+	var prog = $('#donate .progress').offset(),
+		backup = $("#back-up");
+
 	$(document).scroll(function() {
 		var top = $(document).scrollTop();
+		// if (Math.abs(top - prog.top) < 500)
+		// 	$("#donate .progress").addClass('visible');
 
-		if (Math.abs(top - $('#donate .progress').offset().top) < 500) {
-			$("#donate .progress").addClass('visible');
+		console.log('top', top)
+		
+		if (top < 800) {
+			backup.css('opacity', 0);
+		} else if (800 <= top < 900) {
+			backup.css('opacity', .5);
+		} else if (900 <= top) {
+			backup.css('opacity', 1);
 		}
 		
 	})
 })();
-
-$('.twitter').sharrre({
-	share: { twitter: true },
-	template: '<a class="box" href="#"><div class="share"><span></span>Tweet</div></a>',
-	enableHover: false,
-	enableTracking: true,
-	buttons: { twitter: {via: 'magnetproject'}},
-	click: function(api, options){
-		api.simulateClick();
-		api.openPopup('twitter');
-	}
-});
-
-$('.facebook').sharrre({
-	share: { facebook: true },
-	template: '<a class="box" href="#"><div class="share"><span></span>Share</div></a>',
-	enableHover: false,
-	enableTracking: true,
-	click: function(api, options){
-		api.simulateClick();
-		api.openPopup('facebook');
-	}
-});
