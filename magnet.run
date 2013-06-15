@@ -7,3 +7,5 @@ nautilus . & disown
 sublime-text & disown
 gnome-terminal -x sh -c "python -m SimpleHTTPServer" # & disown
 sudo modprobe pcspkr
+sleep 3
+x-www-browser http://localhost:8000

@@ -1,8 +1,8 @@
-@import "font.css";
+@import "fonts.css";
 .tk-museo{font-family:museo,"Open Sans",Arial;}
 .tk-museo-sans{font-family:museo-sans,"Open Sans",Arial;}
 body{background:#333333 fixed url('../img/infslicted.png') repeat top left;font-family:museo-sans,Montserrat,"Open Sans",sans-serif;overflow-x:hidden;color:white;}
-h1,h2,h3,h4,h5,h6{font-family:Montserrat, museo;}
+h1,h2,h3,h4,h5,h6{font-family:museo;}
 a:link{color:#4AE;}
 a:hover,a:link,a:active{color:#4AE;text-decoration:none;}
 canvas{position:fixed;width:100%;height:100%;z-index:-1;}
@@ -16,18 +16,21 @@ canvas{position:fixed;width:100%;height:100%;z-index:-1;}
 .light-bg{position:relative;box-shadow:0 0 25px rgba(0, 0, 0, 0.7);background:#fff;color:#444;overflow:hidden;}.light-bg a:hover,.light-bg a:visited,.light-bg a:active{color:#08C;}
 .light-bg del{color:#666;}
 .light-bg>*{position:relative;z-index:2;}
-.light-bg .bg{z-index:1;position:absolute;left:0;top:0;right:0;bottom:0;width:100%;hesight:100%;opacisty:0.4;}
-.container-fluid{margin-right:auto;margin-left:auto;max-width:1100px;}
-.container,.container-fluid>.text-justify{text-align:justify;}
+.container-fluid{margin-right:auto;margin-left:auto;max-width:1050px;}
+.lead,blockquote{font-family:museo;}
+.text-justify{text-align:justify;}
 .container p,.container-fluid>blockquote p,.container,.container-fluid>blockquote{font-size:24px;}
 .container,.container-fluid{font-size:16px;padding-bottom:50px;}.container#selection,.container-fluid#selection{padding-bottom:30px;}.container#selection li,.container-fluid#selection li{font-size:20px;margin-bottom:10px;font-family:museo,"Open Sans";list-style-image:url(../img/tick.png);}
+.container#selection .sign-up button,.container-fluid#selection .sign-up button{margin:20px 0;font-size:30px;padding:20px 30px;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;font-family:museo,"Open Sans";cursor:pointer;}
+.container#selection .sign-up .notice,.container-fluid#selection .sign-up .notice{color:red;opacity:.8;cursor:default;-webkit-transition:color linear 3s;-moz-transition:color linear 3s;-o-transition:color linear 3s;-ms-transition:color linear 3s;transition:color linear 3s;}
+.container#selection .sign-up:hover .notice,.container-fluid#selection .sign-up:hover .notice{opacity:1;}
 .container .flex-viewport,.container-fluid .flex-viewport{overflow:visible !important;}.container .flex-viewport li:not(.flex-active-slide),.container-fluid .flex-viewport li:not(.flex-active-slide){opacity:0;}
 .container#slider-nav,.container-fluid#slider-nav{margin-bottom:40px;padding-bottom:0;margin-top:5px;font-family:museo,Montserrat,"Open Sans",Arial;width:100%;text-align:center;cursor:default;}.container#slider-nav h2,.container-fluid#slider-nav h2{font:bold 22px museo;}
 .light-bg .container#slider-nav .tooltip .tooltip-inner,.light-bg .container-fluid#slider-nav .tooltip .tooltip-inner{color:black;}
 .container#slider-nav .tooltip .-arrow,.container-fluid#slider-nav .tooltip .-arrow{border-bottom-color:#222;}
 .container#slider-nav .tooltip .tooltip-inner,.container-fluid#slider-nav .tooltip .tooltip-inner{text-align:left;background:rgba(255, 255, 255, 0);padding-top:0;border:none;font:15px Montserrat;border-radius:0;}
-.container#slider-nav .student,.container-fluid#slider-nav .student{width:50px;height:50px;cursor:pointer;display:inline-block;margin-right:6px;border:3px solid white;-webkit-transition:all linear 0.2s;-moz-transition:all linear 0.2s;-o-transition:all linear 0.2s;-ms-transition:all linear 0.2s;transition:all linear 0.2s;-webkit-border-radius:37px;-moz-border-radius:37px;border-radius:37px;-webkit-box-shadow:0 0 15px rgba(0, 0, 0, 0.3);-moz-box-shadow:0 0 15px rgba(0, 0, 0, 0.3);box-shadow:0 0 15px rgba(0, 0, 0, 0.3);}@media (min-width:1030px){.container#slider-nav .student,.container-fluid#slider-nav .student{margin-right:7px;width:57px;height:57px;}}@media (min-width:1150px){.container#slider-nav .student,.container-fluid#slider-nav .student{margin-right:10px;width:60px;height:60px;}}
-.container#slider-nav .student img,.container-fluid#slider-nav .student img{-webkit-border-radius:35px;-moz-border-radius:35px;border-radius:35px;}
+.container#slider-nav .student,.container-fluid#slider-nav .student{width:50px;height:50px;vertical-align:top;overflow:hidden;cursor:pointer;display:inline-block;margin-right:6px;border:3px solid white;-webkit-transition:all linear 0.2s;-moz-transition:all linear 0.2s;-o-transition:all linear 0.2s;-ms-transition:all linear 0.2s;transition:all linear 0.2s;-webkit-border-radius:37px;-moz-border-radius:37px;border-radius:37px;-webkit-box-shadow:0 0 15px rgba(0, 0, 0, 0.3);-moz-box-shadow:0 0 15px rgba(0, 0, 0, 0.3);box-shadow:0 0 15px rgba(0, 0, 0, 0.3);}@media (min-width:1030px){.container#slider-nav .student,.container-fluid#slider-nav .student{margin-right:7px;width:57px;height:57px;}}@media (min-width:1150px){.container#slider-nav .student,.container-fluid#slider-nav .student{margin-right:10px;width:60px;height:60px;}}
+.container#slider-nav .student img,.container-fluid#slider-nav .student img{min-height:70px;-webkit-border-radius:35px;-moz-border-radius:35px;border-radius:35px;}
 body[data-hoverschool=CEFET] .container#slider-nav .student[data-school=CEFET],body[data-hoverschool=CEFET] .container-fluid#slider-nav .student[data-school=CEFET],.container#slider-nav .student[data-school=CEFET]:hover,.container-fluid#slider-nav .student[data-school=CEFET]:hover,.container#slider-nav .student[data-school=CEFET].active,.container-fluid#slider-nav .student[data-school=CEFET].active{border-color:#009b95;}
 body[data-hoverschool=CM] .container#slider-nav .student[data-school=CM],body[data-hoverschool=CM] .container-fluid#slider-nav .student[data-school=CM],.container#slider-nav .student[data-school=CM]:hover,.container-fluid#slider-nav .student[data-school=CM]:hover,.container#slider-nav .student[data-school=CM].active,.container-fluid#slider-nav .student[data-school=CM].active{border-color:#fb202d;}
 body[data-hoverschool=CAP] .container#slider-nav .student[data-school=CAP],body[data-hoverschool=CAP] .container-fluid#slider-nav .student[data-school=CAP],.container#slider-nav .student[data-school=CAP]:hover,.container-fluid#slider-nav .student[data-school=CAP]:hover,.container#slider-nav .student[data-school=CAP].active,.container-fluid#slider-nav .student[data-school=CAP].active{border-color:#00c90d;}
@@ -35,13 +38,13 @@ body[data-hoverschool=CP2] .container#slider-nav .student[data-school=CP2],body[
 body[data-hoverschool=CP2] .container#slider-nav .student[data-school=CP2],body[data-hoverschool=CP2] .container-fluid#slider-nav .student[data-school=CP2],.container#slider-nav .student[data-school=CP2]:hover,.container-fluid#slider-nav .student[data-school=CP2]:hover,.container#slider-nav .student[data-school=CP2].active,.container-fluid#slider-nav .student[data-school=CP2].active{border-color:#00c90d;}
 .container#students-slider,.container-fluid#students-slider{margin-top:20px;}.container#students-slider .flex-control-nav,.container-fluid#students-slider .flex-control-nav{position:static;display:none;}
 .container#students-slider .flex-direction-nav,.container-fluid#students-slider .flex-direction-nav{display:none;}
-.container#students-slider .student,.container-fluid#students-slider .student{padding:0 10px;text-align:center;}.container#students-slider .student img,.container-fluid#students-slider .student img{vertical-align:top;display:inline-block;border-radius:10px;background:white;width:150px;}
+.container#students-slider .student,.container-fluid#students-slider .student{padding:0 10px;text-align:center;}.container#students-slider .student img,.container-fluid#students-slider .student img{vertical-align:top;display:inline-block;border-radius:10px;background:white;width:150px;height:150px;overflow:hidden;}
 .container#students-slider .student>div,.container-fluid#students-slider .student>div{vertical-align:top;display:inline-block;margin-left:40px;text-align:left;width:600px;}
 .container#students-slider .student hgroup *,.container-fluid#students-slider .student hgroup *{display:inline-block;margin:5px 5px 0 0;}
 .container#students-slider .student .text,.container-fluid#students-slider .student .text{padding:10px 0;font:16px museo;}
-.container#cost hr,.container-fluid#cost hr{height:0;border-bottom:1px solid #444;}
-.container#cost table,.container-fluid#cost table{font:20px museo;}.container#cost table td:nth-child(1),.container-fluid#cost table td:nth-child(1){font-weight:bold;}
-.container#cost table td,.container-fluid#cost table td{padding-right:3px;}
+.container#cost table,.container-fluid#cost table{margin:0 auto;width:370px;}.container#cost table td,.container-fluid#cost table td{font:26px/20px museo;padding-right:3px;border-top:none;}
+.container#cost table td:nth-child(1),.container-fluid#cost table td:nth-child(1){font-weight:bold;text-align:right;}
+.container#cost table td[colspan],.container-fluid#cost table td[colspan]{border-top:1px dashed #444;text-align:center;}.container#cost table td[colspan] h1,.container-fluid#cost table td[colspan] h1,.container#cost table td[colspan] h2,.container-fluid#cost table td[colspan] h2,.container#cost table td[colspan] h3,.container-fluid#cost table td[colspan] h3{margin:0;font-size:37px;}
 .container#donate,.container-fluid#donate{text-align:center;}.container#donate button,.container-fluid#donate button{position:relative;padding:20px 35px;background:#009B95;border:1px solid #444;box-shadow:0 1px 4px rgba(0, 0, 0, 0.8);border-radius:4px;color:white;font:bold 44px/150% Montserrat;}
 .container#donate .progress .bar,.container-fluid#donate .progress .bar{-webkit-transition:all ease-out 1s;-moz-transition:all ease-out 1s;-o-transition:all ease-out 1s;-ms-transition:all ease-out 1s;transition:all ease-out 1s;width:0% !important;}
 .container#donate .progress.visible .bar,.container-fluid#donate .progress.visible .bar{width:30% !important;}
@@ -50,11 +53,12 @@ body[data-hoverschool=CP2] .container#slider-nav .student[data-school=CP2],body[
 .container#contact form .btn-submit,.container-fluid#contact form .btn-submit{position:relative;padding:10px 15px;background:#009B95;border:1px solid #444;box-shadow:0 1px 4px rgba(0, 0, 0, 0.8);border-radius:4px;color:white;font:bold 14px Montserrat;}
 .container#contact form h5,.container-fluid#contact form h5,.container#contact form h6,.container-fluid#contact form h6{margin-left:20px;display:inline-block;font-weight:normal;}
 .container#contact form input,.container-fluid#contact form input,.container#contact form textarea,.container-fluid#contact form textarea{box-shadow:none;font-family:inherit;border-radius:0;}
-.container#contact form .btn-submit:active,.container-fluid#contact form .btn-submit:active{top:2px;box-shadow:0 0px 3px rgba(0, 0, 0, 0.6);}
+.container#contact form .btn-submit:active,.container-fluid#contact form .btn-submit:active{top:1px;background:#5bb75b;box-shadow:none;}
 .social-share{display:inline-block;margin-left:10px;}.social-share .sharrre{vertical-align:middle;display:inline-block;}.social-share .sharrre .box:active{position:relative;top:2px;box-shadow:0 0 3px #333333;}
 .social-share .sharrre .share{display:inline-block;padding:5px 5px;text-align:center;font-weight:bold;line-height:14px;color:#ffffff;font-size:13px;text-shadow:0px 1px 0px rgba(0, 0, 0, 0.35);}.social-share .sharrre .share span{background:url("../img/share-btns.png") no-repeat scroll 0 0 transparent;width:18px;height:10px;display:inline-block;}
 .social-share .facebook .share span{background-position:0 -35px;height:12px;}
-footer{position:relative;z-index:2;font-size:15px;color:white;margin-top:30px;}footer .social-btn{position:static !important;top:15px;right:15px;}footer .social-btn img{position:relative;cursor:pointer !important;border-radius:20px;background:white;margin-left:3px;box-shadow:0 0 5px #000000;outline:none !important;}
+footer{position:relative;z-index:2;font-size:15px;color:white;font-family:museo,Montserrat,sans-serif;margin-top:30px;}footer h56{font-size:14px;}
+footer .social-btn{position:static !important;top:15px;right:15px;}footer .social-btn img{position:relative;cursor:pointer !important;border-radius:20px;background:white;margin-left:3px;box-shadow:0 0 5px #000000;outline:none !important;}
 footer .social-btn img:active{top:2px;}
 ::-webkit-scrollbar-thumb{background-color:rgba(0, 0, 0, 0.2);background-clip:padding-box;border:solid transparent;border-width:1px 1px 1px 6px;min-height:28px;padding:100px 0 0;box-shadow:inset 1px 1px 0 rgba(0, 0, 0, 0.1),inset 0 -1px 0 rgba(0, 0, 0, 0.07);}
 ::-webkit-scrollbar{height:16px;overflow:visible;width:12px;background:white;}

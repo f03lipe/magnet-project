@@ -13,7 +13,7 @@
 	<meta property="og:url" content="http://magnetproject.us/" />
 	<meta property="og:site_name" content="Turma Cidadã" />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="TurmaCidadã" />
+	<meta property="og:title" content="MagnetProject" />
 	<meta property="og:image" content="http://turmacidada.herokuapp.com/static/images/logo.png" />
 	<meta property="og:description" content="A TurmaCidadã desenvolve e apoia projetos sustentáveis voltados para a comunidada, promovendo o desenvolvimento 'socio-pessoa-ambiental'" />
 	<meta property="fb:app_id" content="7363627862327638" />
@@ -34,7 +34,7 @@
 	<script type="template/text" id="slider-nav-templ">
 		<li>
 			<div class="student" data-id="<%= id %>">
-				<img src="img/avatar1.jpg?<%= avatar %>" class="thumbnail img-rounded">
+				<img src="<%= avatar %>" class="thumbnail img-rounded">
 				<div>
 					<hgroup>
 						<h3><%= name %></h3>
@@ -43,7 +43,8 @@
 						
 					</hgroup>
 					<div class="text">
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+					<%= message || "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat."
+					%>
 					</div>
 				</div>
 			</div>
@@ -66,7 +67,7 @@
 		<div class="tc-banner">
 			<a href="http://turmacidada.org">
 				<img src="img/logo.png" width=50 alt="Logo Turma Cidadã"/></a>
-			<div class="box">Project Affiliated to <br><a href="http://turmacidada.org">TurmaCidadã Brasil</a></div>
+			<div class="box">Afiliado à <br><a href="http://turmacidada.org">TurmaCidadã Brasil</a></div>
 		</div>
 
 		<div class="social-share">
@@ -80,6 +81,7 @@
 			<h2>Helping students from <a href="#schools">Rio's top magnet schools</a> to get there!</h2>
 		</header>
 	</div>
+
 
 	<div class="light-bg">
 		<div class="bg"></div>
@@ -98,41 +100,51 @@
 			</div>
 		</div>
 	
-		<div class="container-fluid">
-			<div class="row">
-				<div class="span6 lead">
-					<br>
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+		<div class="container-fluid bottomless">
+			<div class="row-fluid">
+				<div class="span12 lead text-justify">
+					O <strong>Magnet Project</strong> é um programa sem fins lucrativos que tem como objetivo financiar o <abbr title="">processo de <em>application</em></abbr> para alunos oriundos de escolas públicas de currículos diferenciados, <abbr title="">magnet schools</abbr>, que estejam interessados em cursar a graduação em universidades estrangeiras.
 				</div>
-				<div class="span6 tk-museo-sans text-justify">
-					<h1>The Idea Behind</h1>
-					Lorem ipsum dolor sit amet, <abbr title="consectetuer adipiscing elit">magnet schools</abbr>, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Curabitur vel odio justo. Etiam eu sapien eu lacus ultricies vehicula. Morbi luctus, purus nec aliquam tincidunt, tortor libero mattis est, eu tempor nisi lacus ac justo. Curabitur vel odio justo. 
+			</div>
+			<div class="row-fluid">
+				<div class="span5">
+					<h2>O Nosso Objetivo</h2>
+					O objetivo do <strong>Magnet Project</strong> é criar um programa anual de financiamento integral dos custos envolvidos no processo de application para alunos de escolas públicas fortes (como o Colégio Pedro II, Colégio Militar, Institutos Federais, Centros Federais e Escolas de Aplicação), que estejam no último ou penúltimo anos do ensino médio. Os custos cobertos devem incluir o preço das provas, livros e curso preparatório.
+				</div>
+
+				<div class="span7">
+					<h2>A Nossa Motivação</h2>
+					A <em>application</em> para universidades americanas é um processo demorado, que envolve o cumprimento de várias etapas distintas, desde a realização de simulados do SAT até o envio de documentos para as universidades pretendidas. Essas etapas envolvem o pagamento de taxas específicas para realização de testes, envio de documento e solicitação de matrícula, entre outros. Alunos bons de baixa renda são automaticamente excluídos da oportunidade de estudar fora, antes mesmo de serem avaliados pelas universidades.
 				</div>
 			</div>
 		</div>
 		
 		<div class="container-fluid">
 			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-				<small>Silvino Neto, <cite title="Source Title">CEO TurmaCidadã Brasil</cite></small>
+				<p>O Brasil é uma nação com grandes perspectivas de desenvolvimento. Desenvolvimento, este, que depende diretamente da competência profissional dos agentes transformadores, que deve ser adquirida no processo de formação educacional. As escolas públicas no Brasil, em geral, não têm atendido às necessidades de uma formação de qualidade. No atual sistema público de educação, estudantes com grande potencialidade para aprendizagem carecem de estimulo e condições para desenvolvimento pleno das suas capacidades.</p>
+				<small>Silvino Neto, <cite title="Source Title">CEO da <a href="http://turmacidada.org">Turma Cidadã Brasil</a></cite></small>
 			</blockquote>
 		</div>
 
 		<div class="container-fluid" id="selection">
 			<div class="row-fluid">
 				<div class="span6">
-					<h1>Our Students</h1>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor bibendum posuere. Mauris in tortor velit, non blandit arcu. Ut fermentum viverra tellus, aliquet imperdiet ligula mollis et. Duis tincidunt odio eu mi sollici
+					<h1>Nosso Time de Alunos</h1>
+					Procuramos por estudantes do 2º ou 3º ano do Ensino Médio que tenham <em>interesse e potencial</em> para estudar em universidades estrangeiras. Espera-se, também, que os estudantes dediquem parte do seu tempo em atividades de voluntariado na Turma Cidadã, sem que haja prejuízo de seu desempenho escolar.
+					<div class="sign-up" style="width: 100%; text-align: center">
+						<button class="btn btn-large disabled btn-success" type="button">Inscreva-se no <strong>Magnet Project</strong></button>
+						<div class="notice">As inscrições para o ano de 2013 estão encerradas.</div>
+					</div>
 				</div>
 				<div class="span6">
-					<h3>The Selection</h3>
-					<p>The students in our team stand out as one of the best in their schools. This is what we're looking for</p>
+					<h3>Critérios de Seleção</h3>
+					<p>Os alunos no nosso time estão entre os melhores das suas respectivas escolas. Nossos critérios se assemelham bastante aos utilizados pelas universidades. Estamos procurando por alunos com</p>
 					<ul>
-						<li>fluency in English (<strong>and Portuguese as well</strong>)</li>
-						<li>high-standard grades</li>
-						<li>developed interests in multiple areas</li>
-						<li>energy and willingness to work</li>
-						<li>...</li>
+						<li>vontade de ajudar a melhorar o Brasil <strong>(é sério!)</strong></li>
+						<li>proficiência na língua inglesa<br><strong>(dominar o português é fudamental ;)</strong></li>
+						<li>interesses interdiciplinares desenvolvidos</li>
+						<li>destacado desempenho escolar</li>
+						<li>atividades extra-curriculares</li>
 					</ul>
 				</div>
 			</div>
@@ -140,20 +152,15 @@
 
 		<div class="container-fluid" id="schools">
 			<div id="schools-CEFET"></div> <div id="schools-CM"></div> <div id="schools-IFRJ"></div> <div id="schools-CAP"></div>
-			<div class="row-fluid">
-				<div class="span9">
-					<h1>Schools envolved</h1>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor bibendum posuere. Mauris in tortor velit, non blandit arcu. Ut fermentum viverra tellus, aliquet imperdiet ligula mollis et. Duis tincidunt odio eu mi sollici
-				</div>
 
-			</div>
 			<div class="row-fluid">
-				<div class="span6">
-					<h3>Escolas Envolvidas</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor bibendum posuere. Mauris in tortor velit, non blandit arcu. Ut fermentum viverra tellus, aliquet imperdiet ligula mollis et. Duis tincidunt odio eu mi sollicitudin ut mollis risus laoreet. Nunc dignissim pretium erat a facilisis. Fusce suscipit aliquam sem, at feugiat eros rutrum id. Curabitur vel odio justo.</p>
+				<div class="span5">
+					<h2>Escolas Envolvidas</h2>
+					O Magnet Project procura alunos do Ensino Médio rede pública de ensino, em escolas conceituadas como os Institutos Federais, Centros Federais, Colégios de Aplicação, Colégio Militar e Predro II. <strong>Não apresentamos restrição alguma, porém, à inscrição alunos da Rede Municipal ou Estadual de Ensino.</strong> Estes podem fazer a selação do mesmo jeito, e serão avaliados de forma imparcial, sempre levando em consideração suas dificuldades circunstanciais.
 				</div>
-				<div class="span6">
-					tudin ut mollis risus laoreet. Nunc dignissim pretium erat a facilisis. Fusce suscipit aliquam sem, at feugiat eros rutrum id. Curabitur vel odio justo. Etiam eu sapien eu lacus ultricies vehicula. Morbi luctus, purus nec aliquam tincidunt, tortor libero mattis est, eu tempor nisi lacus ac justo. Maecenas sodales adipiscing dolor et feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec metus enim, porttitor ut porttitor non, feugiat id nibh. Pellentesque pulvinar ligula in felis euismod nec cursus nisl convallis. Fusce volutpat velit ut ante lacinia condimentum.
+				<div class="span7 text-justify">
+					<h3>O Processo de 2013</h3>
+					Em 2013, por ser nosso primeiro ano, tivemos um processo de seleção diferenciado. Preenchemos uma quota de 10 a 15 vagas com estudantes de 2º e 3º anos de <abbr title="">magnet schools</abbr> com interesse prévio em aplicar para universidades no exterior, que foram encontrados por conhecimento de um dos integrantes ou por recomendação de conhecidos. Houve a preocupação de sondar os interesses dos candidatos, de modo a escolher os mais bem preparados e aqueles que poderiam contribuir positivamente para o projeto.
 				</div>
 			</div>
 		</div>
@@ -162,24 +169,25 @@
 		<div class="container-fluid" id="cost"> 
 			<div class="row-fluid">
 				<div class="span7">
-					<h1>Per Student Cost</h1>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor bibendum posuere. Mauris in tortor velit, non blandit arcu. Ut fermentum viverra tellus, aliquet imperdiet ligula mollis et. Duis tincidunt odio eu mi sollicitudin ut mollis risus laoreet. Nunc dignissim pretium erat a facilisis. Fusce suscipit aliquam sem, at feugiat eros rutrum id. Curabitur vel odio justo. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat
+					<h1>Contas e custos</h1>
+					Dentro do nosso objetivo de diminuir o efeito da desigualdade social nas oportunidades acesso à educação de qualidade. Com esse objetivo, procuramos oferecer aos alunos o essencial para serem competitivos no processo de seleção e conseguirem . Os custos do processo de application incluem testes padronizados, testes de proficiência em inglês, o envio do resultado desses testes para as universidades, livros de estudo para esses testes. Esses custos serão providos pelos doadores do <strong>Magnet Project</strong>.
 					</p>
 				</div>
-				<div class="span4 offset1">
-					<br>
-					<table>
+				<div class="span5 offsset1">
+					<p>O calculo índividual de custo para cada aluno do magnet project está representado abaixo:</p>
+					<table class="table table-hover">
+						<tbody>
 						<tr><td>3 x R$500,00</td><td>SAT tests</td></tr>
 						<tr><td>1 x R$1.700</td><td>SAT course</td></tr>
 						<tr><td>7 x R$110,00</td><td>college fees</td></tr>
 						<tr><td>7 x R$110,00</td><td>college fees</td></tr>
+						<tr><td colspan="2"><h2>≃ R$4.000 <small>per student</small></h2></td></tr>
+						</tbody>
 					</table>
-					<hr>
-					<h2>≃ R$4.000 <small>per student</small></h2>
 				</div>
 			</div>
 		</div>
+
 
 		<div class="container-fluid hidden" id="donate">
 			<div class="row-fluid">
@@ -196,32 +204,33 @@
 		</div>
 
 		<div class="container-fluid" id="dux">
-			<h1>The SAT Course</h1>
 			<div class="row-fluid">
 				<div class="span6">
-					<h3>The Dux Institute, Ipanema</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor bibendum posuere. Mauris in tortor velit, non blandit arcu. Ut fermentum viverra tellus, aliquet imperdiet ligula mollis et. Duis tincidunt odio eu mi sollicitudin ut mollis risus laoreet. Nunc dignissim pretium erat a facilisis. Fusce suscipit aliquam sem, at feugiat eros rutrum id. Curabitur vel odio justo.</p>
+					<h1>The SAT Course</h1>
+					tudin ut mollis risus laoreet. Nunc dignissim pretium erat a facilisis. Fusce suscipit aliquam sem, at feugiat eros rutrum id. Curabitur vel odio justo. Etiam eu sapien eu lacus ultricies vehicula. Morbi luctus, purus nec aliquam tincidunt, tortor libero mattis est, eu tempor nisi lacus ac justo. Maecenas sodales adipiscing dolor et feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
 				</div>
 				<div class="span6">
-					tudin ut mollis risus laoreet. Nunc dignissim pretium erat a facilisis. Fusce suscipit aliquam sem, at feugiat eros rutrum id. Curabitur vel odio justo. Etiam eu sapien eu lacus ultricies vehicula. Morbi luctus, purus nec aliquam tincidunt, tortor libero mattis est, eu tempor nisi lacus ac justo. Maecenas sodales adipiscing dolor et feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec metus enim, porttitor ut porttitor non, feugiat id nibh. Pellentesque pulvinar ligula in felis euismod nec cursus nisl convallis. Fusce volutpat velit ut ante lacinia condimentum.
+					<h3><a href="http://duxinstitute.com/">The Dux Institute</a></h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor bibendum posuere. Mauris in tortor velit, non blandit arcu. Ut fermentum viverra tellus, aliquet imperdiet ligula mollis et. Duis tincidunt odio eu mi sollicitudin ut mollis risus laoreet. Nunc dignissim pretium erat a facilisis. Fusce suscipit aliquam sem, at feugiat eros rutrum id. Curabitur vel odio justo.</p>
 				</div>
 			</div>
 		</div>
 		<div class="container-fluid" id="contact">
 			<div class="row-fluid">
-				<div class="span6">
-					<h1>Contact us!</h1>
-					Get in touch if you have any doubts about the program or wish to discuss a partnership <del>or talk random stuff to a stranger</del>. Don't forget to leave your email, so we can contact you back. You can also email us at <a href="mailto:pires.a.felipe@gmail.com"><strong>pires.a.felipe@gmail.com</strong></a>. We'll come back to you as soon as we can!
+				<div class="span7">
+					<h1>Fale conosco!</h1>
+					Entre em contato se você tem qualquer dúvida sobre o programa ou gostaria de discutir uma parceria. Não esqueça de deixar o seu email no formulário, para receber uma resposta. Você também pode enviar emails para  <a href="mailto:pires.a.felipe@gmail.com"><strong>pires.a.felipe&#64;gmail.com</strong></a> (endereço provisório). <h3>Estamos à procura de uma empresa que acredite na nossa visão e tenha interesse em financiar nossos alunos. Se você acha que a sua se enquadra nesses quesitos, não deixe de nos contactar! :)</h3>
 				</div>
-				<div class="span5 offset1">
+				<div class="span5">
+					<br>
 					<form>
 						<fieldset>
-							<legend>What do you have in mind?</legend>
-							<input type="text" required placeholder="Your Name"><br>
-							<input type="email" required placeholder="Your Email">		
-							<textarea rows="5" required style="width: 100%" placeholder="Your message goes here! :)"></textarea>
-							<button type="submit" onclick="return false;" class="btn btn-success btn-submit" id="submit">Submit</button>
-							<h6>Your email adress is safe with us!</h6>
+							<legend>No que você está pensando?</legend>
+							<input type="text" required placeholder="Seu Nome"><br>
+							<input type="email" required placeholder="Seu Email">		
+							<textarea rows="5" required style="width: 100%" placeholder="Sua mensagem fica aqui! :)"></textarea>
+							<button type="submit" onclick="return false;" class="btn  btn-submit btn-success" id="submit">Enviar</button>
+							<h5>Your email adress is safe with us!</h5>
 						</fieldset>
 					</form>
 				</div>
@@ -233,8 +242,8 @@
 		<footer id="footer">
 			<div class="row-fluid">
 				<div class="span5">
-					<h5>MagnetProject.us &reg; 2013<br>All Rights Reserved</h5>
-					<h6>Concept and development by <a href="http://twitter.com/f03lipe">Felipe Aragão Pires</a></h6>
+					<h5>MagnetProject.us &reg; 2013<br>Todos os Direitos Reservados</h5>
+					<h5>Conceite e desenvolvimento por <a href="http://twitter.com/f03lipe">Felipe Aragão Pires</a></h5>
 					
 					<div class="social-btn">
 						<a href="https://twitter.com/magnetprojectrj"><img tabindex="0" alt="" src="img/twitter_32.png"></a>
@@ -248,13 +257,13 @@
 				</div>
 				<div class="span3">
 				</div>
-				<div class="span4" style="text-align: right">
+				<div class="span4" style="text-align: right; margin-top: 10px">
 					<address style="float: left; padding-top: 15px">
-						<strong>A <a href="http://turmacidada.org">Turma Cidadã</a> Project</strong>
+						<strong>Afiliado à <a href="http://turmacidada.org">Turma Cidadã Brasil</a></strong>
 						<br>
 						R. General Canabarro, 522<br>
 						Tijuca, Rio de Janeiro, Brasil<br>
-						<abbr title="Phone">P:</abbr> (21) 2566-3055
+						<abbr title="telepone">P:</abbr> (21) 2566-3055
 					</address>
 					<img style="float: right" width=100 src="img/logo.png" alt="Logo Turma Cidadã">
 				</div>
@@ -286,22 +295,39 @@
 		//	scrollorama.animate('#box', {duration: 300, property:'opacity', end: .5});
 		});
 
-		var students = [
-			{ id:0, school_label:'CM', name:'Jamal Malic', age:'19 anos', school:'CM Tijuca', avatar:'http://baconmockup.com/200/200' },
-			{ id:1, school_label:'CEFET', name:'Felipe Aragão', age:'16 anos', school:'CEFET RJ', avatar:'http://baconmockup.com/200/200' },
-			{ id:2, school_label:'CM', name:'Ivo Malic', age:'17 anos', school:'CM Tijuca', avatar:'http://baconmockup.com/200/200' },
-			{ id:3, school_label:'CM', name:'Jamal Malic', age:'18 anos', school:'CM Tijuca', avatar:'http://baconmockup.com/200/200' },
-			{ id:4, school_label:'CP2', name:'Caleb Rourke', age:'17 anos', school:'CP2 Tijuca', avatar:'http://baconmockup.com/200/200' },
-			{ id:5, school_label:'CEFET', name:'Jamal Malic', age:'16 anos', school:'CEFET RJ', avatar:'http://baconmockup.com/200/200' },
-			{ id:6, school_label:'CM', name:'Lily Bridgett', age:'17 anos', school:'CM Tijuca', avatar:'http://baconmockup.com/200/200' },
-			{ id:7, school_label:'CAP', name:'Jamal Malic', age:'17 anos', school:'CAP UFRJ', avatar:'http://baconmockup.com/200/200' },
-			{ id:8, school_label:'CEFET', name:'Jamal Malic', age:'18 anos', school:'CEFET RJ', avatar:'http://baconmockup.com/200/200' },
-			{ id:9, school_label:'CP2', name:'Jamal Malic', age:'19 anos', school:'CP2 Tijuca', avatar:'http://baconmockup.com/200/200' },
-			{ id:10, school_label:'IFRJ', name:'Jacqui Flemming', age:'19 anos', school:'IFRJ', avatar:'http://baconmockup.com/200/200' },
-			{ id:11, school_label:'CAP', name:'Jamal Malic', age:'19 anos', school:'CAP UFRJ', avatar:'http://baconmockup.com/200/200' },
-			{ id:12, school_label:'CM', name:'Sergio Tallent', age:'17 anos', school:'CM', avatar:'http://baconmockup.com/200/200' },
-			{ id:13, school_label:'CEFET', name:'Ana Carolina', age:'17 anos', school:'CEFET RJ', avatar:'http://baconmockup.com/200/200' },
-		]
+		function shuffle(o){ //v1.0
+		for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+		return o;
+		};
+
+		var students = shuffle([
+			{ id:0, name:'Alessandra Bastos', age:'17 anos', school_label:'CEFET', school:'CEFET RJ', avatar:'img/students/431894_10200274680483417_636937987_n.jpg',
+			message: '' },
+			{ id:4, name:'Alessandro Pacanowski', age:'17 anos', school_label:'CM', school:'Colégio Militar RJ', avatar:'img/students/532803_463803063648861_609263407_n.jpg',
+			message: '' },
+			{ id:12, name:'André Queiroz', age:'17 anos', school_label:'FAETEC', school:'FAETEC', avatar:'img/students/970533_511492172233966_349772150_n.jpg',
+			message: '' },
+			{ id:1, name:'Felipe Aragão', age:'17 anos', school_label:'CEFET', school:'CEFET RJ', avatar:'img/students/Untitled-dough.png',
+			message: 'Sou estudante do curso técnico de informática na unidade maracanã do <strong>CEFET RJ</strong>. Sou <strong>secretário-geral do grêmio</strong> de lá e volutário na <strong>Turma Cidadã</strong> desde o começo de 2011. Me considero uma pessoa multifacetada, com muitos interesses e incapacidade de fazer uma coisa só. Atualmente fico muito divirto bastante desenvolvendo projetos pela ONG e trabalhando no <strong>Magnet Project</strong>.' },
+			{ id:2, name:'Felipe Guima', age:'17 anos', school_label:'CEFET', school:'CEFET RJ', avatar:'img/students/971002_333531546775968_1456404657_n.jpg',
+			message: '' },
+			{ id:5, name:'Ivo Lima', age:'17 anos', school_label:'CM', school:'Colégio Militar RJ', avatar:'img/students/603597_657977254228897_2077363595_n.jpg',
+			message: '' },
+			{ id:11, name:'Izabel Barbosa', age:'17 anos', school_label:'CAP', school:'CAP UERJ', avatar:'img/students/536995_489767991043577_1256149523_n.jpg',
+			message: '' },
+			{ id:9, name:'Larissa de Paula', age:'17 anos', school_label:'CM', school:'Colégio Militar RJ', avatar:'img/students/600839_458871510854841_86940804_n.jpg',
+			message: '' },
+			{ id:7, name:'Letícia Cardoso', age:'17 anos', school_label:'CM', school:'Colégio Militar RJ', avatar:'img/students/972127_500665209988748_848122732_n.jpg',
+			message: '' },
+			{ id:3, name:'Luiz Fernando Leal', age:'17 anos', school_label:'CEFET', school:'CEFET RJ', avatar:'img/students/543821_454461197941683_1570568162_n.jpg',
+			message: '' },
+			{ id:10, name:'Mari Topeshashvili', age:'17 anos', school_label:'CP2', school:'Colégio Pedro II Humaitá', avatar:'img/students/943459_523820314331823_876949568_n.jpg',
+			message: '' },
+			{ id:6, name:'Pedro Paulo Maia', age:'17 anos', school_label:'CM', school:'Colégio Militar RJ', avatar:'img/students/420093_550766978287482_748761077_n.jpg',
+			message: '' },
+			{ id:8, name:'Vinicius Canto Costa', age:'17 anos', school_label:'CM', school:'Colégio Militar RJ', avatar:'img/students/954806_466504960102039_1246814808_n.jpg',
+			message: '' },
+		])
 
 		for (var i=0; i<students.length; i++) {
 			$('#students-slider .slides').append(_.template($('#slider-nav-templ').html(), students[i]));

@@ -4,7 +4,7 @@
 // by f03lipe
 
 @import "macros.less";
-@import "font.css";
+@import "fonts.css";
 
 .tk-museo { font-family: museo, "Open Sans", Arial; }
 .tk-museo-sans { font-family: museo-sans, "Open Sans", Arial; }
@@ -24,7 +24,7 @@ body {
 
 
 h1,h2,h3,h4,h5,h6 {
-	font-family: Montserrat, museo;
+	font-family: museo;
 }
 
 a:link {
@@ -148,28 +148,20 @@ canvas {
 		position: relative;
 		z-index: 2;
 	}
-
-	.bg {
-		z-index: 1;
-		position: absolute;
-		left: 0; top: 0; right: 0; bottom: 0;
-		width: 100%;
-		hesight: 100%;
-		// background:  url('../img/ps_neutral.png') repeat top left;
-		opacisty: 0.4;
-	}
-
 }
 
 .container-fluid {
 	margin-right: auto;
 	margin-left: auto;
-	max-width: 1100px; /* or 950px */
+	max-width: 1050px; /* or 950px */
 }
 
+//.row-fluid { border: 1px solid red; }
+
+.lead, blockquote { font-family: museo; }
 
 
-.container, .container-fluid > .text-justify { text-align: justify; }
+.text-justify { text-align: justify; }
 .container, .container-fluid > blockquote { p, & { font-size: 24px; } }
 .container, .container-fluid 
 {
@@ -184,6 +176,27 @@ canvas {
 			margin-bottom: 10px;
 			font-family: museo, "Open Sans";
 			list-style-image: url(../img/tick.png);
+		}
+
+		.sign-up {
+			button {
+				margin: 20px 0;
+				font-size: 30px;
+				padding: 20px 30px;
+				.border-radius(10px);
+				font-family: museo, "Open Sans";
+				cursor: pointer;
+			}
+
+			.notice {
+				color: red;
+				opacity: .8;
+				cursor: default;
+				.transition(color, linear, 3s);
+			}
+			&:hover .notice {
+				opacity: 1;
+			}
 		}
 	}
 
@@ -230,6 +243,8 @@ canvas {
 			@dim: 50px;
 			width: @dim;
 			height: @dim;
+			vertical-align: top;
+			overflow: hidden;
 
 			cursor: pointer;
 			display: inline-block;
@@ -246,6 +261,7 @@ canvas {
 			&.active { }
 
 			img {
+				min-height: 70px;
 				.border-radius(@bradius);
 			}
 			
@@ -288,6 +304,8 @@ canvas {
 				border-radius: 10px;
 				background: white;
 				width: 150px;
+				height: 150px;
+				overflow: hidden;
 			}
 
 			& > div {
@@ -312,18 +330,27 @@ canvas {
 
 	&#cost
 	{
-		hr {
-			height: 0;
-			border-bottom: 1px solid #444;
-		}
-
 		table {
-			font: 20px museo;
+			margin: 0 auto;
+			width: 370px;
+			td {
+				font: 26px/20px museo;
+				padding-right: 3px;
+				border-top: none; 
+			}
+			
 			td:nth-child(1) {
 				font-weight: bold;
+				text-align: right;
 			}
-			td {
-				padding-right: 3px;
+			
+			td[colspan] {
+				h1, h2, h3 {
+					margin: 0;
+					font-size: 37px;
+				}
+				border-top: 1px dashed #444;
+				text-align: center;
 			}
 		}
 	}
@@ -399,8 +426,9 @@ canvas {
 			}
 
 			.btn-submit:active {
-				top: 2px;
-				box-shadow: 0 0px 3px rgba(0,0,0,.6);
+				top: 1px;
+				background: #5bb75b;
+				box-shadow: none;
 			}
 		}
 	}
@@ -456,7 +484,10 @@ footer
 	z-index: 2;
 	font-size: 15px;
 	color: white;
+	font-family: museo, Montserrat, sans-serif;
 	margin-top: 30px;
+
+	h56 { font-size: 14px; }
 
 	.social-btn {
 		position: static !important;
