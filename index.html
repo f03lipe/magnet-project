@@ -106,13 +106,16 @@
 				</div>
 			</div>
 		</div>
-	
+
 		<div class="container-fluid bottomless">
 			<div class="row-fluid">
 				<div class="span12 lead text-justify">
 					O <strong>Magnet Project</strong> é um programa sem fins lucrativos que tem como objetivo financiar o <abbr data-abbr="application" title="">processo de <em>application</em></abbr> para alunos oriundos de escolas públicas de currículos diferenciados, <abbr data-abbr="magnet-school" title="">magnet schools</abbr>, que estejam interessados em cursar a graduação em universidades estrangeiras.
 				</div>
 			</div>
+		</div>
+		
+		<div class="container-fluid bottomless">
 			<div class="row-fluid">
 				<div class="span5">
 					<h2>O Nosso Objetivo</h2>
@@ -312,7 +315,6 @@
 		$(window).ready(function() {
 			$("#slider-nav .student").tooltip({html:true, delay: 0, placement:'bottom'});
 			$("abbr").each(function (i, e) {
-				console.log('bla')
 				$(e).click(function (evt) {
 					window.location.hash = '#'+$(e).data('abbr');
 				})
