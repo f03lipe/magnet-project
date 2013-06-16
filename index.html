@@ -167,7 +167,7 @@
 				</div>
 				<div class="span7 text-justify">
 					<h3>O Processo de 2013</h3>
-					Em 2013, por ser nosso primeiro ano, tivemos um processo de seleção diferenciado. Preenchemos uma quota de 10 a 15 vagas com estudantes de 2º e 3º anos de <abbr data-abbr="magnet-project" title="">magnet schools</abbr> com interesse prévio em aplicar para universidades no exterior, que foram encontrados por conhecimento de um dos integrantes ou por recomendação de conhecidos. Houve a preocupação de sondar os interesses dos candidatos, de modo a escolher os mais bem preparados e aqueles que poderiam contribuir positivamente para o projeto.
+					Em 2013, por ser nosso primeiro ano, tivemos um processo de seleção diferenciado. Preenchemos uma quota de 10 a 15 vagas com estudantes de 2º e 3º anos de <abbr data-abbr="magnet-school" title="">magnet schools</abbr> com interesse prévio em aplicar para universidades no exterior, que foram encontrados por conhecimento de um dos integrantes ou por recomendação de conhecidos. Houve a preocupação de sondar os interesses dos candidatos, de modo a escolher os mais bem preparados e aqueles que poderiam contribuir positivamente para o projeto.
 				</div>
 			</div>
 		</div>
@@ -231,11 +231,11 @@
 				</div>
 				<div class="span8 text-justify">
 					<dl class="dl-horizontal">
-						<dt>Application</dt>
+						<dt id="application">Application</dt>
 						<dd>em sua significação ampla, se refere ao processo de inscrição em universidades americanas. Ele inclui a realização de exames padronizados, como <strong>SAT</strong> (reasoning e subjects) e <strong>TOEFL</strong>, envio de documentos (notas escolares, certificados de conclusão do ensino médio e cartas de recomendação) e de essays (redações pessoais que servem para que a universidade conheça o estudante e possa decidir se ele se encaixa no perfil que ela procura).
-						<dt>Magnet schools </dt>
+						<dt id="magnet-school">Magnet schools </dt>
 						<dd>são escolas públicas concorridas com currículo especializado, cujos objetivos são eliminar, reduzir e prevenir o isolamento de grupos desfavorecidos, ao mesmo tempo que proporciona aos estudantes conhecimentos mais fortes em disciplinas acadêmicas e competências profissionais.</dd>
-						<dt>SATs e TOEFL </dt>
+						<dt id="SAT">SATs e TOEFL </dt>
 						<dd>consectetur adipiscing elit. Praesent porttitor bibendum posuere. Mauris in tortor velit, non blandit arcu. Ut fermentum viverra tellus, aliquet imperdiet ligula mollis et. Duis tincidunt odio eu mi sollicitudin ut mollis risus laoreet. Nunc dignissim pretium erat a facilisis.</dd>
 					</dl>
 				</div>
@@ -310,10 +310,16 @@
 	<script type="text/javascript">
 
 		$(window).ready(function() {
-			$("#slider-nav .student").tooltip({html:true, delay: 0, placement:'bottom'})
+			$("#slider-nav .student").tooltip({html:true, delay: 0, placement:'bottom'});
+			$("abbr").each(function (i, e) {
+				console.log('bla')
+				$(e).click(function (evt) {
+					window.location.hash = '#'+$(e).data('abbr');
+				})
+			})
 		});
 
-		var students = ({for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);return o;})([
+		var students = (function(o) {for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);return o;})([
 			{ id:0, name:'Alessandra Bastos', age:'17 anos', school_label:'CEFET', school:'CEFET RJ',
 				avatar:'img/students/431894_10200274680483417_636937987_n.jpg',
 				message: 'Sou estudante do CEFET/RJ - unidade Maracanã, onde curso o 3° ano do ensino médio e o curso <strong>técnico de informática</strong>. Sou apaixonada por <strong>simulações da ONU</strong> em geral e serei secretária-geral do SICEFET (Simulações Internas do CEFET/RJ). Aprecio muito a ciência, em especial a área de química e considero trabalhar com isso num futuro próximo. Me considero uma pessoa expressiva, expontânea, criativa, curiosa, crítica e energética.' },
@@ -353,7 +359,7 @@
 			{ id:8, name:'Vinicius Canto Costa', age:'17 anos', school_label:'CM', school:'Colégio Militar RJ',
 				avatar:'img/students/954806_466504960102039_1246814808_n.jpg',
 				message: '' },
-		])
+		]);
 
 		for (var i=0; i<students.length; i++) {
 			$('#students-slider .slides').append(_.template($('#slider-nav-templ').html(), students[i]));

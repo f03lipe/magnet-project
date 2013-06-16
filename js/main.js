@@ -141,9 +141,7 @@ $().ready(function() {
 		var top = $(document).scrollTop();
 		// if (Math.abs(top - prog.top) < 500)
 		// 	$("#donate .progress").addClass('visible');
-
-		console.log('top', top)
-		
+				
 		if (top < 800) {
 			backup.css('opacity', 0);
 		} else if (800 <= top < 900) {
