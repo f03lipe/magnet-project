@@ -49,7 +49,7 @@
 						
 					</hgroup>
 					<div class="text">
-					<%= message || "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat."
+					<%= message || "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor bibendum posuere. Mauris in tortor velit, non blandit arcu. Ut fermentum viverra tellus, aliquet imperdiet ligula mollis et. Duis tincidunt odio eu mi sollicitudin ut mollis risus laoreet. Nunc dignissim pretium erat a facilisis. Fusce suscipit aliquam sem, at feugiat eros rutrum id. Curabitur vel odio justo."
 					%>
 					</div>
 				</div>
@@ -119,7 +119,7 @@
 			<div class="row-fluid">
 				<div class="span5">
 					<h2>O Nosso Objetivo</h2>
-					O objetivo do <strong>Magnet Project</strong> é criar um programa anual de financiamento integral dos custos envolvidos no processo de <abbr data-abbr="application" title=""><em>application</em></abbr> para alunos de escolas públicas fortes (como o Colégio Pedro II, Colégio Militar, Institutos Federais, Centros Federais e Escolas de Aplicação), que estejam no último ou penúltimo anos do ensino médio. Os custos cobertos devem incluir o preço das provas, livros e curso preparatório.
+					O objetivo do <strong>Magnet Project</strong> é criar um programa anual de financiamento integral dos custos envolvidos no <abbr data-abbr="application" title="">processo de <em>application</em></abbr> para alunos de escolas públicas fortes (como o Colégio Pedro II, Colégio Militar, Institutos Federais, Centros Federais e Escolas de Aplicação), que estejam no último ou penúltimo anos do ensino médio. Os custos cobertos devem incluir o preço das provas, livros e curso preparatório.
 				</div>
 
 				<div class="span7">
@@ -322,50 +322,76 @@
 		});
 
 		var students = (function(o) {for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);return o;})([
-			{ id:0, name:'Alessandra Bastos', age:'17 anos', school_label:'CEFET', school:'CEFET RJ',
+			{ 
+				name:'Alessandra Bastos', age:'17 anos',
+				school_label:'CEFET', school:'CEFET RJ',
 				avatar:'img/students/431894_10200274680483417_636937987_n.jpg',
-				message: 'Sou estudante do CEFET/RJ - unidade Maracanã, onde curso o 3° ano do ensino médio e o curso técnico de informática (para o qual eu fiz um ano de iniciação científica). Sou apaixonada por simulações da ONU em geral e serei secretária-geral do SICEFET (Simulações Internas do CEFET/RJ). Aprecio muito a ciência, em especial a área de química e considero trabalhar com isso num futuro próximo. Acredito ser uma pessoa expressiva, expontânea, criativa, curiosa, crítica e energética.' },
-			{ id:4, name:'Alessandro Pacanowski', age:'17 anos', school_label:'CM', school:'Colégio Militar RJ',
+				message: 'Sou <strong>estudante do CEFET/RJ</strong> - unidade Maracanã, onde curso o 3° ano do ensino médio e o <strong>curso técnico de informática</strong> (para o qual eu fiz um ano de iniciação científica). Sou apaixonada por <strong>simulações da ONU</strong> em geral e serei secretária-geral do SICEFET (Simulações Internas do CEFET/RJ). Aprecio muito a ciência, em especial a área de química e considero trabalhar com isso num futuro próximo. Acredito ser uma pessoa expressiva, expontânea, criativa, curiosa, crítica e energética.' },
+			{ 
+				name:'Alessandro Pacanowski', age:'17 anos',
+				school_label:'CM', school:'Colégio Militar RJ',
 				avatar:'img/students/532803_463803063648861_609263407_n.jpg',
 				message: '' },
-			{ id:12, name:'André Queiroz', age:'17 anos', school_label:'FAETEC', school:'FAETEC',
+			{ 
+				name:'André Queiroz', age:'17 anos',
+				school_label:'FAETEC', school:'FAETEC',
 				avatar:'img/students/970533_511492172233966_349772150_n.jpg',
-				message: '<h2>A primeira palavra que eu falei foi <em>dad</em>.</h2>Já no primário eu era um dos mais bagunceiros da classe, porém, com as melhores notas. Sempre gostei de desafios, e escola não era um deles. Sou técnico de informática formado pela FAETEC e já desenvolvi sistemas de gestão e um jogo sobre reciclagem, além de ter sido premiado em olimpíadas de Matemática e Informática. Quero cursar Ciência da Computação na Universidade e o meu maior sonho é transformar a educação brasileira em algo mais divertido (e desafiador) por meio da tecnologia.' },
-			{ id:1, name:'Felipe Aragão', age:'17 anos', school_label:'CEFET', school:'CEFET RJ',
+				message: 'Já no primário eu era um dos mais bagunceiros da classe, porém, com as melhores notas. Sempre gostei de desafios, e escola não era um deles. Sou <strong>técnico de informática formado pela FAETEC</strong> e já desenvolvi sistemas de gestão e um jogo sobre reciclagem, além de ter sido <strong>premiado em olimpíadas de Matemática e Informática</strong>. Quero cursar Ciência da Computação na universidade e o <strong>meu maior sonho é transformar a educação brasileira</strong> em algo mais divertido (e desafiador) por meio da tecnologia.' },
+			{ 
+				name:'Felipe Aragão', age:'17 anos',
+				school_label:'CEFET', school:'CEFET RJ',
 				avatar:'img/students/Untitled-dough.png',
 				message: 'Sou estudante do curso técnico de informática na unidade maracanã do <strong>CEFET RJ</strong>. Sou <strong>secretário-geral do grêmio</strong> de lá e volutário na <strong>Turma Cidadã</strong> desde o começo de 2011. Me considero uma pessoa multifacetada, com muitos interesses e incapacidade de fazer uma coisa só. Atualmente me divirto bastante desenvolvendo projetos pela ONG e trabalhando no <strong>Magnet Project</strong>.' },
-			{ id:2, name:'Felipe Guimarães', age:'16 anos', school_label:'CEFET', school:'CEFET RJ',
+			{ 
+				name:'Felipe Guimarães', age:'16 anos',
+				school_label:'CEFET', school:'CEFET RJ',
 				avatar:'img/students/971002_333531546775968_1456404657_n.jpg',
 				message: 'Sou estudante do CEFET/RJ - Maracanã, no curso de <strong>Segurança do Trabalho</strong>. Sou um dos representantes do meu curso técnico no grêmio e monitor de matemática nessa escola. Me considero uma pessoa curiosa que busca sempre conhecimentos novos e maneira de transmiti-los. E espero que um dia eu possa fazer uma real diferença na vida de outras pessoas e quem sabe, nesse país.' },
-			{ id:5, name:'Ivo Lima', age:'17 anos', school_label:'CM', school:'Colégio Militar RJ',
+			{ 
+				name:'Ivo Lima', age:'17 anos',
+				school_label:'CM', school:'Colégio Militar RJ',
 				avatar:'img/students/603597_657977254228897_2077363595_n.jpg',
 				message: '' },
-			{ id:11, name:'Izabel Barbosa', age:'17 anos', school_label:'CAP', school:'CAP UERJ',
+			{ 
+				name:'Izabel Barbosa', age:'17 anos',
+				school_label:'CAP', school:'CAP UERJ',
 				avatar:'img/students/536995_489767991043577_1256149523_n.jpg',
 				message: '' },
-			{ id:9, name:'Larissa de Paula', age:'17 anos', school_label:'CM', school:'Colégio Militar RJ',
+			{ 
+				name:'Larissa de Paula', age:'17 anos',
+				school_label:'CM', school:'Colégio Militar RJ',
 				avatar:'img/students/600839_458871510854841_86940804_n.jpg',
-				message: 'Sou estudante do Colégio Militar do Rio de Janeiro. Lá, tive a honra de ser diretora de hipismo do grêmio estudantil. Atualmente faço ballet profissional, equitação e dou aula de história e geografia para crianças carentes. Já morei em cinco cidades diferentes e por isso sou apaixonada por novos lugares e culturas. Acredito que o que importa na vida é amar de verdade e se doar por inteiro ao que você se propõe a fazer.' },
-			{ id:7, name:'Letícia Cardoso', age:'17 anos', school_label:'CM', school:'Colégio Militar RJ',
+				message: 'Sou estudante do <strong>Colégio Militar do Rio de Janeiro</strong>. Lá, tive a honra de ser <strong>diretora de hipismo do grêmio estudantil</strong>. Atualmente faço ballet profissional, equitação e dou aula de história e geografia para crianças carentes. Já morei em cinco cidades diferentes e por isso sou apaixonada por novos lugares e culturas. Acredito que o que importa na vida é amar de verdade e se doar por inteiro ao que você se propõe a fazer.' },
+			{ 
+				name:'Letícia Cardoso', age:'17 anos',
+				school_label:'CM', school:'Colégio Militar RJ',
 				avatar:'img/students/972127_500665209988748_848122732_n.jpg',
-				message: 'Sou estudante do Colégio Militar do Rio de Janeiro, onde sou a primeira da minha turma desde que adentrei em tal instituição. Faço equitação e jogo handball, aprendendo, dessa forma, a trabalhar em equipe, ser gentil e a superar obstáculos. Dedicada, engajada e preocupada com o próximo, considero que sonhos só são grandes o suficiente, a partir do momento que eles te assustam, por isso, desejar ser a primeira mulher pantheon em 125 anos de CMRJ e estudar no exterior, é só o começo.' },
-			{ id:3, name:'Luiz Fernando Leal', age:'19 anos', school_label:'CEFET', school:'CEFET RJ',
+				message: 'Sou estudante do <strong>Colégio Militar do Rio de Janeiro</strong>, onde sou a primeira da minha turma desde que adentrei em tal instituição. Faço <strong>equitação</strong> e jogo handball, aprendendo, dessa forma, a trabalhar em equipe, ser gentil e a superar obstáculos. Dedicada, engajada e preocupada com o próximo, considero que sonhos só são grandes o suficiente, a partir do momento que eles te assustam, por isso, desejar ser a primeira mulher pantheon em 125 anos de CMRJ e estudar no exterior, é só o começo.' },
+			{ 
+				name:'Luiz Fernando Leal', age:'19 anos',
+				school_label:'CEFET', school:'CEFET RJ',
 				avatar:'img/students/543821_454461197941683_1570568162_n.jpg',
-				message: 'Sou estudante do CEFET/RJ, onde curso o 3° ano do ensino médio e o curso técnico de eletrônica. Tenho interesse em seguir carreira científica no exterior, para que no futuro eu possa voltar ao Brasil e aplicar todos os meus conhecimentos para o avanço da ciência no país. Tendo isso em mente, venho atuando como pesquisador orientado no CBPF e como monitor de Física em minha escola, procurando sempre agregar os valores necessários para o sucesso, tanto no meio acadêmico como no meio social..' },
-			{ id:10, name:'Mari Topeshashvili', age:'17 anos', school_label:'CP2', school:'Colégio Pedro II Humaitá',
+				message: 'Sou estudante do <strong>CEFET/RJ</strong>, onde curso o 3° ano do ensino médio e o <strong>curso técnico de eletrônica</strong>. Tenho interesse em seguir carreira científica no exterior, para que no futuro eu possa voltar ao Brasil e aplicar todos os meus conhecimentos para o avanço da ciência no país. Tendo isso em mente, venho atuando como <strong>pesquisador orientado no CBPF</strong> e como <strong>monitor de Física</strong> em minha escola, procurando sempre agregar os valores necessários para o sucesso, tanto no meio acadêmico como no meio social..' },
+			{ 
+				name:'Mari Topeshashvili', age:'17 anos',
+				school_label:'CP2', school:'Colégio Pedro II Humaitá',
 				avatar:'img/students/943459_523820314331823_876949568_n.jpg',
 				message: '' },
-			{ id:6, name:'Pedro Paulo Maia', age:'18 anos', school_label:'CM', school:'Colégio Militar RJ',
+			{ 
+				name:'Pedro Paulo Maia', age:'18 anos',
+				school_label:'CM', school:'Colégio Militar RJ',
 				avatar:'img/students/420093_550766978287482_748761077_n.jpg',
-				message: 'Estudo no Colégio Militar do Rio de Janeiro. Tenho interesse de cursar a área de Administração e Educação nos EUA e voltar ao Brasil. Pretendo abrir uma escola e fazer a diferença em um setor carente de investimentos. Na minha vida acadêmica, já fiz trabalhos voluntários, trabalhei no Projeto Mais Educação da Prefeitura, fui Vice-presidente do Grêmio estudantil e já fui medalhista em Olimpíadas Científicas nas áreas de Matemática, Física, Química, Astronomia e Oceanografia.' },
-			{ id:8, name:'Vinicius Canto Costa', age:'17 anos', school_label:'CM', school:'Colégio Militar RJ',
+				message: 'Estudo no <strong>Colégio Militar do Rio de Janeiro</strong>. Tenho interesse de cursar a área de Administração e Educação nos EUA e <strong>voltar ao Brasil</strong>. Pretendo abrir uma escola e fazer a diferença em um setor carente de investimentos. Na minha vida acadêmica, já fiz trabalhos voluntários, trabalhei no Projeto Mais Educação da Prefeitura, fui <strong>Vice-presidente do Grêmio estudantil</strong> e já fui <strong>medalhista em Olimpíadas Científicas nas áreas de Matemática, Física, Química, Astronomia e Oceanografia</strong>.' },
+			{ 
+				name:'Vinicius Canto Costa', age:'17 anos',
+				school_label:'CM', school:'Colégio Militar RJ',
 				avatar:'img/students/954806_466504960102039_1246814808_n.jpg',
 				message: '' },
 		]);
 
 		for (var i=0; i<students.length; i++) {
-			$('#students-slider .slides').append(_.template($('#slider-nav-templ').html(), students[i]));
-			$('#slider-nav').append(_.template($('#slider-el-templ').html(), students[i]));
+			$('#students-slider .slides').append(_.template($('#slider-nav-templ').html(), _.extend(students[i], {id:i})));
+			$('#slider-nav').append(_.template($('#slider-el-templ').html(),  _.extend(students[i], {id:i})));
 		}
 
 		var updateSlider = function (evt) {

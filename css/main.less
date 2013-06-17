@@ -129,7 +129,7 @@ canvas {
 	top: 30px;
 	right: 50px;
 	opacity: 0;
-	.transition(opacity, linear, .4s);
+	.transition(opacity, linear, .5s);
 
 	i {
 		color: #444;
@@ -181,7 +181,8 @@ canvas {
 
 .text-justify { text-align: justify; }
 .container, .container-fluid > blockquote { p, & { font-size: 24px; } }
-.container, .container-fluid 
+
+[class*="container"]
 {
 
 	font-size: 16px;
@@ -235,6 +236,7 @@ canvas {
 		width: 100%;
 		text-align: center;
 		cursor: default;
+		z-index: 100;
 
 		h2 {
 			font: bold 22px museo;
@@ -250,8 +252,10 @@ canvas {
 				background: rgba(255,255,255, 0); // contrast with h3
 				padding-top: 0;
 				border: none;
-				font: 15px Montserrat;
+				font: 14px Montserrat, museo, Arial;
 				border-radius: 0;
+				z-index: 10;
+				position: relative;
 			}
 		}
 
@@ -285,23 +289,28 @@ canvas {
 			
 			body[data-hoverschool=CEFET] &[data-school=CEFET],
 			&[data-school=CEFET]:hover,
-			&[data-school=CEFET].active { border-color: @color0; }
+			&[data-school=CEFET].active { border-color:; box-shadow: 0 0 10px @color0; }
 
 			body[data-hoverschool=CM] &[data-school=CM],
 			&[data-school=CM]:hover,
-			&[data-school=CM].active { border-color: @color1; }
+			&[data-school=CM].active { border-color:; box-shadow: 0 0 10px @color1; }
 			
 			body[data-hoverschool=CAP] &[data-school=CAP],
 			&[data-school=CAP]:hover,
-			&[data-school=CAP].active { border-color: @color2; }
+			&[data-school=CAP].active { border-color:; box-shadow: 0 0 10px @color2; }
 
 			body[data-hoverschool=CP2] &[data-school=CP2],
 			&[data-school=CP2]:hover,
-			&[data-school=CP2].active { border-color: @color3; }
+			&[data-school=CP2].active { border-color:; box-shadow: 0 0 10px @color3; }
 
 			body[data-hoverschool=CP2] &[data-school=CP2],
 			&[data-school=CP2]:hover,
-			&[data-school=CP2].active { border-color: @color2; }
+			&[data-school=CP2].active { border-color:; box-shadow: 0 0 10px @color2; }
+			
+			&[data-school]:hover,
+			&[data-school].active {
+				border-color: ;
+			}
 		}
 	}
 
@@ -317,7 +326,7 @@ canvas {
 			text-align: center;
 			
 			img {
-				vertical-align: top;
+				vertical-align: middle;
 				display: inline-block;
 				border-radius: 10px;
 				background: white;
@@ -331,7 +340,7 @@ canvas {
 				display: inline-block;
 				margin-left: 40px;
 				text-align: left;
-				width: 635px;
+				width: 650px;
 			}
 
 			hgroup * {

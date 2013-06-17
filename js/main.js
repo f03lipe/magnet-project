@@ -142,13 +142,10 @@ $().ready(function() {
 		// if (Math.abs(top - prog.top) < 500)
 		// 	$("#donate .progress").addClass('visible');
 				
-		if (top < 800) {
+		if (top < 700) {
 			backup.css('opacity', 0);
-		} else if (800 <= top < 900) {
-			backup.css('opacity', .5);
-		} else if (900 <= top) {
-			backup.css('opacity', 1);
-		}
-		
+		} else {
+			backup.css('opacity', .8);
+		}		
 	})
 })();
