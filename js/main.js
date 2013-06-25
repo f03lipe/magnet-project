@@ -6,7 +6,9 @@ var schools = {
 	'cap': { color: '#FB202D' },
 }
 
-MagneticCamp = new (function () {
+MagneticCamp = new (function (data) {
+
+	var data = data || {};
 	
 	// Never do this without your parent's supervision.
 	var max = Math.max,
@@ -15,8 +17,8 @@ MagneticCamp = new (function () {
 
 	// Globals: you may touch this
 	var LAPSE = 60
-		, COLORS = _.pluck(schools, 'color') // ['#009B95', '#FF7100', '#00C90D', '#FB202D']
-		, NUMLINES = 10
+		, COLORS = data.colors || _.pluck(schools, 'color') // ['#009B95', '#FF7100', '#00C90D', '#FB202D']
+		, NUMLINES = data.strings || 10
 		;
 
 	var header = $('header')
@@ -79,7 +81,11 @@ MagneticCamp = new (function () {
 		$('canvas.fullscreen')[0].width = $(window).width();
 		$('canvas.fullscreen')[0].height = $(window).height();
 		Mx = canvas.width/2;
-		My = header.offset().top+header.height()/2-header.parent().offset().top;
+	
+		if (header.length)
+			My = header.offset().top+header.height()/2-header.parent().offset().top;
+		else
+			My = canvas.height/2;
 		d1 = {x: Mx, y: My-130};
 		d2 = {x: Mx, y: My+130};
 	}
@@ -94,21 +100,7 @@ MagneticCamp = new (function () {
 	}
 });
 
-$().ready(function() {
-	MagneticCamp.init()/
-
-	$("[data-school]").bind({
-		mouseover: function (evt) {
-			target = $(evt.target);
-				school = (
-					(target.data('school')?target:false) ||
-					target.find('[data-school]')[0] ||
-					target.closest('[data-school]')).data('school');
-			document.body.dataset.hoverschool = school;
-		},
-		mouseout: function (evt) { delete document.body.dataset.hoverschool; },
-		mouseleave: function (evt) { delete document.body.dataset.hoverschool; },
-	})
+function setUpSharrre() {
 	$('.twitter').sharrre({
 		share: { twitter: true },
 		template: '<a class="box" href="#"><div class="share"><span></span>Tweet</div></a>',
@@ -130,10 +122,9 @@ $().ready(function() {
 			api.openPopup('facebook');
 		}
 	});
+}
 
-});
-
-(function scrollAnimations() {
+function setScrollAnimations() {
 	var prog = $('#donate .progress').offset(),
 		backup = $("#back-up");
 
@@ -148,4 +139,4 @@ $().ready(function() {
 			backup.css('opacity', .8);
 		}		
 	})
-})();
+}

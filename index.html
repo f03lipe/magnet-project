@@ -67,7 +67,7 @@
 		<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 	<![endif]-->
 
-	<canvas class="fullscreen" id="mag" data-stellar-ratio=".2"></canvas>
+	<canvas class="fullscreen" id="mag"></canvas>
 
 	<div class="container" id="header">
 		<div class="tc-banner">
@@ -310,15 +310,35 @@
 	<script type="text/javascript" src="js/underscore-min.js"></script>
 	<script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
 
+	<script type="text/javascript" src="js/plugins.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript">
 
 		$(window).ready(function() {
+			MagneticCamp.init();
+			
 			$("#slider-nav .student").tooltip({html:true, delay: 0, placement:'bottom'});
 			$("abbr").each(function (i, e) {
 				$(e).click(function (evt) {
 					window.location.hash = '#'+$(e).data('abbr');
 				})
 			})
+
+			setUpSharrre();
+			setScrollAnimations();
+
+			$("[data-school]").bind({
+				mouseover: function (evt) {
+					target = $(evt.target);
+						school = (
+							(target.data('school')?target:false) ||
+							target.find('[data-school]')[0] ||
+							target.closest('[data-school]')).data('school');
+					document.body.dataset.hoverschool = school;
+				},
+				mouseout: function (evt) { delete document.body.dataset.hoverschool; },
+				mouseleave: function (evt) { delete document.body.dataset.hoverschool; },
+			});
 		});
 
 		var students = (function(o) {for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);return o;})([
@@ -346,12 +366,12 @@
 				name:'Felipe Guimarães', age:'16 anos',
 				school_label:'CEFET', school:'CEFET RJ',
 				avatar:'img/students/971002_333531546775968_1456404657_n.jpg',
-				message: 'Sou estudante do CEFET/RJ - Maracanã, no curso de <strong>Segurança do Trabalho</strong>. Sou um dos representantes do meu curso técnico no grêmio e monitor de matemática nessa escola. Me considero uma pessoa curiosa que busca sempre conhecimentos novos e maneira de transmiti-los. E espero que um dia eu possa fazer uma real diferença na vida de outras pessoas e quem sabe, nesse país.' },
+				message: 'Sou estudante do <strong>CEFET/RJ - Maracanã</strong>, no curso de <strong>Segurança do Trabalho</strong>. Sou um dos representantes do meu curso técnico no grêmio e <strong>monitor de matemática</strong> nessa escola. Me considero uma pessoa curiosa que busca sempre conhecimentos novos e maneira de transmiti-los. E espero que um dia eu possa fazer uma real diferença na vida de outras pessoas e quem sabe, nesse país.' },
 			{ 
 				name:'Ivo Lima', age:'17 anos',
 				school_label:'CM', school:'Colégio Militar RJ',
 				avatar:'img/students/603597_657977254228897_2077363595_n.jpg',
-				message: 'Há mais de 10 anos em escolas públicas, estudo hoje no <strong>Colégio Militar</strong>, onde conquistei diversas honrarias, entre elas, o título de Tenente-Coronel-Aluno - a segunda mais alta posição de distinção que um aluno pode alcançar. Pretendo cursar economia no exterior para, aliando conhecimentos à minha experiência no <strong>projeto SOMAR</strong> (onde dou aulas de inglês para crianças carentes, utilizando a língua como um pretexto para ensiná-las valores), me tornar capaz de transformar as escolas públicas do Brasil.' },
+				message: 'Há mais de 10 anos em escolas públicas, estudo hoje no <strong>Colégio Militar</strong>, onde conquistei diversas honrarias, entre elas, o título de <strong>Tenente-Coronel-Aluno</strong> - a segunda mais alta posição de distinção que um aluno pode alcançar. Pretendo cursar economia no exterior para, aliando conhecimentos à minha experiência no <strong>projeto SOMAR</strong> (onde dou aulas de inglês para crianças carentes, utilizando a língua como um pretexto para ensiná-las valores), me tornar capaz de transformar as escolas públicas do Brasil.' },
 			{ 
 				name:'Izabel Barbosa', age:'17 anos',
 				school_label:'CAP', school:'CAP UERJ',
@@ -401,10 +421,10 @@
 		}
 
 		$('#students-slider .slides').parent().flexslider({
-			animation: "fade",
-			// after: updateSlider, 
-			// start: updateSlider,
-			// manualControls: $("#slider-nav .student")
+			animation: "slide",
+			after: updateSlider, 
+			start: updateSlider,
+			manualControls: $("#slider-nav .student")
 		});
 
 		$(document).ready(function(){
@@ -412,7 +432,5 @@
 		});
 	</script>
 
-	<script type="text/javascript" src="js/plugins.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
