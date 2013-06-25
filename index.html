@@ -226,10 +226,9 @@
 			</div>
 		</div>
 
-		<div class="container-fluid" id="dux">
+		<div class="container-fluid" id="vocab">
 			<div class="row-fluid">
 				<div class="span4">
-					Sou um estudante carioca de 17 anos, desde à quinta serie no Colegio Militar. Conheci Olimpiadas de Matematica quando pequeno e desde entao continuei estudando. Participei da IMO(International Mathematical Olympiad) 2013 na Colômbia, entre outras. Sempre tive interesse por diferentes áreas do conhecimento e para isso, leio bastante. Me sinto no dever de poder passar para outros jovens tudo que aprendi com as olímpiadas e para isso, faço parte do Projeto Fermat (Formaçao em Raciocinio Matematico) onde alunos de escolas municipais e estaduais assistem a aulas de olimpíada e interagem entre si, passando conhecimento e evoluindo juntos. Tenho muitos hobbies como malhaçao, lutas(muay thai e jiu jitsu), dança(tango, forró e samba), corrida, olimpíadas, curso de espanhol e de inglês, faço parte da banda do meu colégio(tocando saxofone) e faço equitaçao no meu colégio. Tenho vontade de estudar fora para ter mais qualificação e poder passar mais ideias e conhecimento para próximas gerações.
 					<h1>Vocabulário</h1>
 					Veja o que cada termo significa aqui.
 				</div>
@@ -240,7 +239,7 @@
 						<dt id="magnet-school">Magnet schools </dt>
 						<dd>são escolas públicas concorridas com currículo especializado, cujos objetivos são eliminar, reduzir e prevenir o isolamento de grupos desfavorecidos, ao mesmo tempo que proporciona aos estudantes conhecimentos mais fortes em disciplinas acadêmicas e competências profissionais.</dd>
 						<dt id="SAT">SATs e TOEFL </dt>
-						<dd>são teste padronizados (como o ENEM brasileiro, mas que acontecem diversas vezes ao ano) que servem para mostrar o nível de conhecimento do aluno para as universidades. O SAT, dividido em <em>SAT Reasoning</em> e <em>SAT Subjects</em>, testa conhecimento nas áreas como Inglês (leitura e escrita), Matemática, História (americana e mundial), Física, Química, Biologia e outras mais. TOELF é o teste padronizado de inglês, que serve para testar a fluência dos alunos.</dd>
+						<dd>são teste padronizados (como o ENEM brasileiro, mas que acontecem diversas vezes ao ano) que servem para mostrar o nível de conhecimento do aluno para as universidades. O SAT, dividido em <em>SAT Reasoning</em> e <em>SAT Subjects</em>, testa conhecimento nas áreas como Inglês (leitura e escrita), Matemática, História (americana e mundial), Física, Química, Biologia e outras mais. TOELF é o teste padronizado de inglês, que serve para testar a fluência dos.</dd>
 					</dl>
 				</div>
 			</div>
@@ -342,7 +341,7 @@
 				name:'Felipe Aragão', age:'17 anos',
 				school_label:'CEFET', school:'CEFET RJ',
 				avatar:'img/students/Untitled-dough.png',
-				message: 'Sou estudante do curso técnico de informática na unidade maracanã do <strong>CEFET RJ</strong>. Sou <strong>secretário-geral do grêmio</strong> de lá e volutário na <strong>Turma Cidadã</strong> desde o começo de 2011. Me considero uma pessoa multifacetada, com muitos interesses e incapacidade de fazer uma coisa só. Atualmente me divirto bastante desenvolvendo projetos pela ONG e trabalhando no <strong>Magnet Project</strong>.' },
+				message: 'Sou estudante do <strong>curso técnico de informática</strong> na unidade maracanã do <strong>CEFET RJ</strong>. Sou <strong>secretário-geral do grêmio</strong> de lá e volutário na <strong>Turma Cidadã</strong> desde o começo de 2011. Sou uma pessoa multifacetada, com muitos interesses e incapacidade de fazer uma coisa só. Atualmente me divirto bastante desenvolvendo projetos pela ONG e coordenando o <strong>Magnet Project</strong>.' },
 			{ 
 				name:'Felipe Guimarães', age:'16 anos',
 				school_label:'CEFET', school:'CEFET RJ',
@@ -352,7 +351,7 @@
 				name:'Ivo Lima', age:'17 anos',
 				school_label:'CM', school:'Colégio Militar RJ',
 				avatar:'img/students/603597_657977254228897_2077363595_n.jpg',
-				message: 'Há mais de 10 anos em escolas públicas, estudo hoje no <strong>Colégio Militar</strong>, onde conquistei diversas honrarias, dentre as quais destaco o título de Tenente-Coronel-Aluno - a segunda mais alta posição de distinção que um aluno pode alcançar. Pretendo cursar economia no exterior para, aliando conhecimentos à minha experiência no <strong>projeto SOMAR</strong> (onde dou aulas de inglês para crianças carentes, utilizando a língua como um pretexto para ensiná-las valores), me tornar capaz de transformar as escolas públicas do Brasil.' },
+				message: 'Há mais de 10 anos em escolas públicas, estudo hoje no <strong>Colégio Militar</strong>, onde conquistei diversas honrarias, entre elas, o título de Tenente-Coronel-Aluno - a segunda mais alta posição de distinção que um aluno pode alcançar. Pretendo cursar economia no exterior para, aliando conhecimentos à minha experiência no <strong>projeto SOMAR</strong> (onde dou aulas de inglês para crianças carentes, utilizando a língua como um pretexto para ensiná-las valores), me tornar capaz de transformar as escolas públicas do Brasil.' },
 			{ 
 				name:'Izabel Barbosa', age:'17 anos',
 				school_label:'CAP', school:'CAP UERJ',
@@ -402,10 +401,10 @@
 		}
 
 		$('#students-slider .slides').parent().flexslider({
-			animation: "slide",
-			after: updateSlider, 
-			start: updateSlider,
-			manualControls: $("#slider-nav .student")
+			animation: "fade",
+			// after: updateSlider, 
+			// start: updateSlider,
+			// manualControls: $("#slider-nav .student")
 		});
 
 		$(document).ready(function(){
