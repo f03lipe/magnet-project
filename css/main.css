@@ -7,13 +7,13 @@ a:link{color:#4AE;}
 a:hover,a:link,a:active{color:#4AE;text-decoration:none;}
 canvas{position:fixed;width:100%;height:100%;z-index:-1;}
 #header{padding-bottom:0;}#header .tc-banner{position:absolute;top:10px;left:10px;cursor:pointer;}#header .tc-banner img{position:relative;z-index:1;vertical-align:middle;}
-#header .tc-banner .box{position:relative;display:inline-block;z-index:0;padding:10px 15px;margin-left:-10px;vertical-align:middle;cursor:default;font:bold 13px/16px "Montserrat";backsground:rgba(0, 0, 0, 0.5);opacity:0;}#header .tc-banner .box a{font-weight:bold;color:#0BF;}
+#header .tc-banner .box{position:relative;display:inline-block;z-index:0;padding:10px 15px;margin-left:-10px;vertical-align:middle;cursor:default;font:bold 13px/16px "Montserrat";opacity:0;}#header .tc-banner .box a{font-weight:bold;color:#0BF;}
 #header .tc-banner:hover .box{opacity:1;}
 #header .social-share{position:absolute;top:15px;right:15px;}
 #header header{position:relative;margin-top:200px;margin-bottom:125px;text-align:center;color:white;}#header header h1{cursor:default;font:bolder 130px/80px Montserrat,"Monofett","Open Sans";letter-spacing:-2px;text-transform:uppercase;tesxt-shadow:0px 0 7px rgba(0, 0, 0, 0.5);}
 #header header h2{font:18px Montserrat;margin-top:15px;text-shadow:0px 0 1px black;}
 #header header h2 a{color:inherit;font-weight:bold;text-decoration:none !important;}
-#back-up{position:fixed;top:30px;right:50px;opacity:0;-webkit-transition:opacity linear 0.5s;-moz-transition:opacity linear 0.5s;-o-transition:opacity linear 0.5s;-ms-transition:opacity linear 0.5s;transition:opacity linear 0.5s;}#back-up i{color:#444;cursor:pointer;font-size:50px;opacity:.8;}
+#back-up{position:fixed;top:30px;right:50px;opacity:0;-webkit-transition:opacity linear 0.2s;-moz-transition:opacity linear 0.2s;-o-transition:opacity linear 0.2s;-ms-transition:opacity linear 0.2s;transition:opacity linear 0.2s;}#back-up i{color:#444;cursor:pointer;font-size:50px;opacity:.8;}
 #back-up i:hover{opacity:1;}
 .light-bg{position:relative;box-shadow:0 0 25px rgba(0, 0, 0, 0.7);background:#fff;color:#444;overflow:hidden;}.light-bg a:hover,.light-bg a:visited,.light-bg a:active{color:#08C;}
 .light-bg del{color:#666;}
