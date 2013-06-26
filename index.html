@@ -253,13 +253,14 @@
 				</div>
 				<div class="span5">
 					<br>
-					<form>
+					<form onSubmit="mailForm(this); return false">
 						<fieldset>
 							<legend>No que você está pensando?</legend>
-							<input type="text" required placeholder="Seu Nome"><br>
-							<input type="email" required placeholder="Seu Email">		
-							<textarea rows="5" required style="width: 100%" placeholder="Sua mensagem fica aqui! :)"></textarea>
-							<button type="submit" onclick="return false;" class="btn  btn-submit btn-success" id="submit">Enviar</button>
+							<input type="text" name="name" srequired placeholder="Seu Nome"><br>
+							<!-- <input type="email" name="email" srequired placeholder="Seu Email"> -->
+							<input type="text" name="subject" srequired placeholder="O assunto da conversa">
+							<textarea rows="5" name="content" style="width: 100%" srequired placeholder="Sua mensagem fica aqui! :)"></textarea>
+							<button type="submit" class="btn  btn-submit btn-success" id="submit">Enviar</button>
 							<h5>Your email adress is safe with us!</h5>
 						</fieldset>
 					</form>
@@ -273,7 +274,7 @@
 			<div class="row-fluid">
 				<div class="span5">
 					<h5>MagnetProject.us &reg; 2013<br>Todos os Direitos Reservados</h5>
-					<h5>Conceite e desenvolvimento por <a href="http://twitter.com/f03lipe">Felipe Aragão Pires</a></h5>
+					<h5>Conceito e desenvolvimento por <a href="http://twitter.com/f03lipe">Felipe Aragão Pires</a></h5>
 					
 					<div class="social-btn">
 						<a target="_blank" href="https://twitter.com/magnetprojectrj"><img alt="Twitter" src="img/twitter_32.png"></a>
@@ -313,6 +314,16 @@
 	<script type="text/javascript" src="js/plugins.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript">
+
+		function mailForm(form) {
+			var name = encodeURIComponent(form.querySelector('[name=name]').value),
+				// email = encodeURIComponent(form.querySelector('[name=email]').value),
+				subject = encodeURIComponent(form.querySelector('[name=subject]').value),
+				content = encodeURIComponent(form.querySelector('[name=content]').value);
+
+			window.open('mailto:pires.a.felipe@gmail.com?subject='+subject+'&body='+content,
+				'_blank', 'menubar=yes,height=400,width=700');
+		}
 
 		$(window).ready(function() {
 			MagneticCamp.init();
