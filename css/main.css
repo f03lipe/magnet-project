@@ -45,9 +45,9 @@ body[data-hoverschool=CP2] [class*="container"]#slider-nav .student[data-school=
 [class*="container"]#students-slider .student>div{vertical-align:top;display:inline-block;margin-left:40px;text-align:left;width:650px;}
 [class*="container"]#students-slider .student hgroup *{display:inline-block;margin:5px 5px 0 0;}
 [class*="container"]#students-slider .student .text{padding:10px 0;font:16px museo;}
-[class*="container"]#cost table{margin:0 auto;width:370px;}[class*="container"]#cost table td{font:26px/20px museo;padding-right:3px;border-top:none;}
+[class*="container"]#cost table{margin:0 auto;width:100%;}[class*="container"]#cost table td{font:16px/12px museo;padding-right:3px;border-top:none;}
 [class*="container"]#cost table td:nth-child(1){font-weight:bold;text-align:right;}
-[class*="container"]#cost table td[colspan]{border-top:1px dashed #444;text-align:center;}[class*="container"]#cost table td[colspan] h1,[class*="container"]#cost table td[colspan] h2,[class*="container"]#cost table td[colspan] h3{margin:0;font-size:37px;}
+[class*="container"]#cost table td[colspan]{width:100px;border-top:1px solid #DDD;text-align:center;}[class*="container"]#cost table td[colspan] h1,[class*="container"]#cost table td[colspan] h2,[class*="container"]#cost table td[colspan] h3{margin:0;font-size:37px;}
 [class*="container"]#donate{text-align:center;}[class*="container"]#donate button{position:relative;padding:20px 35px;background:#009B95;border:1px solid #444;box-shadow:0 1px 4px rgba(0, 0, 0, 0.8);border-radius:4px;color:white;font:bold 44px/150% Montserrat;}
 [class*="container"]#donate .progress .bar{-webkit-transition:all ease-out 1s;-moz-transition:all ease-out 1s;-o-transition:all ease-out 1s;-ms-transition:all ease-out 1s;transition:all ease-out 1s;width:0% !important;}
 [class*="container"]#donate .progress.visible .bar{width:30% !important;}
