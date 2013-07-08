@@ -37,6 +37,8 @@ a:hover, a:link, a:active {
 }
 
 
+
+
 // HEADER
 // #header, canvas
 
@@ -46,8 +48,6 @@ canvas {
 	height: 100%;
 	z-index: -1;
 }
-
-@media (max-width: 767px) { body { padding: 0; } } 
 
 #header
 {
@@ -120,16 +120,7 @@ canvas {
 		}
 	}
 
-
-	@media (max-width: @msize1) {
-		header {
-			margin: 90px 0 35px;
-			h1 { font-size: 100px; line-height: 65px; }
-			h2 { font-size: 20px; }
-		}
-	}
 }
-
 
 // LIGHT-BG and CONTAINERS
 // .light-bg > .container
@@ -197,38 +188,6 @@ canvas {
 
 	font-size: 16px;
 	padding-bottom: 50px;
-	@media (max-width: 700px) { padding-bottom: 10px; }
-
-	&#selection {
-		padding-bottom: 30px;
-		li {
-			font-size: 20px;
-			margin-bottom: 10px;
-			font-family: museo, "Open Sans";
-			list-style-image: url(../img/tick.png);
-		}
-
-		.sign-up {
-			button {
-				margin: 20px 0;
-				font-size: 30px;
-				padding: 20px 30px;
-				.border-radius(10px);
-				font-family: museo, "Open Sans";
-				cursor: pointer;
-			}
-
-			.notice {
-				color: red;
-				opacity: .8;
-				cursor: default;
-				.transition(color, linear, 3s);
-			}
-			&:hover .notice {
-				opacity: 1;
-			}
-		}
-	}
 
 	.flex-viewport {
 		overflow: visible !important;
@@ -282,6 +241,7 @@ canvas {
 			cursor: pointer;
 			display: inline-block;
 			margin-right: 6px;
+			margin-bottom: 6px;
 			border: 3px solid white;
 
 			@media (min-width: 1030px) { margin-right: 7px; width: @dim+7; height: @dim+7; }
@@ -352,7 +312,8 @@ canvas {
 				display: inline-block;
 				margin-left: 40px;
 				text-align: left;
-				width: 650px;
+				width: 100%;
+				max-width: 650px;
 			}
 
 			hgroup * {
@@ -366,6 +327,38 @@ canvas {
 			}
 		}
 	}
+
+	&#selection {
+		padding-bottom: 30px;
+		li {
+			font-size: 20px;
+			margin-bottom: 10px;
+			font-family: museo, "Open Sans";
+			list-style-image: url(../img/tick.png);
+		}
+
+		.sign-up {
+			button {
+				margin: 20px 0;
+				font-size: 30px;
+				padding: 20px 30px;
+				.border-radius(10px);
+				font-family: museo, "Open Sans";
+				cursor: pointer;
+			}
+
+			.notice {
+				color: red;
+				opacity: .8;
+				cursor: default;
+				.transition(color, linear, 3s);
+			}
+			&:hover .notice {
+				opacity: 1;
+			}
+		}
+	}
+
 
 	&#cost
 	{
@@ -596,3 +589,22 @@ footer
 	background-color: #777;
 }
 
+
+@media (max-width: 767px) { // to cancel bootstrap 20px side padding
+	body { padding: 0; }
+} 
+
+@media (max-width: 600px) {
+	body { padding: 5px; }
+
+	#header header {
+		margin: 120px 0 50px;
+		h1 { font-size: 100px; line-height: 65px; }
+		h2 { font-size: 20px; }
+	}
+
+	[class*="container"] { padding-bottom: 10px; }
+
+	#students-slider .student .text { width: 400px; }
+
+}
