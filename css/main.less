@@ -47,6 +47,8 @@ canvas {
 	z-index: -1;
 }
 
+@media (max-width: 767px) { body { padding: 0; } } 
+
 #header
 {
 	padding-bottom: 0; // reset from .container
@@ -89,11 +91,12 @@ canvas {
 		right: 15px;
 	}
 
+	@msize1: 650px;
+
 	header {
 		position: relative;
-		margin-top: 200px;
-		margin-bottom: 125px;
-		
+		margin: 200px 0 125px;
+
 		text-align: center;
 		color: white;
 
@@ -102,7 +105,6 @@ canvas {
 			font: bolder 130px/80px Montserrat, "Monofett", "Open Sans";
 			letter-spacing: -2px;
 			text-transform: uppercase;
-			tesxt-shadow: 0px 0 7px rgba(0,0,0,.5);
 		}
 
 		h2 {
@@ -115,6 +117,15 @@ canvas {
 			color: inherit;
 			font-weight: bold;
 			text-decoration: none !important;
+		}
+	}
+
+
+	@media (max-width: @msize1) {
+		header {
+			margin: 90px 0 35px;
+			h1 { font-size: 100px; line-height: 65px; }
+			h2 { font-size: 20px; }
 		}
 	}
 }
@@ -186,6 +197,7 @@ canvas {
 
 	font-size: 16px;
 	padding-bottom: 50px;
+	@media (max-width: 700px) { padding-bottom: 10px; }
 
 	&#selection {
 		padding-bottom: 30px;
