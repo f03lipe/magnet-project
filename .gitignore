@@ -2,3 +2,5 @@
 *.swp
 *~
 
+*.sublime-workspace
+*.sublime-project
