@@ -1,3 +1,6 @@
+
+trap "echo Ending the process; sudo modprobe -r pcspkr; exit 0" 2 # trap Ctrl
+
 while true
 do
 	sleep .1
